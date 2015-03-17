@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
     <modules jcr:primaryType="jnt:modules">
-        <storiesout-templates j:dependencies="default"
+        <storiesout-templates j:dependencies="bootstrap3-components default font-awesome"
                             j:installedModules="storiesout-templates"
                             j:modulePriority="0"
                             j:moduleType="templatesSet"
                             j:title="Storiesout Templates"
+                            jcr:mixinTypes="jmix:hasExternalProviderExtension"
                             jcr:primaryType="jnt:module">
 
             <portlets jcr:primaryType="jnt:portletFolder"/>
@@ -23,7 +24,84 @@
                   jcr:mixinTypes="jmix:theme"
                   jcr:primaryType="jnt:template">
                     <home jcr:primaryType="jnt:pageTemplate"/>
-                    <simple jcr:primaryType="jnt:pageTemplate"/>
+                        <simple jcr:primaryType="jnt:pageTemplate">
+                            <pagecontent jcr:primaryType="jnt:contentList">
+                                <teaser-page columnsType="customColumns"
+                                  gridClasses="col-md-6,col-md-6 hidden-print"
+                                  gridLayout="fixed-width"
+                                  jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
+                                  jcr:primaryType="bootstrap3nt:columns"
+                                  sectionCssClass="teaser-page"
+                                  sectionElement="section">
+                                    <teaser-page-col0 jcr:primaryType="jnt:contentList">
+                                        <breadcrumb cssClass="breadcrumb-so"
+                                       jcr:mixinTypes="bootstrap3mix:advancedBreadcrumb"
+                                       jcr:primaryType="bootstrap3nt:breadcrumb"/>
+                                        <page-title hx="h1"
+                                       jcr:mixinTypes="bootstrap3mix:advancedPageTitle"
+                                       jcr:primaryType="bootstrap3nt:pageTitle"/>
+                                    </teaser-page-col0>
+                                    <teaser-page-col1 jcr:primaryType="jnt:contentList">
+                                        <social jcr:primaryType="sont:social"/>
+                                    </teaser-page-col1>
+                                </teaser-page>
+                                <content columnsType="predefinedColumns"
+                              grid="8_4"
+                              gridLayout="fixed-width"
+                              jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:predefinedColumns"
+                              jcr:primaryType="bootstrap3nt:columns"
+                              sectionElement="div"
+                              sectionId="content"/>
+                            </pagecontent>
+                        </simple>
+                        <pagecontent jcr:primaryType="jnt:contentList">
+                            <header columnsType="customColumns"
+                          gridClasses="col-md-6 col-sm-12,col-md-6 col-sm-12 hidden-print"
+                          gridLayout="fixed-width"
+                          jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
+                          jcr:primaryType="bootstrap3nt:columns"
+                          sectionElement="header"
+                          sectionId="header">
+                                <header-col0 jcr:primaryType="jnt:contentList">
+                                    <logo j:allowedTypes="sont:logo" jcr:primaryType="jnt:absoluteArea"/>
+                                </header-col0>
+                                <header-col1 jcr:primaryType="jnt:contentList">
+                                    <adminbar jcr:primaryType="sont:adminBar"/>
+                                </header-col1>
+                            </header>
+                            <navigation-menu j:view="storiesout"
+                                   jcr:mixinTypes="bootstrap3mix:navbarAdvanced jmix:renderable"
+                                   jcr:primaryType="bootstrap3nt:navbar"
+                                   navbarClass="navbar navbar-default navbar-static-top navbar-inverse hidden-print"
+                                   ulClass="nav navbar-nav"/>
+                            <pagecontent jcr:primaryType="jnt:area"/>
+                            <footer columnsType="nogrid"
+                          jcr:mixinTypes="bootstrap3mix:createSection"
+                          jcr:primaryType="bootstrap3nt:columns"
+                          sectionCssClass="hidden-print"
+                          sectionElement="footer"
+                          sectionId="footer">
+                                <footer jcr:primaryType="jnt:contentList">
+                                    <footer-main columnsType="customColumns"
+                                     gridClasses="col-md-3 col-sm-6 info-box,col-md-3 col-sm-6 info-box,col-md-3 col-sm-6 info-box social-box,col-md-3 col-sm-6 info-box"
+                                     gridLayout="fixed-width"
+                                     jcr:mixinTypes="bootstrap3mix:createAbsoluteAreas bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
+                                     jcr:primaryType="bootstrap3nt:columns"
+                                     level="0"
+                                     sectionElement="div"
+                                     sectionId="footer-main"/>
+                                    <footer-copyright columnsType="customColumns"
+                                          gridClasses="col-lg-12 clearfix"
+                                          gridLayout="fixed-width"
+                                          jcr:mixinTypes="bootstrap3mix:createAbsoluteAreas bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
+                                          jcr:primaryType="bootstrap3nt:columns"
+                                          level="0"
+                                          sectionCssClass="hidden-print"
+                                          sectionElement="div"
+                                          sectionId="footer-copyright"/>
+                            </footer>
+                            </footer>
+                        </pagecontent>
                 </base>
                     <content-template j:applyOn="jnt:content"
                               j:hiddenTemplate="true"

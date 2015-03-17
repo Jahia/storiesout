@@ -1,2 +1,16 @@
 <jnt = 'http://www.jahia.org/jahia/nt/1.0'>
 <jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<sont = 'http://www.jahia.org/storiesout/nt/1.0'>
+<somix = 'http://www.jahia.org/storiesout/mix/1.0'>
+
+[somix:component] > jmix:droppableContent, jmix:editorialContent mixin
+
+[sont:logo] > jnt:content,somix:component
+ - siteName (string) i18n mandatory
+ - siteTeaser (string) i18n mandatory
+ - logo (weakreference, picker) i18n mandatory < jnt:file
+ - slogan (weakreference, picker) i18n mandatory < jnt:file
+
+[sont:adminBar] > jnt:content,somix:component
+
+[sont:social] > jnt:content,somix:component
