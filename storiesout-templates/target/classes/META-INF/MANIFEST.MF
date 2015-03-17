@@ -1,0 +1,79 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1426601488697
+Build-Jdk: 1.6.0_65
+Built-By: pol
+Bundle-Category: jahia-module
+Bundle-Description: This is the custom profile module (Storiesout Templa
+ tes) for running on a Digital Factory server.
+Bundle-DocURL: http://www.jahia.com
+Bundle-ManifestVersion: 2
+Bundle-Name: Storiesout Templates
+Bundle-SymbolicName: storiesout-templates
+Bundle-Vendor: Jahia Solutions Group SA
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Implementation-Title: Storiesout Templates
+Implementation-URL: http://www.jahia.com
+Implementation-Vendor: Jahia Solutions Group SA
+Implementation-Version: 1.0-SNAPSHOT
+Import-Package: org.jahia.taglibs.template.gwt;version="[7.0,8)",org.apa
+ che.taglibs.standard.tag.rt.core,org.apache.solr.schema,org.jahia.tagli
+ bs.internal.date;version="[7.0,8)",org.apache.taglibs.standard.function
+ s,org.jahia.services.sites,org.apache.taglibs.standard.tag.common.core,
+ javax.servlet.http;version="[3.0,4)",org.jahia.taglibs.uicomponents.log
+ inform;version="[7.0,8)",org.jahia.taglibs;version="[7.0,8)",org.jahia.
+ taglibs.template.pager;version="[7.0,8)",org.jahia.taglibs.utility.cons
+ tants;version="[7.0,8)",org.apache.taglibs.unstandard;version="[7.0,8)"
+ ,org.apache.commons.id,org.jahia.taglibs.uicomponents.portlets;version=
+ "[7.0,8)",org.jahia.taglibs.jcr.query;version="[7.0,8)",org.jahia.utils
+ ,org.jahia.services.render.scripting,org.apache.taglibs.standard.tag.rt
+ .fmt,org.apache.commons.lang;version="[2.6,3)",org.jahia.taglibs.utilit
+ y.session;version="[7.0,8)",org.jahia.taglibs.jcr;version="[7.0,8)",org
+ .jahia.exceptions,org.jahia.defaults.config.spring,org.jahia.taglibs.te
+ mplate.layoutmanager;version="[7.0,8)",org.jahia.taglibs.uicomponents.u
+ ser;version="[7.0,8)",org.jahia.services.seo,org.jahia.taglibs.uicompon
+ ents;version="[7.0,8)",org.jahia.taglibs.functions;version="[7.0,8)",or
+ g.jahia.taglibs.utility.siteproperties;version="[7.0,8)",org.jahia.serv
+ ices,org.apache.taglibs.standard.tei,org.jahia.taglibs.internal.gwt;ver
+ sion="[7.0,8)",javax.jcr;version="[2.0,3)",org.jahia.taglibs.utility;ve
+ rsion="[7.0,8)",org.jahia.services.content.nodetypes,org.jahia.taglibs.
+ query;version="[7.0,8)",org.jahia.taglibs.uicomponents.i18n;version="[7
+ .0,8)",org.apache.commons.lang.math;version="[2.6,3)",org.jahia.taglibs
+ .search;version="[7.0,8)",org.jahia.taglibs.template.include;version="[
+ 7.0,8)",org.jahia.services.content.decorator,org.jahia.taglibs.template
+ ;version="[7.0,8)",org.jahia.taglibs.internal.i18n;version="[7.0,8)",or
+ g.jahia.taglibs.utility.i18n;version="[7.0,8)",org.jahia.taglibs.uicomp
+ onents.image;version="[7.0,8)",org.jahia.services.usermanager,org.jahia
+ .taglibs.jcr.node;version="[7.0,8)",org.jahia.services.render,org.jahia
+ .services.content,org.jahia.data.viewhelper.principal,org.jahia.taglibs
+ .internal.uicomponents;version="[7.0,8)",org.jahia.taglibs.user;version
+ ="[7.0,8)"
+Jahia-Depends: default
+Jahia-GroupId: org.jahia.modules
+Jahia-Module-Type: templatesSet
+Jahia-Required-Version: 7.0.0.4
+Jahia-Source-Control-Connection: scm:dummy:uri
+Jahia-Source-Control-DeveloperConnection: scm:dummy:uri
+Jahia-Source-Folders: /Users/pol/jahia/storiesout/trunk/storiesout-templ
+ ates
+Jahia-Static-Resources: /css,/icons,/images,/img,/javascript
+Require-Capability: com.jahia.services.content; filter:="(nodetypes=jmix
+ :renderable)",com.jahia.services.content; filter:="(nodetypes=jmix:them
+ e)",com.jahia.services.content; filter:="(nodetypes=jnt:contentFolder)"
+ ,com.jahia.services.content; filter:="(nodetypes=jnt:contentList)",com.
+ jahia.services.content; filter:="(nodetypes=jnt:contentTemplate)",com.j
+ ahia.services.content; filter:="(nodetypes=jnt:folder)",com.jahia.servi
+ ces.content; filter:="(nodetypes=jnt:mainResourceDisplay)",com.jahia.se
+ rvices.content; filter:="(nodetypes=jnt:page)",com.jahia.services.conte
+ nt; filter:="(nodetypes=jnt:pageTemplate)",com.jahia.services.content; 
+ filter:="(nodetypes=jnt:portletFolder)",com.jahia.services.content; fil
+ ter:="(nodetypes=jnt:template)",com.jahia.services.content; filter:="(n
+ odetypes=jnt:templateSets)",com.jahia.services.content; filter:="(nodet
+ ypes=jnt:templatesFolder)",com.jahia.services.content; filter:="(nodety
+ pes=jnt:translation)",com.jahia.services.content; filter:="(nodetypes=j
+ nt:virtualsite)",com.jahia.services.content; filter:="(nodetypes=mix:ti
+ tle)"
+Specification-Title: Storiesout Templates
+Specification-Vendor: Jahia Solutions Group SA
+Specification-Version: 1.0-SNAPSHOT
+Tool: Bnd-2.1.0.20130426-122213

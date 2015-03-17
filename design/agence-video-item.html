@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="meta description">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>StoriesOut: Agence Videos</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="dist/css/storiesout.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
+    <!-- flexslider CSS http://flexslider.woothemes.com/-->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
+
+    <!-- Gem style -->
+    <link rel="stylesheet" href="css/gem.css">
+
+</head>
+
+<body>
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="logo-container">
+                    <a class="img-logo" href="index.html"><img alt="StoriesOut" height="30"
+                                                               src="img/storiesout.svg"></a>
+                    <img class="img-slogan hidden-print" alt="StoriesOut" height="25" src="img/slogan-fr.svg">
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12 hidden-print">
+
+                <div class="header-lang">
+                    <a class="btn btn-sm btn-primary active" title="French" href="#"><img src="img/fr.png" alt="French"></a>
+                    <a class="btn btn-sm btn-inverse" title="English" href="#"><img src="img/us.png" alt="English"></a>
+                </div>
+                <!-- Button trigger modal -->
+                <a href="#" class="btn-login" data-toggle="modal" data-target="#myModal">
+                    <i class="fa fa-lock"></i> Se connecter
+                </a>
+
+                <div class="dropdown btn-logout">
+                    <img src="images/anne.png" alt="Nom Prénom" class="img-user img-circle">
+                    <a id="dLabel" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button"
+                       aria-expanded="false">
+                        Hello Nom Prénom
+                        <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-cogs"></i>
+                            Administration</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i
+                                class="fa fa-pencil-square-o"></i> Edit Mode</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-eye"></i> Mode
+                            Aperçu</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-globe"></i> En
+                            ligne</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i
+                                class="fa fa-power-off"></i> Logout</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Static navbar -->
+ <nav class="navbar navbar-default navbar-static-top navbar-inverse hidden-print" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--<a class="navbar-brand" href="#">StoriesOut</a>-->
+
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">l'Agence<span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="agence-presentation.html">Présentation de l'Agence</a></li>
+                        <li class="divider"></li>
+                        <li><a href="agence-equipe.html">L'équipe</a></li>
+                        <li><a href="agence-recrutement.html">Recrutement</a></li>
+                        <li class="active"><a href="agence-videos.html">Vidéos</a></li>
+                        <li><a href="agence-video-item.html">Vidéo Item </a></li>
+                        <li class="divider"></li>
+                        <li><a href="index.html">Home Page 1 statique</a></li>
+                        <li><a href="index-1.html">Home Page 2 slider</a></li>
+                        <li><a href="404.html">Page Erreur 404</a></li>
+                        <li><a href="500.html">Page Erreur 500</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="services-presentation.html">Services Présentation</a></li>
+                        <li class="divider"></li>
+                        <li><a href="services-relations-presse.html">Relations Presse</a></li>
+                        <li><a href="services-marketing-operationnel.html">Marketing Opérationnel</a></li>
+                        <li><a href="services-media-Coaching.html">Media Coaching</a></li>
+                    </ul>
+                </li>
+                <li><a href="clients.html">Clients</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Résultats
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="resultats-coupures-presse.html">Coupures de Presse</a></li>
+                        <li><a href="resultats-communiques-presse.html">Communiqués de Presse</a></li>
+                        <li><a href="resultats-campagnes-relations-presse.html">Campagnes Relations Presse</a></li>
+                        <li><a href="resultats-content-marketing.html">Content Marketing</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="input-group">
+                    <input type="text" placeholder="Rechercher" class="form-control">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="fa fa-search"></i>
+                                    </button>
+                                  </span>
+                </div>
+                <!-- /input-group -->
+            </form>
+
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+
+
+<section class="teaser-page">
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <ol class="breadcrumb breadcrumb-so">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Page Mère</a></li>
+                    <li class="active">Page Courante</li>
+                </ol>
+                <h1>Titre de la Video</h1>
+
+                <p>StoriesOut est l'agence de communication des sociétés innovantes.</p>
+
+            </div>
+            <div class="col-md-6 hidden-print">
+                <div class="social social-big ">
+                    <a class="btn btn-twitter" href="#">
+                        <i class="fa fa-2x fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-linkedin" href="#">
+                        <i class="fa fa-2x fa-linkedin"></i>
+                    </a>
+                    <a class="btn btn-facebook" href="#">
+                        <i class="fa fa-2x fa-facebook"></i>
+                    </a>
+                    <a class="btn btn-youtube" href="#">
+                        <i class="fa fa-2x fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3">
+
+
+                <p><a href="agence-videos.html" class="btn btn-primary btn-block"><i class="fa fa-angle-left"></i> Retour a
+                    la liste</a></p>
+
+
+                    <h3 class="title">Decription</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit lectus, lacinia eget feugiat
+                        non, consequat et diam. Praesent in odio vitae neque tincidunt congue. Mauris vitae condimentum
+                        nunc. Curabitur porttitor dignissim tempor. In hac habitasse platea dictumst.
+
+                    </p>
+
+                    <p>Phasellus leo elit, ultrices fermentum tempor eu, aliquet eu lorem. Vivamus rutrum elementum
+                        odio. Donec eget nibh ut urna mollis bibendum. Maecenas nec neque sodales felis suscipit
+                        hendrerit in sit amet augue. </p>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-9">
+                <iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&player_id=player_1" width="100%"
+                        height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer id="footer" class="hidden-print">
+    <div id="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 info-box">
+                    <div class="logo-container">
+                        <img alt="StoriesOut" height="25" src="img/storiesout-white.svg">
+                    </div>
+                    <p>StoriesOut est l'agence de communication des sociétés innovantes.</p>
+
+                    <p> Avec l'essor des nouveaux médias, nous pensons qu'il est possible d'écrire chaque histoire en
+                        temps réel.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 info-box">
+                    <h2 class="title">Contact</h2>
+
+                    <div class="icon-boxes">
+                        <div class="icon-box">
+                            <div class="icon icon-wrap">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="content">
+                                4567 Street name,
+                                <br>
+                                012 12 City name, Country
+                            </div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon icon-wrap">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="content">
+                                <a href="tel:+012345678">+012 345 678</a>
+                            </div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon icon-wrap">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="content"><a href="#">info@storiesout.com</a></div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon icon-wrap">
+                                <i class="fa fa-globe"></i>
+                            </div>
+                            <div class="content"><a href="#">www.storiesout.com</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 info-box social-box">
+                    <h2 class="title">Derniers tweets</h2>
+
+                    <div class="icon-boxes">
+                        <div class="icon-box">
+                            <div class="icon icon-wrap">
+                                <i class="fa fa-twitter text-contrast"></i>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Phasellus vulputate lobortis sem. Mauris id velit in urna.
+                                    <br>
+                                    <a class="time" href="#">
+                                        <i>1 hour ago</i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon icon-wrap">
+                                <i class="fa fa-twitter text-contrast"></i>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Etiam luctus, dui congue tempus blandit, dui.
+                                    <br>
+                                    <a class="time" href="#">
+                                        <i>3 hours ago</i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 info-box">
+                    <h2 class="title">Newsletter</h2>
+
+                    <p>Proin condimentum, nisi vel vestibulum ultricies, nunc elit.</p>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="input-group">
+                                <input type="text" placeholder="Email address" class="form-control">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="fa fa-envelope"></i>
+                                    </button>
+                                  </span>
+                            </div>
+                            <!-- /input-group -->
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- /.row -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer-copyright" class="hidden-print">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 clearfix">
+                    <p class="copyright">
+                        Copyright
+                        ©
+                        2015 StoriesOut
+                    </p>
+                    <ul class="list-inline copyright-shortcuts">
+                        <!-- List -->
+                        <li><a href="#">Informations Légales</a></li>
+                        <li>
+                        </li>
+                        <li><a href="#">Plan du site </a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="social">
+                        <a class="btn btn-twitter" href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-linkedin" href="#">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a class="btn btn-facebook" href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-youtube" href="#">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Se Connecter</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <form role="form">
+                            <div class="input-group form-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control" placeholder="Username">
+                            </div>
+
+                            <div class="input-group form-group">
+                                <span class="input-group-addon"><i class="fa fa-check"></i></span>
+                                <input type="password" class="form-control" placeholder="Password">
+                            </div>
+
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Rester connecté
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Annuler
+                </button>
+                <button type="button" class="btn btn-primary"><i class="fa fa-unlock"></i> Se Connecter</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+
+
+<!-- FlexSlider -->
+<script defer src="js/jquery.flexslider.js"></script>
+<script>
+    // Can also be used with $(document).ready()
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation:"slide",
+            smoothHeight:true
+        });
+    });
+</script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54802fa11e909c08"
+        async="async"></script>
+
+<script src="js/modernizr.js"></script>
+<!-- Modernizr -->
+<a href="#0" class="cd-top">Top</a>
+<script src="js/main.js"></script>
+<!-- Gem jQuery -->
+</body>
+
+</html>

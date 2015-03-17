@@ -1,0 +1,53 @@
+
+/******************************************************************************
+* Facets List
+******************************************************************************/
+div.activefacetsList{
+     background-color:#39f;
+     margin:0;
+     padding:15px;
+     margin-bottom:15px;
+     color:#fff;
+ }
+div.activefacetsList2{
+    margin:15px 0;
+
+}
+div.activefacetsList2 span{
+    margin-left:5px;
+    font-size: 100%;
+    font-weight: normal;
+
+}
+div.activefacetsList .btn{
+    margin:0;
+}
+div.activefacetsList a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+div.activefacetsList a:hover,
+div.activefacetsList a:focus {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.activefacetsList h3 {
+	margin:0;
+	padding:0;
+    margin-bottom:10px;
+    color:#fff;
+}
+.activefacetsList li{
+
+}
+.facetsList h3   {
+    display: block;
+}
+button.button-close-facet {
+    color: #fff;
+    opacity: 1;
+    margin-left: 5px;
+    text-shadow: none;
+}
