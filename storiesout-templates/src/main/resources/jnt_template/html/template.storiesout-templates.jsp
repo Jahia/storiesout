@@ -21,11 +21,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="meta description">
     <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="${url.currentModule}/img/favicon.ico">
 
     <title>${fn:escapeXml(renderContext.mainResource.node.displayableName)}</title>
 
-    <template:addResources type="css" resources="bootstrap.css"/>
+    <template:addResources type="css" resources="bootstrap.min.css"/>
     <template:addResources type="css" resources="storiesout.css"/>
     <template:addResources type="css" resources="docs.css"/>
     <template:addResources type="css" resources="font-awesome.min.css"/>
