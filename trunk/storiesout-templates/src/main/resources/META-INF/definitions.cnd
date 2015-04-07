@@ -17,6 +17,8 @@
 
 [sont:jumbotron] > jnt:content, somix:component
 
+[sont:homeSlider] > jnt:content, somix:component
+  
 [sont:profile] > jnt:content, somix:component
 
 [sont:job] > jnt:content, somix:component
