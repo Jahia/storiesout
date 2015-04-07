@@ -24,37 +24,7 @@
                   jcr:mixinTypes="jmix:theme"
                   jcr:primaryType="jnt:template">
                     <home jcr:primaryType="jnt:pageTemplate"/>
-                        <simple jcr:primaryType="jnt:pageTemplate">
                             <pagecontent jcr:primaryType="jnt:contentList">
-                                <teaser-page columnsType="customColumns"
-                                  gridClasses="col-md-6,col-md-6 hidden-print"
-                                  gridLayout="fixed-width"
-                                  jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
-                                  jcr:primaryType="bootstrap3nt:columns"
-                                  sectionCssClass="teaser-page"
-                                  sectionElement="section">
-                                    <teaser-page-col0 jcr:primaryType="jnt:contentList">
-                                        <breadcrumb cssClass="breadcrumb-so"
-                                       jcr:mixinTypes="bootstrap3mix:advancedBreadcrumb"
-                                       jcr:primaryType="bootstrap3nt:breadcrumb"/>
-                                        <page-title hx="h1"
-                                       jcr:mixinTypes="bootstrap3mix:advancedPageTitle"
-                                       jcr:primaryType="bootstrap3nt:pageTitle"/>
-                                    </teaser-page-col0>
-                                    <teaser-page-col1 jcr:primaryType="jnt:contentList">
-                                        <social jcr:primaryType="sont:social"/>
-                                    </teaser-page-col1>
-                                </teaser-page>
-                                <content columnsType="predefinedColumns"
-                              grid="8_4"
-                              gridLayout="fixed-width"
-                              jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:predefinedColumns"
-                              jcr:primaryType="bootstrap3nt:columns"
-                              sectionElement="div"
-                              sectionId="content"/>
-                            </pagecontent>
-                        </simple>
-                        <pagecontent jcr:primaryType="jnt:contentList">
                             <header columnsType="customColumns"
                           gridClasses="col-md-6 col-sm-12,col-md-6 col-sm-12 hidden-print"
                           gridLayout="fixed-width"
@@ -102,6 +72,105 @@
                             </footer>
                             </footer>
                         </pagecontent>
+                        <full jcr:primaryType="jnt:pageTemplate">
+                            <pagecontent jcr:primaryType="jnt:contentList">
+                                <teaser-page columnsType="customColumns"
+                                  gridClasses="col-md-6,col-md-6 hidden-print"
+                                  gridLayout="fixed-width"
+                                  jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
+                                  jcr:primaryType="bootstrap3nt:columns"
+                                  sectionCssClass="teaser-page"
+                                  sectionElement="section">
+                                    <teaser-page-col0 jcr:primaryType="jnt:contentList">
+                                        <breadcrumb cssClass="breadcrumb-so"
+                                       jcr:mixinTypes="bootstrap3mix:advancedBreadcrumb"
+                                       jcr:primaryType="bootstrap3nt:breadcrumb"/>
+                                        <page-title hx="h1"
+                                       j:view="storiesout"
+                                       jcr:mixinTypes="bootstrap3mix:advancedPageTitle jmix:renderable"
+                                       jcr:primaryType="bootstrap3nt:pageTitle"/>
+                                    </teaser-page-col0>
+                                    <teaser-page-col1 jcr:primaryType="jnt:contentList">
+                                        <social jcr:primaryType="sont:social"/>
+                                    </teaser-page-col1>
+                                </teaser-page>
+                                <pagecontent jcr:primaryType="jnt:area"/>
+                            </pagecontent>
+                        </full>
+                        <simple jcr:primaryType="jnt:pageTemplate">
+                            <pagecontent jcr:primaryType="jnt:contentList">
+                                <teaser-page columnsType="customColumns"
+                                  gridClasses="col-md-6,col-md-6 hidden-print"
+                                  gridLayout="fixed-width"
+                                  jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
+                                  jcr:primaryType="bootstrap3nt:columns"
+                                  sectionCssClass="teaser-page"
+                                  sectionElement="section">
+                                    <teaser-page-col0 jcr:primaryType="jnt:contentList">
+                                        <breadcrumb cssClass="breadcrumb-so"
+                                       jcr:mixinTypes="bootstrap3mix:advancedBreadcrumb"
+                                       jcr:primaryType="bootstrap3nt:breadcrumb"/>
+                                        <page-title hx="h1"
+                                       j:view="storiesout"
+                                       jcr:mixinTypes="bootstrap3mix:advancedPageTitle jmix:renderable"
+                                       jcr:primaryType="bootstrap3nt:pageTitle"/>
+                                    </teaser-page-col0>
+                                    <teaser-page-col1 jcr:primaryType="jnt:contentList">
+                                        <social jcr:primaryType="sont:social"/>
+                                    </teaser-page-col1>
+                                </teaser-page>
+                                <content columnsType="predefinedColumns"
+                              grid="8_4"
+                              gridLayout="fixed-width"
+                              jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:predefinedColumns"
+                              jcr:primaryType="bootstrap3nt:columns"
+                              sectionElement="div"
+                              sectionId="content"/>
+                            </pagecontent>
+                        </simple>
+                        <video j:applyOn="sont:video"
+                      j:defaultTemplate="true"
+                      j:hiddenTemplate="false"
+                      jcr:primaryType="jnt:contentTemplate">
+                            <j:translation_en jcr:language="en"
+                                    jcr:mixinTypes="mix:title"
+                                    jcr:primaryType="jnt:translation"
+                                    jcr:title="video"/>
+                            <pagecontent jcr:primaryType="jnt:contentList">
+                                <pagecontent jcr:primaryType="jnt:contentList">
+                                    <teaser-page columnsType="customColumns"
+                                     gridClasses="col-md-6,col-md-6 hidden-print"
+                                     gridLayout="fixed-width"
+                                     jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
+                                     jcr:primaryType="bootstrap3nt:columns"
+                                     sectionCssClass="teaser-page"
+                                     sectionElement="section">
+                                        <teaser-page-col0 jcr:primaryType="jnt:contentList">
+                                            <breadcrumb cssClass="breadcrumb-so"
+                                          jcr:mixinTypes="bootstrap3mix:advancedBreadcrumb"
+                                          jcr:primaryType="bootstrap3nt:breadcrumb"/>
+                                            <page-title hx="h1"
+                                          j:view="storiesout"
+                                          jcr:mixinTypes="bootstrap3mix:advancedPageTitle jmix:renderable"
+                                          jcr:primaryType="bootstrap3nt:pageTitle"/>
+                                        </teaser-page-col0>
+                                        <teaser-page-col1 jcr:primaryType="jnt:contentList">
+                                            <social jcr:primaryType="sont:social"/>
+                                        </teaser-page-col1>
+                                    </teaser-page>
+                                    <content columnsType="nogrid"
+                                 gridLayout="fixed-width"
+                                 jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection"
+                                 jcr:primaryType="bootstrap3nt:columns"
+                                 sectionElement="div"
+                                 sectionId="content">
+                                        <content jcr:primaryType="jnt:contentList">
+                                            <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
+                                    </content>
+                                    </content>
+                                </pagecontent>
+                            </pagecontent>
+                        </video>
                 </base>
                     <content-template j:applyOn="jnt:content"
                               j:hiddenTemplate="true"
