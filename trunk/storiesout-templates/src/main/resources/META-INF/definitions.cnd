@@ -15,5 +15,23 @@
 
 [sont:social] > jnt:content, somix:component
 
-[sont:jumbotron] > jnt:content, somix:component noquery
+[sont:jumbotron] > jnt:content, somix:component
 
+[sont:profile] > jnt:content, somix:component
+
+[sont:job] > jnt:content, somix:component
+
+[somix:alternateTitle] mixin
+ extends = jmix:navMenuItem
+ itemtype = content
+ - alternateTitle (string) internationalized
+
+[somix:intro] mixin
+ extends = jmix:navMenuItem
+ itemtype = content
+ - intro (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
+
+[sont:video] > jnt:content, mix:title
+
+  [sont:videos] > jnt:content, somix:component, jmix:manuallyOrderable, jmix:list orderable
++ * (sont:video)
