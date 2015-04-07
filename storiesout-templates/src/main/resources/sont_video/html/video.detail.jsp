@@ -17,11 +17,19 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
-
+<c:set var="parentNode" value="${jcr:findDisplayableNode(currentNode.parent, renderContext)}"/>
+<c:choose>
+    <c:when test="! empty parentNode">
+        <c:url  var="parentUrl" value='${parentNode.url}'/>
+    </c:when>
+    <c:otherwise>
+        <c:set var="parentUrl">javascript:history.back()</c:set>
+    </c:otherwise>
+</c:choose>
             <div class="col-xs-12 col-sm-12 col-md-3">
 
 
-                <p><a href="agence-videos.html" class="btn btn-primary btn-block"><i class="fa fa-angle-left"></i> Retour a
+              <p><a href="${parentUrl}" class="btn btn-primary btn-block"><i class="fa fa-angle-left"></i> Retour a
                     la liste</a></p>
 
 

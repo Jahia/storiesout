@@ -18,7 +18,9 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <%-- TODO: HARDCODED --%>
-<div class="jumbotron jumbotron-so jumbotron-img" style="background-image: url(${url.currentModule}/img/book.jpg)">
+<section class="teaser hidden-print">
+    <div class="container">
+        <div class="jumbotron jumbotron-so jumbotron-img" style="background-image: url(${url.currentModule}/img/book.jpg)">
             <div class="row">
                 <div class="col-md-6 jumbotron-text">
                     <h2>Stories<span class="color-blue">Out</span></h2>
@@ -53,3 +55,5 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
