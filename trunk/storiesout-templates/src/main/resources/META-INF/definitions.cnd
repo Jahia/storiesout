@@ -2,6 +2,9 @@
 <jnt = 'http://www.jahia.org/jahia/nt/1.0'>
 <somix = 'http://www.jahia.org/storiesout/mix/1.0'>
 <sont = 'http://www.jahia.org/storiesout/nt/1.0'>
+<bootstrap3mix = 'http://www.jahia.org/bootstrap3/mix/1.0'>
+<bootstrap3nt = 'http://www.jahia.org/bootstrap3/nt/1.0'>
+
 
 [somix:component] > jmix:droppableContent, jmix:editorialContent mixin
 
@@ -35,5 +38,11 @@
 
 [sont:video] > jnt:content, mix:title
 
-  [sont:videos] > jnt:content, somix:component, jmix:manuallyOrderable, jmix:list orderable
+[sont:videos] > jnt:content, somix:component, jmix:manuallyOrderable, jmix:list orderable
 + * (sont:video)
+
+[somix:moreLink] mixin
+  extends = bootstrap3nt:panel 
+  itemtype = content
+  - link (weakreference, picker[type='editoriallink']) < jnt:page
+  - image (weakreference, picker[type='image']) < jmix:image

@@ -32,13 +32,13 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="collapse navbar-collapse navbar-responsive-collapse">
+        <div id="navbar" class="navbar-collapse collapse">
             <c:choose>
                 <c:when test="${fn:startsWith(renderContext.mainResource.path,'/templateSets/')}">
                     no render on studio
                 </c:when>
                 <c:otherwise>
-                    <template:module node="${currentNode}" view="menu"/>
+                    <template:module node="${currentNode}" view="hidden.storiesout-menu"/>
                 </c:otherwise>
             </c:choose>
             <%--
