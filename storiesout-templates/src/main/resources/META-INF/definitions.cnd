@@ -22,7 +22,13 @@
 
 [sont:homeSlider] > jnt:content, somix:component
   
-[sont:profile] > jnt:content, somix:component
+[sont:profile] > jnt:content, somix:component, mix:title
+ - subtitle (string) i18n
+ - photo (weakreference, picker[type='image']) < jmix:image
+ - bio (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
+ - twitter (string) 
+ - facebook (string)
+ - google (string)
 
 [sont:job] > jnt:content, somix:component
 
