@@ -30,7 +30,10 @@
  - facebook (string)
  - google (string)
 
-[sont:job] > jnt:content, somix:component
+[sont:job] > jnt:content, somix:component, mix:title
+ - new (boolean) = false
+ + * (jmix:droppableContent) = jmix:droppableContent
+
 
 [somix:alternateTitle] mixin
  extends = jmix:navMenuItem
@@ -52,3 +55,5 @@
   itemtype = content
   - link (weakreference, picker[type='editoriallink']) < jnt:page
   - image (weakreference, picker[type='image']) < jmix:image
+  
+[sont:sideMenuAnchor] > jnt:content, somix:component, jmix:bindedComponent
