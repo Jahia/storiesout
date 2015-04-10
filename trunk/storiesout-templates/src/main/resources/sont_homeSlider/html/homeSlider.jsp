@@ -27,7 +27,7 @@
                 <template:addResources type="css" resources="flexslider.css"/>
                 <template:addResources type="css" resources="gem.css"/>
 
-                <template:include view="social-big"/>
+                <template:include view="social-big-absolute"/>
                 <div class="flexslider carousel clearfix" id="flexslider-${currentNode.identifier}">
                     <ul class="slides">
                         <c:forEach items="${homeSliderItems}" var="homeSliderItem">

@@ -25,10 +25,10 @@
 
     <title>${fn:escapeXml(renderContext.mainResource.node.displayableName)}</title>
 
+    <template:addResources type="css" resources="font-awesome.min.css"/>
     <template:addResources type="css" resources="bootstrap.min.css"/>
     <template:addResources type="css" resources="storiesout.css"/>
     <template:addResources type="css" resources="docs.css"/>
-    <template:addResources type="css" resources="font-awesome.min.css"/>
 
 
     <template:addResources type="javascript" resources="ie8-responsive-file-warning.js" condition="if lt IE 9"/>

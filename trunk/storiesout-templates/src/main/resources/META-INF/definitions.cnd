@@ -5,8 +5,15 @@
 <bootstrap3mix = 'http://www.jahia.org/bootstrap3/mix/1.0'>
 <bootstrap3nt = 'http://www.jahia.org/bootstrap3/nt/1.0'>
 
-
 [somix:component] > jmix:droppableContent, jmix:editorialContent mixin
+
+[somix:socialLinks] mixin
+extends=jnt:virtualsite
+itemtype=content
+ - twitter (string)
+ - linkedin (string)
+ - facebook (string)
+ - youtube (string)
 
 [somix:internalLink] > jmix:templateMixin  mixin
    extends=somix:link
@@ -32,7 +39,7 @@
 [somix:social] mixin
  - displaySocial (boolean) = true
 
-[sont:social] > jnt:content, somix:component
+[sont:social] > jnt:content, somix:component, somix:social
 
 [sont:jumbotron] > jnt:content, somix:component, mix:title, somix:link, somix:social
  - image (weakreference, picker[type='image']) < jmix:image

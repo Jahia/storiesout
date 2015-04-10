@@ -21,7 +21,7 @@
 <c:if test="${jcr:isNodeType(currentNode, 'somix:social')}">
     <c:set var="displaySocial" value="${currentNode.properties.displaySocial.boolean}"/>
     <c:if test="${displaySocial == true}">
-        <div class="social social-big">
+        <div class="social social-big social-absolute">
             <%@include file="displayLinks.jspf"%>
         </div>
     </c:if>
