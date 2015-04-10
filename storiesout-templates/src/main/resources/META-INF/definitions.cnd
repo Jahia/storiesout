@@ -102,12 +102,12 @@ itemtype=content
 [sont:sideMenuAnchor] > jnt:content, somix:component, jmix:bindedComponent
 
 [somix:mediaPicture] > jmix:templateMixin  mixin
-  extends=sont:clients
+  extends=sont:client
   - mediaPicture (weakreference, picker[type='image']) < jmix:image
 
 [somix:mediaVideo] > jmix:templateMixin  mixin
-  extends=sont:clients
-  - mediaVideo (string)
+  extends=sont:client
+  - mediaVideo (string,textarea)
 
 [sont:client] > jnt:content, somix:component, mix:title
  - logo (weakreference, picker[type='image']) < jmix:image

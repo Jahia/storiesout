@@ -29,8 +29,8 @@
 <div class="col-xs-12 col-sm-12 col-md-3">
 
 
-    <p><a href="${parentUrl}" class="btn btn-primary btn-block"><i class="fa fa-angle-left"></i> Retour a
-        la liste</a></p>
+    <p><a href="${parentUrl}" class="btn btn-primary btn-block"><i class="fa fa-angle-left"></i> <fmt:message
+            key="sont_video.backToList"/></a></p>
 
 
     <h3 class="title">Decription</h3>
