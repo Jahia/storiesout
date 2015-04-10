@@ -47,7 +47,8 @@
 [sont:homeSliderFreeItem] > jnt:content, somix:homeSliderItem
  - free (string, textarea) i18n
 
-[sont:homeSlider] > jnt:content, somix:component, somix:social
+[sont:homeSlider] > jnt:contentList, somix:component, somix:social
+ orderable
  + * (somix:homeSliderItem)
 
 [sont:profile] > jnt:content, somix:component, mix:title
@@ -58,7 +59,8 @@
  - facebook (string)
  - google (string)
 
-[sont:job] > jnt:content, somix:component, mix:title
+[sont:job] > jnt:contentList, somix:component, mix:title
+  orderable
  - new (boolean) = false
  + * (jmix:droppableContent) = jmix:droppableContent
 
@@ -75,7 +77,8 @@
 
 [sont:video] > jnt:content, mix:title
 
-[sont:videos] > jnt:content, somix:component, jmix:manuallyOrderable, jmix:list orderable
+[sont:videos] > jnt:contentList, somix:component, jmix:manuallyOrderable, jmix:list orderable
+  orderable
 + * (sont:video)
 
 [somix:moreLink] mixin
