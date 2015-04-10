@@ -15,6 +15,11 @@ itemtype=content
  - facebook (string)
  - youtube (string)
 
+[somix:clients] mixin
+extends=jnt:virtualsite
+itemtype=content
+ - clients (weakreference, picker[type='editorial'])
+
 [somix:internalLink] > jmix:templateMixin  mixin
    extends=somix:link
    - linkTitle (string) i18n
@@ -95,3 +100,23 @@ itemtype=content
   - image (weakreference, picker[type='image']) < jmix:image
   
 [sont:sideMenuAnchor] > jnt:content, somix:component, jmix:bindedComponent
+
+[somix:mediaPicture] > jmix:templateMixin  mixin
+  extends=sont:clients
+  - mediaPicture (weakreference, picker[type='image']) < jmix:image
+
+[somix:mediaVideo] > jmix:templateMixin  mixin
+  extends=sont:clients
+  - mediaVideo (string)
+
+[sont:client] > nt:content, somix:component, mix:title
+ - logo (weakreference) (weakreference, picker[type='image']) < jmix:image
+ - mediaType (string, choicelist[mediaInitializer,resourceBundle]) = 'picture' autocreated < 'picture', 'video'
+ - quote  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
+ - description  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
+ - status (string, choicelist[resourceBundle]) = 'active' autocreated < 'active', 'unactive'
+
+[sont:clients] > jnt:contentList, somix:component, jmix:manuallyOrderable, jmix:list orderable
+  orderable
++ * (sont:client)
+

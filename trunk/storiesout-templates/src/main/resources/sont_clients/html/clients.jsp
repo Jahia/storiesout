@@ -19,14 +19,14 @@
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 
 <template:include view="hidden.header"/>
-<%--<c:set var="videos" value="${jcr:getChildrenOfType(currentNode, 'sont:video')}"/>--%>
-<c:set var="videos" value="${moduleMap.currentList}"/>
+<%--<c:set var="clients" value="${jcr:getChildrenOfType(currentNode, 'sont:client')}"/>--%>
+<c:set var="clients" value="${moduleMap.currentList}"/>
 
-<div class="row video_wrapper">
-    <c:forEach items="${videos}" var="video" varStatus="status" begin="${moduleMap.begin}" end="${moduleMap.end}">
-        <template:module node="${video}" nodeTypes="sont:video" editable="true"/>
+<div class="row client_wrapper">
+    <c:forEach items="${clients}" var="client" varStatus="status" begin="${moduleMap.begin}" end="${moduleMap.end}">
+        <template:module node="${client}" nodeTypes="sont:client" editable="true"/>
     </c:forEach>
 </div>
 <c:if test="${renderContext.editMode}">
-    <template:module path="*" nodeTypes="sont:video"/>
+    <template:module path="*" nodeTypes="sont:client"/>
 </c:if>
