@@ -19,9 +19,11 @@
 <c:if test="${not empty boundComponent and jcr:isNodeType(boundComponent, 'jmix:list')}">
     <template:addCacheDependency node="${boundComponent}"/>
     <div class="list-group ">
-        <c:forEach items="${jcr:getChildrenOfType(boundComponent, 'jmix:droppableContent')}" var="component" varStatus="status">
+        <c:forEach items="${jcr:getChildrenOfType(boundComponent, 'jmix:droppableContent')}" var="component"
+                   varStatus="status">
             <c:if test="${jcr:isNodeType(component,'mix:title' )}">
-                <a class="list-group-item<c:if test='${status.first}'><c:out value=' active'/></c:if>" href="#${component.identifier}"><i class="fa fa-angle-right fa fa-fixed-width"></i>
+                <a class="list-group-item<c:if test='${status.first}'><c:out value=' active'/></c:if>"
+                   href="#${component.identifier}"><i class="fa fa-angle-right fa fa-fixed-width"></i>
                         ${component.displayableName}
                 </a>
             </c:if>

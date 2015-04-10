@@ -18,34 +18,14 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 
-<template:addResources type="css" resources="bootstrap.min.css"/>
-<c:set var="cssClass"/>
-<c:set var="hx"/>
-<c:if test="${jcr:isNodeType(currentNode,'bootstrap3mix:advancedPageTitle' )}">
-    <c:set var="cssClass" value="${currentNode.properties.cssClass.string}"/>
-    <c:set var="hx" value="${currentNode.properties['hx'].string}"/>
-</c:if>
-
-
-<c:if test="${empty hx}">
-    <c:set var="hx" value="h1"/>
-</c:if>
-
-<c:set var="pageTitle"
-       value="${renderContext.mainResource.node.displayableName}"/>
-<c:if test="${jcr:isNodeType(renderContext.mainResource.node, 'somix:alternateTitle')}">
-    <c:set var="alternateTitle" value="${renderContext.mainResource.node.properties.alternateTitle.string}"/>
-    <c:if test="${not empty alternateTitle}">
-        <c:set var="pageTitle"
-               value="${alternateTitle}"/>
-    </c:if>
-</c:if>
-
-
-<${hx}<c:if test="${! empty cssClass}"><c:out value=" "/>class="${cssClass}"</c:if>>${pageTitle}</${hx}>
-
-<c:if test="${jcr:isNodeType(renderContext.mainResource.node, 'somix:intro')}">
-    <c:set var="intro" value="${renderContext.mainResource.node.properties.intro.string}"/>
-    <c:if test="${not empty intro}">${intro}
+<c:if test="${jcr:isNodeType(currentNode, 'somix:social')}">
+    <c:set var="displaySocial" value="${currentNode.properties.displaySocial.boolean}"/>
+    <c:if test="${displaySocial == true}">
+        <div class="social social-big">
+            <a class="btn btn-twitter" href="#"> <i class="fa fa-2x fa-twitter"></i> </a>
+            <a class="btn btn-linkedin" href="#"> <i class="fa fa-2x fa-linkedin"></i> </a>
+            <a class="btn btn-facebook" href="#"> <i class="fa fa-2x fa-facebook"></i> </a>
+            <a class="btn btn-youtube" href="#"> <i class="fa fa-2x fa-youtube"></i> </a>
+        </div>
     </c:if>
 </c:if>

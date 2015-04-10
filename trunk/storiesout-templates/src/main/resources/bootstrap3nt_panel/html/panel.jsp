@@ -3,7 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="jcr" uri="http://www.jahia.org/tags/jcr" %>
-<%@ taglib prefix="lang" uri="http://jahia.com/tags/languageswitcher" %>
 <%@ taglib prefix="ui" uri="http://www.jahia.org/tags/uiComponentsLib" %>
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="out" type="java.io.PrintWriter"--%>
@@ -46,7 +45,7 @@
                     </a>
                 </c:when>
                 <c:otherwise>
-                        <img src="${imageUrl}" class="img-responsive" alt="alt">
+                    <img src="${imageUrl}" class="img-responsive" alt="alt">
                 </c:otherwise>
             </c:choose>
         </div>

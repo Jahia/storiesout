@@ -25,7 +25,8 @@
             <c:url var="photoUrl" value="${photo.url}"/>
             <a data-toggle="modal" data-target="#modal-${currentNode.identifier}" href="#"
                title="${fn:escapeXml(currentNode.displayableName)}">
-                <img alt="${fn:escapeXml(currentNode.displayableName)}" width="165" height="165" class="img-circle" src="${photoUrl}">
+                <img alt="${fn:escapeXml(currentNode.displayableName)}" width="165" height="165" class="img-circle"
+                     src="${photoUrl}">
             </a>
         </c:if>
     </div>
@@ -64,7 +65,8 @@
 </div>
 
 
-<div class="modal fade" id="modal-${currentNode.identifier}" tabindex="-1" role="dialog" aria-labelledby="modal-${currentNode.identifier}"
+<div class="modal fade" id="modal-${currentNode.identifier}" tabindex="-1" role="dialog"
+     aria-labelledby="modal-${currentNode.identifier}"
      aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -79,7 +81,8 @@
                         <c:set var="photo" value="${currentNode.properties.photo.node}"/>
                         <c:if test="${! empty photo}">
                             <c:url var="photoUrl" value="${photo.url}"/>
-                            <img alt="${fn:escapeXml(currentNode.displayableName)}" width="165" height="165" class="profile-image pull-right img-circle" src="${photoUrl}">
+                            <img alt="${fn:escapeXml(currentNode.displayableName)}" width="165" height="165"
+                                 class="profile-image pull-right img-circle" src="${photoUrl}">
                         </c:if>
                         ${currentNode.properties.bio.string}
                     </div>

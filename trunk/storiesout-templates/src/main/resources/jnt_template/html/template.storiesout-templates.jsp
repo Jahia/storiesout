@@ -41,9 +41,6 @@
     <!-- google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
-    <!-- flexslider CSS http://flexslider.woothemes.com/-->
-    <template:addResources type="css" resources="flexslider.css"/>
-    <template:addResources type="css" resources="gem.css"/>
 
 </head>
 
@@ -54,20 +51,10 @@
 <template:addResources type="javascript" resources="jquery.min.js"/>
 <template:addResources type="javascript" resources="bootstrap.min.js"/>
 <template:addResources type="javascript" resources="ie10-viewport-bug-workaround.js"/>
-<template:addResources type="javascript" resources="jquery.flexslider-min.js"/>
 <template:addResources type="inline">
-<script>
-    // Can also be used with $(document).ready()
-    $(window).load(function () {
-        $('.flexslider').flexslider({
-            animation:"slide",
-            smoothHeight:true
-        });
-    });
-</script>
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54802fa11e909c08"
-        async="async"></script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54802fa11e909c08"
+            async="async"></script>
 
 </template:addResources>
 <template:addResources type="javascript" resources="modernizr.js"/>
