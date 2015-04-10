@@ -22,11 +22,16 @@
 <%--<c:set var="clients" value="${jcr:getChildrenOfType(currentNode, 'sont:client')}"/>--%>
 <c:set var="clients" value="${moduleMap.currentList}"/>
 
-<div class="row client_wrapper">
+<ul class="client-list clearfix">
     <c:forEach items="${clients}" var="client" varStatus="status" begin="${moduleMap.begin}" end="${moduleMap.end}">
-        <template:module node="${client}" nodeTypes="sont:client" editable="true"/>
+        <li class="client-item">
+            <article>
+                <template:module node="${client}" nodeTypes="sont:client" editable="true"/>
+            </article>
+        </li>
     </c:forEach>
-</div>
+</ul>
+
 <c:if test="${renderContext.editMode}">
     <template:module path="*" nodeTypes="sont:client"/>
 </c:if>
