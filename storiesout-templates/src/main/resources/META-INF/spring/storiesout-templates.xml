@@ -5,4 +5,7 @@
     <bean id="linkInitializer" class="org.jahia.modules.components.initializers.LinkInitializer">
         <property name="key" value="linkInitializer"/>
     </bean>
+    <bean id="mediaInitializer" class="org.jahia.modules.components.initializers.MediaInitializer">
+        <property name="key" value="mediaInitializer"/>
+    </bean>
 </beans>
