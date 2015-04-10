@@ -28,10 +28,10 @@
             <c:set var="facebook" value="${siteNode.properties.facebook.string}"/>
             <c:set var="youtube" value="${siteNode.properties.youtube.string}"/>
             <c:set var="displaySocial" value="${currentNode.properties.displaySocial.boolean}"/>
-            <c:if test="${! empty twitter}"><a class="btn btn-twitter" href="${twitter}"> <i class="fa fa-twitter"></i> </a></c:if>
-            <c:if test="${! empty linkedin}"><a class="btn btn-linkedin" href="${linkedin}"> <i class="fa fa-linkedin"></i> </a></c:if>
-            <c:if test="${! empty facebook}"><a class="btn btn-twitter" href="${facebook}"> <i class="fa fa-facebook"></i> </a></c:if>
-            <c:if test="${! empty youtube}"><a class="btn btn-youtube" href="${youtube}"> <i class="fa fa-youtube"></i> </a></c:if>
+            <c:if test="${! empty twitter}"><a class="btn btn-twitter" href="${twitter}"> <i class="fa fa-twitter" style="line-height: 35px;"></i> </a></c:if>
+            <c:if test="${! empty linkedin}"><a class="btn btn-linkedin" href="${linkedin}"> <i class="fa fa-linkedin" style="line-height: 35px;"></i> </a></c:if>
+            <c:if test="${! empty facebook}"><a class="btn btn-twitter" href="${facebook}"> <i class="fa fa-facebook" style="line-height: 35px;"></i> </a></c:if>
+            <c:if test="${! empty youtube}"><a class="btn btn-youtube" href="${youtube}"> <i class="fa fa-youtube" style="line-height: 35px;"></i> </a></c:if>
         </div>
     </c:if>
 </c:if>
