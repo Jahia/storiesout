@@ -27,7 +27,7 @@
                     <c:set var="mediaPicture" value="${currentNode.properties.mediaPicture.node}"/>
                     <c:if test="${! empty mediaPicture}">
                         <c:url var="mediaPictureUrl" value="${mediaPicture.url}"/>
-                        <img src="${mediaPicture}" class="img-responsive"/>
+                        <img src="${mediaPictureUrl}" class="img-responsive"/>
                     </c:if>
                 </c:when>
                 <c:when test="${mediaType eq 'video'}">
