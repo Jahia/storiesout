@@ -214,6 +214,47 @@
                               sectionId="content"/>
                             </pagecontent>
                         </videos>
+                        <client j:applyOn="sont:client"
+                        j:defaultTemplate="true"
+                        j:hiddenTemplate="false"
+                        jcr:primaryType="jnt:contentTemplate">
+                            <j:translation_en jcr:language="en"
+                                    jcr:mixinTypes="mix:title"
+                                    jcr:primaryType="jnt:translation"
+                                    jcr:title="client"/>
+                            <pagecontent jcr:primaryType="jnt:contentList">
+                                <pagecontent jcr:primaryType="jnt:contentList">
+                                    <teaser-page columnsType="customColumns"
+                                     gridClasses="col-md-6,col-md-6 hidden-print"
+                                     gridLayout="fixed-width"
+                                     jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
+                                     jcr:primaryType="bootstrap3nt:columns"
+                                     sectionCssClass="teaser-page"
+                                     sectionElement="section">
+                                        <teaser-page-col0 jcr:primaryType="jnt:contentList">
+                                            <breadcrumb cssClass="breadcrumb-so"
+                                          jcr:mixinTypes="bootstrap3mix:advancedBreadcrumb"
+                                          jcr:primaryType="bootstrap3nt:breadcrumb"/>
+                                            <page-title hx="h1"
+                                          j:view="storiesout"
+                                          jcr:mixinTypes="bootstrap3mix:advancedPageTitle jmix:renderable"
+                                          jcr:primaryType="bootstrap3nt:pageTitle"/>
+                                        </teaser-page-col0>
+                                        <teaser-page-col1 jcr:primaryType="jnt:contentList"/>
+                                    </teaser-page>
+                                    <content columnsType="nogrid"
+                                 gridLayout="fixed-width"
+                                 jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection"
+                                 jcr:primaryType="bootstrap3nt:columns"
+                                 sectionElement="div"
+                                 sectionId="content">
+                                        <content jcr:primaryType="jnt:contentList">
+                                            <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
+                                        </content>
+                                    </content>
+                                </pagecontent>
+                            </pagecontent>
+                        </client>
                 </base>
                     <content-template j:applyOn="jnt:content"
                               j:hiddenTemplate="true"
