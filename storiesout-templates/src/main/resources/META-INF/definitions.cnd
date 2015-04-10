@@ -8,6 +8,19 @@
 
 [somix:component] > jmix:droppableContent, jmix:editorialContent mixin
 
+[somix:internalLink] > jmix:templateMixin  mixin
+   extends=somix:link
+   - linkTitle (string) i18n
+   - internalLink (weakreference, picker[type='page']) < jnt:page
+
+[somix:externalLink] > jmix:templateMixin  mixin
+   extends=somix:link
+   - linkTitle (string) i18n
+   - externalLink (string) = 'http://' i18n
+
+[somix:link] mixin
+ - linkType (string, choicelist[linkInitializer,resourceBundle]) = 'noLink' autocreated < 'internal', 'external','noLink'
+
 [sont:logo] > jnt:content, somix:component
  - siteName (string) mandatory internationalized
  - siteTeaser (string) mandatory internationalized
@@ -16,12 +29,27 @@
 
 [sont:adminBar] > jnt:content, somix:component
 
+[somix:social] mixin
+ - displaySocial (boolean) = true
+
 [sont:social] > jnt:content, somix:component
 
-[sont:jumbotron] > jnt:content, somix:component
+[sont:jumbotron] > jnt:content, somix:component, mix:title, somix:link, somix:social
+ - image (weakreference, picker[type='image']) < jmix:image
+ - lead (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
 
-[sont:homeSlider] > jnt:content, somix:component
-  
+[somix:homeSliderItem] mixin
+
+[sont:homeSliderSplashItem] > jnt:content, somix:homeSliderItem, mix:title, somix:link
+ - image (weakreference, picker[type='image']) < jmix:image
+ - lead (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
+
+[sont:homeSliderFreeItem] > jnt:content, somix:homeSliderItem
+ - free (string, textarea) i18n
+
+[sont:homeSlider] > jnt:content, somix:component, somix:social
+ + * (somix:homeSliderItem)
+
 [sont:profile] > jnt:content, somix:component, mix:title
  - subtitle (string) i18n
  - photo (weakreference, picker[type='image']) < jmix:image

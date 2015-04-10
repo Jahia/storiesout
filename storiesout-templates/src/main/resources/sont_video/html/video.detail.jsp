@@ -20,34 +20,35 @@
 <c:set var="parentNode" value="${jcr:findDisplayableNode(currentNode.parent, renderContext)}"/>
 <c:choose>
     <c:when test="! empty parentNode">
-        <c:url  var="parentUrl" value='${parentNode.url}'/>
+        <c:url var="parentUrl" value='${parentNode.url}'/>
     </c:when>
     <c:otherwise>
         <c:set var="parentUrl">javascript:history.back()</c:set>
     </c:otherwise>
 </c:choose>
-            <div class="col-xs-12 col-sm-12 col-md-3">
+<div class="col-xs-12 col-sm-12 col-md-3">
 
 
-              <p><a href="${parentUrl}" class="btn btn-primary btn-block"><i class="fa fa-angle-left"></i> Retour a
-                    la liste</a></p>
+    <p><a href="${parentUrl}" class="btn btn-primary btn-block"><i class="fa fa-angle-left"></i> Retour a
+        la liste</a></p>
 
 
-                    <h3 class="title">Decription</h3>
+    <h3 class="title">Decription</h3>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit lectus, lacinia eget feugiat
-                        non, consequat et diam. Praesent in odio vitae neque tincidunt congue. Mauris vitae condimentum
-                        nunc. Curabitur porttitor dignissim tempor. In hac habitasse platea dictumst.
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit lectus, lacinia eget feugiat
+        non, consequat et diam. Praesent in odio vitae neque tincidunt congue. Mauris vitae condimentum
+        nunc. Curabitur porttitor dignissim tempor. In hac habitasse platea dictumst.
 
-                    </p>
+    </p>
 
-                    <p>Phasellus leo elit, ultrices fermentum tempor eu, aliquet eu lorem. Vivamus rutrum elementum
-                        odio. Donec eget nibh ut urna mollis bibendum. Maecenas nec neque sodales felis suscipit
-                        hendrerit in sit amet augue. </p>
+    <p>Phasellus leo elit, ultrices fermentum tempor eu, aliquet eu lorem. Vivamus rutrum elementum
+        odio. Donec eget nibh ut urna mollis bibendum. Maecenas nec neque sodales felis suscipit
+        hendrerit in sit amet augue. </p>
 
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-9">
-                <iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&amp;player_id=player_1" width="100%" height="400" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-9">
+    <iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&amp;player_id=player_1" width="100%"
+            height="400" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
-            </div>
+</div>
 
