@@ -71,7 +71,7 @@ itemtype=content
  - facebook (string)
  - google (string)
 
-[sont:job] > jnt:contentList, somix:component, mix:title
+[sont:job] > jnt:content, somix:component, mix:title, jmix:manuallyOrderable, jmix:list
   orderable
  - new (boolean) = false
  + * (jmix:droppableContent) = jmix:droppableContent
@@ -114,7 +114,9 @@ itemtype=content
  - mediaType (string, choicelist[mediaInitializer,resourceBundle]) = 'picture' autocreated < 'picture', 'video'
  - quote  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
  - description  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
- - status (string, choicelist[resourceBundle]) = 'active' autocreated < 'active', 'unactive'
+ - status (string, choicelist[resourceBundle]) = 'active' autocreated facetable < 'active', 'unactive'
+ - clientType (weakreference, choicelist[nodes='/sites/systemsite/categories/clientTypes;jnt:category',sort]) facetable
+ - sector (weakreference, choicelist[nodes='/sites/systemsite/categories/sectors;jnt:category',sort]) multiple facetable
 
 [sont:clients] > jnt:contentList, somix:component, jmix:manuallyOrderable, jmix:list orderable
   orderable

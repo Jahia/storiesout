@@ -277,4 +277,332 @@
                 </home>
         </storiesout-templates>
     </modules>
+    <sites jcr:primaryType="jnt:virtualsitesFolder">
+        <systemsite jcr:primaryType="jnt:virtualsite">
+            <categories jcr:primaryType="jnt:category">
+                <sectors jcr:primaryType="jnt:category">
+                    <accounting-firms jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Accounting firms"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Accounting firms"/>
+                    </accounting-firms>
+                    <agriculture jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Agriculture"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Agriculture"/>
+                    </agriculture>
+                    <auction-houses jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Auction houses"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Auction houses"/>
+                    </auction-houses>
+                    <automotive-motorsports-and-performance jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Automotive motorsports and performance"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Automotive motorsports and performance"/>
+                    </automotive-motorsports-and-performance>
+                    <bookstores jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Bookstores"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Bookstores"/>
+                    </bookstores>
+                    <building-materials jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Building materials"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Building materials"/>
+                    </building-materials>
+                    <cannabis jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Cannabis"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Cannabis"/>
+                    </cannabis>
+                    <chartered jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Chartered"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Chartered"/>
+                    </chartered>
+                    <chemical jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Chemical"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Chemical"/>
+                    </chemical>
+                    <cleaning jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Cleaning"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Cleaning"/>
+                    </cleaning>
+                    <clothing jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Clothing"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Clothing"/>
+                    </clothing>
+                    <cosmetics jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Cosmetics"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Cosmetics"/>
+                    </cosmetics>
+                    <design jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Design"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Design"/>
+                    </design>
+                    <distributors jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Distributors"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Distributors"/>
+                    </distributors>
+                    <dredging jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Dredging"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Dredging"/>
+                    </dredging>
+                    <education jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Education"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Education"/>
+                    </education>
+                    <employment-agencies jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Employment agencies"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Employment agencies"/>
+                    </employment-agencies>
+                    <energy jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Energy"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Energy"/>
+                    </energy>
+                    <entertainment jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Entertainment"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Entertainment"/>
+                    </entertainment>
+                    <ergonomics jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Ergonomics"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Ergonomics"/>
+                    </ergonomics>
+                    <event-management jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Event management"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Event management"/>
+                    </event-management>
+                    <exercise-equipment jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Exercise equipment"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Exercise equipment"/>
+                    </exercise-equipment>
+                    <financial-services jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Financial services"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Financial services"/>
+                    </financial-services>
+                    <financial-technology jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Financial technology"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Financial technology"/>
+                    </financial-technology>
+                    <food jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Food"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Food"/>
+                    </food>
+                    <geophysical jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Geophysical"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Geophysical"/>
+                    </geophysical>
+                    <health-care jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Health care"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Health care"/>
+                    </health-care>
+                    <horticultural jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Horticultural"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Horticultural"/>
+                    </horticultural>
+                    <hospitality jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Hospitality"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Hospitality"/>
+                    </hospitality>
+                    <industrial-company-stubs jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Industrial company stubs"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Industrial company stubs"/>
+                    </industrial-company-stubs>
+                    <industrial-supply jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Industrial supply"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Industrial supply"/>
+                    </industrial-supply>
+                    <jewellery jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Jewellery"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Jewellery"/>
+                    </jewellery>
+                    <land-development jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Land development"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Land development"/>
+                    </land-development>
+                    <manufacturing jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Manufacturing"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Manufacturing"/>
+                    </manufacturing>
+                    <map jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Map"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Map"/>
+                    </map>
+                    <marketing jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Marketing"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Marketing"/>
+                    </marketing>
+                    <media jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Media"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Media"/>
+                    </media>
+                    <meteorological jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Meteorological"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Meteorological"/>
+                    </meteorological>
+                    <military-corporations jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Military corporations"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Military corporations"/>
+                    </military-corporations>
+                    <mining jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Mining"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Mining"/>
+                    </mining>
+                    <modeling-agencies jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Modeling agencies"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Modeling agencies"/>
+                    </modeling-agencies>
+                    <museum jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Museum"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Museum"/>
+                    </museum>
+                    <non-renewable-resource jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Non-renewable resource"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Non-renewable resource"/>
+                    </non-renewable-resource>
+                    <outsourcing jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Outsourcing"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Outsourcing"/>
+                    </outsourcing>
+                    <packaging jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Packaging"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Packaging"/>
+                    </packaging>
+                    <plastics jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Plastics"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Plastics"/>
+                    </plastics>
+                    <polling jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Polling"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Polling"/>
+                    </polling>
+                    <public-relations jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Public relations"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Public relations"/>
+                    </public-relations>
+                    <public-utilities jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Public utilities"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Public utilities"/>
+                    </public-utilities>
+                    <publishing jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Publishing"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Publishing"/>
+                    </publishing>
+                    <rail-industry jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Rail industry"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Rail industry"/>
+                    </rail-industry>
+                    <real-estate jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Real estate"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Real estate"/>
+                    </real-estate>
+                    <renewable-resource jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Renewable resource"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Renewable resource"/>
+                    </renewable-resource>
+                    <risk-management jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Risk management"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Risk management"/>
+                    </risk-management>
+                    <security jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Security"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Security"/>
+                    </security>
+                    <service jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Service"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Service"/>
+                    </service>
+                    <shoe jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Shoe"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Shoe"/>
+                    </shoe>
+                    <signage jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Signage"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Signage"/>
+                    </signage>
+                    <storage jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Storage"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Storage"/>
+                    </storage>
+                    <technology jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Technology"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Technology"/>
+                    </technology>
+                    <textile jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Textile"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Textile"/>
+                    </textile>
+                    <transport jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Transport"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Transport"/>
+                    </transport>
+                    <travel-and-holiday jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Travel and holiday"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Travel and holiday"/>
+                    </travel-and-holiday>
+                    <type-foundries jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation"
+                                          jcr:title="Type foundries"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation"
+                                          jcr:title="Type foundries"/>
+                    </type-foundries>
+                    <waste jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Waste"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Waste"/>
+                    </waste>
+                    <wholesalers jcr:primaryType="jnt:category">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" jcr:title="Wholesalers"/>
+                        <j:translation_fr jcr:language="fr" jcr:primaryType="jnt:translation" jcr:title="Wholesalers"/>
+                    </wholesalers>
+                </sectors>
+                <clientTypes jcr:primaryType="jnt:category">
+                    <b2b jcr:primaryType="jnt:category"/>
+                    <b2c jcr:primaryType="jnt:category"/>
+                </clientTypes>
+            </categories>
+        </systemsite>
+    </sites>
 </content>
