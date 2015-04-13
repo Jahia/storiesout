@@ -38,7 +38,7 @@
         <div class="col-md-6 col-sm-12 ">
             <c:if test="${! empty logo}">
                 <c:url var="logoUrl" value="${logo.url}"/>
-                <p></p><img src="${logoUrl}" class="client-logo" alt="${fn:escapeXml(currentNode.displayableName)}"></p>
+                <p></p><img src="${logoUrl}" class="img-responsive" alt="${fn:escapeXml(currentNode.displayableName)}"></p>
             </c:if>
         </div>
         <div class="col-md-3 col-sm-12 ">
