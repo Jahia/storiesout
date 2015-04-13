@@ -11,7 +11,7 @@
 <c:url var="clientUrl" value="${currentNode.url}"/>
 <c:if test="${! empty logo}">
     <c:url var="logoUrl" value="${logo.url}"/>
-    <a href="${clientUrl}"><img src="${logoUrl}" class="client-logo" alt="${fn:escapeXml(logo.displayableName)}"></a>
+    <a href="${clientUrl}"><img src="${logoUrl}" class="img-responsive" alt="${fn:escapeXml(logo.displayableName)}"></a>
 </c:if>
 
 <p class="client-name" style="word-wrap: break-word;"><a href="${clientUrl}">${currentNode.displayableName}</a></p>
