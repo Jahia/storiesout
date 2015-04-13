@@ -15,7 +15,7 @@
 <%--@elvariable id="acl" type="java.lang.String"--%>
 
 <c:if test="${!empty activeFacetsVars[activeFacetMapVarName]}">
-    <%--<div>--%>
+    <div class="clearfix activefacetsList2">
 </c:if>
 <c:forEach items="${activeFacetsVars[activeFacetMapVarName]}" var="facet" varStatus="activeFacetStat">
     <c:forEach items="${facet.value}" var="facetValue">
@@ -48,5 +48,5 @@
     </c:forEach>
 </c:forEach>
 <c:if test="${!empty activeFacetsVars[activeFacetMapVarName]}">
-    <%--</div>--%>
+    </div>
 </c:if>
