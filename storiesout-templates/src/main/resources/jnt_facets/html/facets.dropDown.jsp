@@ -16,6 +16,7 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <%--@elvariable id="acl" type="java.lang.String"--%>
+<template:addResources type="css" resources="facets.css"/>
 <c:set var="boundComponent" value="${uiComponents:getBindedComponent(currentNode, renderContext, 'j:bindedComponent')}"/>
 <c:if test="${not empty boundComponent}">
     <c:set var="facetParamVarName" value="N-${boundComponent.name}"/>
@@ -212,9 +213,7 @@
                     <%@include file="facetDisplay.jspf"%>
                 </c:forEach>
                 <div>
-                    <div class="clearfix activefacetsList2">
-                        <%@include file="activeFacets.jspf"%>
-                    </div>
+                    <%@include file="activeFacets.jspf"%>
                 </div>
             </div>
         </form>
