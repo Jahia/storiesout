@@ -21,6 +21,16 @@
                 <c:url var="linkUrl" value="${linkNode.url}"/>
             </c:if>
         </c:when>
+        <c:when test="${linkType == 'file'}">
+            <c:set var="linkNode" value="${currentNode.properties.fileLink.node}"/>
+            <c:set var="linkTitle" value="${currentNode.properties.linkTitle.string}"/>
+            <c:if test="${! empty linkNode}">
+                <c:if test="${empty linkTitle}">
+                    <c:set var="linkTitle" value="${linkNode.displayableName}"/>
+                </c:if>
+                <c:url var="linkUrl" value="${linkNode.url}"/>
+            </c:if>
+        </c:when>
         <c:when test="${linkType == 'external'}">
             <c:set var="linkTitle" value="${currentNode.properties.linkTitle.string}"/>
             <c:set var="linkUrl" value="${currentNode.properties.externalLink.string}"/>

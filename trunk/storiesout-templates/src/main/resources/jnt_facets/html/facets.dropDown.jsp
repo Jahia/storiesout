@@ -212,6 +212,9 @@
                 <c:forEach items="${result.facetFields}" var="currentFacet">
                     <%@include file="facetDisplay.jspf"%>
                 </c:forEach>
+                <c:forEach items="${result.facetDates}" var="currentFacet">
+                    <%@include file="facetDisplay.jspf" %>
+                </c:forEach>
                 <div>
                     <%@include file="activeFacets.jspf"%>
                 </div>

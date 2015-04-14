@@ -84,7 +84,7 @@
                             <img alt="${fn:escapeXml(currentNode.displayableName)}" width="165" height="165"
                                  class="profile-image pull-right img-circle" src="${photoUrl}">
                         </c:if>
-                        ${currentNode.properties.bio.string}
+                        ${currentNode.properties.text.string}
                     </div>
                 </div>
             </div>
