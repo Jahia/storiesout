@@ -250,6 +250,17 @@
                                  sectionId="content">
                                         <content jcr:primaryType="jnt:contentList">
                                             <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
+                                            <tab fadeEffect="true"
+                                   jcr:primaryType="bootstrap3nt:tabs"
+                                   navigation="tab">
+                                                <coupures-de-presse jcr:primaryType="jnt:contentList">
+                                                    <j:translation_fr jcr:language="fr"
+                                                      jcr:primaryType="jnt:translation"
+                                                      jcr:title="Coupures de Presse"/>
+                                                    <main-resource-press j:mainResourceView="relatedBuzz"
+                                                         jcr:primaryType="jnt:mainResourceDisplay"/>
+                                                </coupures-de-presse>
+                                            </tab>
                                         </content>
                                     </content>
                                 </pagecontent>

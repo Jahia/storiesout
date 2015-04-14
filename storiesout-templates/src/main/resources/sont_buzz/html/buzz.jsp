@@ -73,7 +73,6 @@
                     <p class="text-right"><a target="${target}" class="btn btn-primary" href="${linkUrl}"><i class="fa fa-external-link"></i> <fmt:message key="sont_buzz.readMore"/></a></p>
                 </c:otherwise>
             </c:choose>
-
         </div>
     </div>
     <hr>
