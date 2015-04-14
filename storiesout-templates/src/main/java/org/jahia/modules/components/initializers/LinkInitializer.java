@@ -48,6 +48,11 @@ public class LinkInitializer extends AbstractChoiceListRenderer implements Modul
         myPropertiesMap.put("addMixin", "somix:externalLink");
         myChoiceList.add(new ChoiceListValue("external", myPropertiesMap, new ValueImpl("external", PropertyType.STRING, false)));
 
+        //link file
+        myPropertiesMap = new HashMap<String, Object>();
+        myPropertiesMap.put("addMixin", "somix:fileLink");
+        myChoiceList.add(new ChoiceListValue("file", myPropertiesMap, new ValueImpl("file", PropertyType.STRING, false)));
+
         //no link
         myPropertiesMap = new HashMap<String, Object>();
         myChoiceList.add(new ChoiceListValue("noLink", myPropertiesMap, new ValueImpl("noLink", PropertyType.STRING, false)));

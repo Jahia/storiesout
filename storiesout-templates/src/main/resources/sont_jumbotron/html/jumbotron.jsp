@@ -13,7 +13,7 @@
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 
 <c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>
-<c:set var="lead" value="${currentNode.properties.lead.string}"/>
+<c:set var="text" value="${currentNode.properties.text.string}"/>
 <c:set var="image" value="${currentNode.properties.image.node}"/>
 
 <c:choose>
@@ -33,7 +33,7 @@
                     <c:if test="${! empty title}">
                         <h2>${title}</h2>
                     </c:if>
-                    ${lead}
+                    ${text}
                     <template:include view="link-btn"/>
                 </div>
                 <div class="col-md-6">

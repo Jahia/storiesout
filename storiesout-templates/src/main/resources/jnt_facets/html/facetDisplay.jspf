@@ -20,7 +20,7 @@
 					<c:param name="${facetParamVarName}" value="${functions:encodeUrlParam(facet:getFacetDrillDownUrl(facetValue, activeFacetsVars[facetParamVarName]))}"/>
 				</c:url>
 				<option value="${facetUrl}">
-					<facet:facetValueLabel currentFacetField="${currentFacet}" facetValueCount="${facetValue}" facetValueLabels="${facetValueLabels}" facetValueFormats="${facetValueFormats}" facetValueRenderers="${facetValueRenderers}" facetValueNodeTypes="${facetValueNodeTypes}"/>
+					<facet:facetValueLabel currentFacetFieldName="${currentFacet.name}" facetValueCount="${facetValue}" facetValueLabels="${facetValueLabels}" facetValueFormats="${facetValueFormats}" facetValueRenderers="${facetValueRenderers}" facetValueNodeTypes="${facetValueNodeTypes}"/>
 				 (${facetValue.count})</option>
 			</c:if>
 		</c:forEach>

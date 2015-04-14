@@ -4,7 +4,7 @@
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>
-<c:set var="lead" value="${currentNode.properties.lead.string}"/>
+<c:set var="text" value="${currentNode.properties.text.string}"/>
 <c:set var="image" value="${currentNode.properties.image.node}"/>
 
 <c:choose>
@@ -18,7 +18,7 @@
             </div>
             <div class="media-body">
                 <h4 class="media-heading">${title}</h4>
-                    ${lead}
+                    ${text}
                 <template:include view="link"/>
             </div>
         </div>
@@ -29,7 +29,7 @@
                 <c:if test="${! empty title}">
                     <h2>${title}</h2>
                 </c:if>
-                    ${lead}
+                    ${text}
                 <template:include view="link-btn"/>
             </div>
             <div class="carousel-img">

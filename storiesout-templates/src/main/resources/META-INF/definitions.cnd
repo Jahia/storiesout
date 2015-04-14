@@ -7,6 +7,12 @@
 
 [somix:component] > jmix:droppableContent, jmix:editorialContent mixin
 
+[somix:text] mixin
+ - text  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
+
+[somix:image] mixin
+ - image (weakreference, picker[type='image']) < jmix:image
+
 [somix:socialLinks] mixin
 extends=jnt:virtualsite
 itemtype=content
@@ -30,8 +36,13 @@ itemtype=content
    - linkTitle (string) i18n
    - externalLink (string) = 'http://' i18n
 
+[somix:fileLink] > jmix:templateMixin  mixin
+   extends=somix:link
+   - linkTitle (string) i18n
+   - fileLink (weakreference) internationalized < 'jnt:file'
+
 [somix:link] mixin
- - linkType (string, choicelist[linkInitializer,resourceBundle]) = 'noLink' autocreated < 'internal', 'external','noLink'
+ - linkType (string, choicelist[linkInitializer,resourceBundle]) = 'noLink' autocreated < 'internal', 'external', 'file', 'noLink'
 
 [sont:logo] > jnt:content, somix:component
  - siteName (string) mandatory internationalized
@@ -46,15 +57,14 @@ itemtype=content
 
 [sont:social] > jnt:content, somix:component, somix:social
 
-[sont:jumbotron] > jnt:content, somix:component, mix:title, somix:link, somix:social
+[sont:jumbotron] > jnt:content, somix:component, mix:title, somix:link, somix:social, somix:text
  - image (weakreference, picker[type='image']) < jmix:image
- - lead (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
+
 
 [somix:homeSliderItem] mixin
 
-[sont:homeSliderSplashItem] > jnt:content, somix:homeSliderItem, mix:title, somix:link
+[sont:homeSliderSplashItem] > jnt:content, somix:homeSliderItem, mix:title, somix:text, somix:link
  - image (weakreference, picker[type='image']) < jmix:image
- - lead (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
 
 [sont:homeSliderFreeItem] > jnt:content, somix:homeSliderItem
  - free (string, textarea) i18n
@@ -63,11 +73,10 @@ itemtype=content
  orderable
  + * (somix:homeSliderItem)
 
-[sont:profile] > jnt:content, somix:component, mix:title
+[sont:profile] > jnt:content, somix:component, mix:title, somix:text
  - subtitle (string) i18n
  - photo (weakreference, picker[type='image']) < jmix:image
- - bio (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
- - twitter (string) 
+ - twitter (string)
  - facebook (string)
  - google (string)
 
@@ -110,6 +119,7 @@ itemtype=content
   - mediaVideo (string,textarea)
 
 [sont:client] > jnt:content, somix:component, mix:title
+ - jcr:title (string)
  - logo (weakreference, picker[type='image']) < jmix:image
  - mediaType (string, choicelist[mediaInitializer,resourceBundle]) = 'picture' autocreated < 'picture', 'video'
  - quote  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
@@ -122,3 +132,11 @@ itemtype=content
   orderable
 + * (sont:client)
 
+[somix:tilt] > mix:title, somix:link, somix:image, somix:text mixin
+
+[somix:calendarEntry] > somix:tilt, mix:referenceable
+ - date (date) = now() facetable
+
+[sont:buzz] > jnt:content, somix:calendarEntry, somix:component
+ - author (string)
+ - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable
