@@ -19,7 +19,7 @@
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <c:set var="parentNode" value="${jcr:findDisplayableNode(currentNode.parent, renderContext)}"/>
 <c:choose>
-    <c:when test="! empty parentNode">
+    <c:when test="${! empty parentNode}">
         <c:url var="parentUrl" value='${parentNode.url}'/>
     </c:when>
     <c:otherwise>
