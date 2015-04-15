@@ -5,7 +5,6 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="jcr" uri="http://www.jahia.org/tags/jcr" %>
 
-<c:set var="logo" value="${currentNode.properties.logo.node}"/>
 
 <c:set var="parentNode" value="${jcr:findDisplayableNode(currentNode.parent, renderContext)}"/>
 <c:choose>
@@ -36,6 +35,7 @@
             </c:choose>
         </div>
         <div class="col-md-6 col-sm-12 ">
+            <c:set var="logo" value="${currentNode.properties.logoBig.node}"/>
             <c:if test="${! empty logo}">
                 <c:url var="logoUrl" value="${logo.url}"/>
                 <p></p><img src="${logoUrl}" class="img-responsive" alt="${fn:escapeXml(currentNode.displayableName)}"></p>
