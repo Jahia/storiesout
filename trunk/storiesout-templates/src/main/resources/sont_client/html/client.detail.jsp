@@ -7,7 +7,7 @@
 
 <c:set var="parentNode" value="${jcr:findDisplayableNode(renderContext.mainResource.node.parent, renderContext)}"/>
 <c:choose>
-    <c:when test="! empty parentNode">
+    <c:when test="${! empty parentNode}">
         <c:url var="parentUrl" value='${parentNode.url}'/>
     </c:when>
     <c:otherwise>
