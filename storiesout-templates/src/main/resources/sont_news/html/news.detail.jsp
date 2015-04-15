@@ -28,7 +28,7 @@
     </c:otherwise>
 </c:choose>
 
-<p><a href="${parentNode}" class="btn btn-primary"><i class="fa fa-angle-left"></i> <fmt:message key="sont_news.backToList"/></a></p>
+<p><a href="${parentUrl}" class="btn btn-primary"><i class="fa fa-angle-left"></i> <fmt:message key="sont_news.backToList"/></a></p>
 <c:set var="imageNode" value="${currentNode.properties.image.node}"/>
 <c:if test="${! empty imageNode}">
     <div class="img-float-left border-gray">
