@@ -21,11 +21,6 @@ itemtype=content
  - facebook (string)
  - youtube (string)
 
-[somix:clients] mixin
-extends=jnt:virtualsite
-itemtype=content
- - clients (weakreference, picker[type='editorial'])
-
 [somix:internalLink] > jmix:templateMixin  mixin
    extends=somix:link
    - linkTitle (string) i18n
@@ -139,4 +134,7 @@ itemtype=content
 
 [sont:buzz] > jnt:content, somix:calendarEntry, somix:component
  - author (string)
+ - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable
+
+[sont:news] > jnt:content, somix:calendarEntry, somix:component
  - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable

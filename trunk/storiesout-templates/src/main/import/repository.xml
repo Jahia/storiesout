@@ -249,23 +249,80 @@
                                  sectionElement="div"
                                  sectionId="content">
                                         <content jcr:primaryType="jnt:contentList">
-                                            <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
                                             <tab fadeEffect="true"
                                    jcr:primaryType="bootstrap3nt:tabs"
                                    navigation="tab">
-                                                <coupures-de-presse jcr:primaryType="jnt:contentList">
+                                                <buzz jcr:primaryType="jnt:contentList">
+                                                    <j:translation_en jcr:language="en"
+                                                      jcr:mixinTypes="mix:title"
+                                                                      jcr:primaryType="jnt:translation"
+                                                                      jcr:title="Buzz"/>
                                                     <j:translation_fr jcr:language="fr"
+                                                      jcr:mixinTypes="mix:title"
                                                       jcr:primaryType="jnt:translation"
                                                       jcr:title="Coupures de Presse"/>
                                                     <main-resource-press j:mainResourceView="relatedBuzz"
                                                          jcr:primaryType="jnt:mainResourceDisplay"/>
-                                                </coupures-de-presse>
+                                                </buzz>
+                                                <news jcr:primaryType="jnt:contentList">
+                                                    <j:translation_en jcr:language="en"
+                                                      jcr:mixinTypes="mix:title"
+                                                      jcr:primaryType="jnt:translation"
+                                                      jcr:title="News"/>
+                                                    <j:translation_fr jcr:language="fr"
+                                                      jcr:mixinTypes="mix:title"
+                                                      jcr:primaryType="jnt:translation"
+                                                      jcr:title="Communiqués de Presse"/>
+                                                    <main-resource-display j:mainResourceView="relatedNews"
+                                                           jcr:primaryType="jnt:mainResourceDisplay"/>
+                                                </news>
                                             </tab>
                                         </content>
                                     </content>
                                 </pagecontent>
                             </pagecontent>
                         </client>
+                        <news j:applyOn="sont:news"
+                         j:defaultTemplate="true"
+                         j:hiddenTemplate="false"
+                         jcr:primaryType="jnt:contentTemplate">
+                            <j:translation_en jcr:language="en"
+                                    jcr:mixinTypes="mix:title"
+                                    jcr:primaryType="jnt:translation"/>
+                            <pagecontent jcr:primaryType="jnt:contentList">
+                                <pagecontent jcr:primaryType="jnt:contentList">
+                                    <teaser-page columnsType="customColumns"
+                                     gridClasses="col-md-6,col-md-6 hidden-print"
+                                     gridLayout="fixed-width"
+                                     jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
+                                     jcr:primaryType="bootstrap3nt:columns"
+                                     sectionCssClass="teaser-page"
+                                     sectionElement="section">
+                                        <teaser-page-col0 jcr:primaryType="jnt:contentList">
+                                            <breadcrumb cssClass="breadcrumb-so"
+                                          jcr:mixinTypes="bootstrap3mix:advancedBreadcrumb"
+                                          jcr:primaryType="bootstrap3nt:breadcrumb"/>
+                                            <page-title hx="h1"
+                                          j:view="storiesout"
+                                          jcr:mixinTypes="bootstrap3mix:advancedPageTitle jmix:renderable"
+                                          jcr:primaryType="bootstrap3nt:pageTitle"/>
+                                            <main-resource-display j:mainResourceView="date" jcr:primaryType="jnt:mainResourceDisplay"/>
+                                        </teaser-page-col0>
+                                        <teaser-page-col1 jcr:primaryType="jnt:contentList"/>
+                                    </teaser-page>
+                                    <content columnsType="nogrid"
+                                 gridLayout="fixed-width"
+                                 jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection"
+                                 jcr:primaryType="bootstrap3nt:columns"
+                                 sectionElement="div"
+                                 sectionId="content">
+                                        <content jcr:primaryType="jnt:contentList">
+                                            <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
+                                        </content>
+                                    </content>
+                                </pagecontent>
+                            </pagecontent>
+                        </news>
                 </base>
                     <content-template j:applyOn="jnt:content"
                               j:hiddenTemplate="true"
