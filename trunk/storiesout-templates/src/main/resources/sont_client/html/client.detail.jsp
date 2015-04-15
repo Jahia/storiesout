@@ -5,10 +5,12 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="jcr" uri="http://www.jahia.org/tags/jcr" %>
 
-<c:set var="parentNode" value="${jcr:findDisplayableNode(renderContext.mainResource.node.parent, renderContext)}"/>
+
+
+<c:set var="parentPage" value="${jcr:getParentOfType(renderContext.mainResource.node, 'jnt:page')}" />
 <c:choose>
-    <c:when test="${! empty parentNode}">
-        <c:url var="parentUrl" value='${parentNode.url}'/>
+    <c:when test="${! empty parentPage}">
+        <c:url var="parentUrl" value='${parentPage.url}'/>
     </c:when>
     <c:otherwise>
         <c:set var="parentUrl">javascript:history.back()</c:set>
