@@ -1227,3 +1227,6 @@ body.error-page .logo {
     margin-top: 50px;
     display: inline-block
 }
+.tab-content {
+    padding-top:15px;
+}
