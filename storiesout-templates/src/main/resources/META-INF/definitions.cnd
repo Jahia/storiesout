@@ -116,6 +116,7 @@ itemtype=content
 [sont:client] > jnt:content, somix:component, mix:title
  - jcr:title (string)
  - logo (weakreference, picker[type='image']) < jmix:image
+ - logoBig (weakreference, picker[type='image']) < jmix:image
  - mediaType (string, choicelist[mediaInitializer,resourceBundle]) = 'picture' autocreated < 'picture', 'video'
  - quote  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
  - description  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
