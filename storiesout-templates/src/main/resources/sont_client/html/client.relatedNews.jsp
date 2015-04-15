@@ -19,5 +19,5 @@
 <c:set var="query" value="select * from [sont:news] as news where news.[relatedClient]='${currentNode.identifier}' order by news.[date] desc"/>
 <jcr:sql var="newsList" sql="${query}" limit="${limit}" offset="${paginationIndex}"/>
 <c:forEach items="${newsList.nodes}" var="news">
-    <template:module path="${news.path}" view="media" editable="false"/>
+    <template:module path="${news.path}" view="default" editable="false"/>
 </c:forEach>
