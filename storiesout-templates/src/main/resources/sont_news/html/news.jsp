@@ -17,7 +17,7 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
-
+<c:url var="linkUrl" value="${currentNode.url}"/>
 <div class="press-item">
 
     <h3 class="title"><a href="${linkUrl}" target="_blank">${currentNode.displayableName}</a></h3>
@@ -45,8 +45,8 @@
                 </div>
             </c:if>
             <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
-            <c:url var="readMore" value="${currentNode.url}"/>
-            <p class="text-right"><a class="btn btn-primary" href="${readMore}"><i class="fa fa-external-link"></i> <fmt:message key="sont_buzz.readMore"/></a></p>
+
+            <p class="text-right"><a class="btn btn-primary" href="${linkUrl}"><i class="fa fa-external-link"></i> <fmt:message key="sont_buzz.readMore"/></a></p>
         </div>
     </div>
     <hr>
