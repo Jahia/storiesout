@@ -17,15 +17,16 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
-<c:set var="parentNode" value="${jcr:findDisplayableNode(currentNode.parent, renderContext)}"/>
+<c:set var="parentPage" value="${jcr:getParentOfType(renderContext.mainResource.node, 'jnt:page')}" />
 <c:choose>
-    <c:when test="${! empty parentNode}">
-        <c:url var="parentUrl" value='${parentNode.url}'/>
+    <c:when test="${! empty parentPage}">
+        <c:url var="parentUrl" value='${parentPage.url}'/>
     </c:when>
     <c:otherwise>
         <c:set var="parentUrl">javascript:history.back()</c:set>
     </c:otherwise>
 </c:choose>
+
 <div class="col-xs-12 col-sm-12 col-md-3">
 
 
