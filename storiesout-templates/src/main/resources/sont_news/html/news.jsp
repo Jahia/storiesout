@@ -20,7 +20,7 @@
 <c:url var="linkUrl" value="${currentNode.url}"/>
 <div class="press-item">
 
-    <h3 class="title"><a href="${linkUrl}" target="_blank">${currentNode.displayableName}</a></h3>
+    <h3 class="title"><a href="${linkUrl}">${currentNode.displayableName}</a></h3>
     <c:set var="date" value="${currentNode.properties.date.time}"/>
     <fmt:formatDate value="${date}" pattern="MMMM" var="month"/>
     <fmt:formatDate value="${date}" pattern="d" var="day"/>
