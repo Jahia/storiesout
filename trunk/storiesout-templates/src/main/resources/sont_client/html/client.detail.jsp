@@ -5,8 +5,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="jcr" uri="http://www.jahia.org/tags/jcr" %>
 
-
-<c:set var="parentNode" value="${jcr:findDisplayableNode(currentNode.parent, renderContext)}"/>
+<c:set var="parentNode" value="${jcr:findDisplayableNode(renderContext.mainResource.node.parent, renderContext)}"/>
 <c:choose>
     <c:when test="! empty parentNode">
         <c:url var="parentUrl" value='${parentNode.url}'/>
