@@ -44,9 +44,16 @@
                     </a>
                 </div>
             </c:if>
-            <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
-
-            <p class="text-right"><a class="btn btn-primary" href="${linkUrl}"><i class="fa fa-external-link"></i> <fmt:message key="sont_buzz.readMore"/></a></p>
+            <c:set var="shortText" value="${currentNode.properties.shortText.string}"/>
+            <c:choose>
+                <c:when test="${! empty fn:trim(functions:removeHtmlTags(shortText))}">
+                    ${shortText}
+                </c:when>
+                <c:otherwise>
+                    <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
+                </c:otherwise>
+            </c:choose>
+            <p class="text-right"><a class="btn btn-primary" href="${linkUrl}"><i class="fa fa-external-link"></i> <fmt:message key="sont_news.readMore"/></a></p>
         </div>
     </div>
     <hr>
