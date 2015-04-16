@@ -138,4 +138,5 @@ itemtype=content
  - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable
 
 [sont:news] > jnt:content, somix:calendarEntry, somix:component
+ - shortText  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
  - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable
