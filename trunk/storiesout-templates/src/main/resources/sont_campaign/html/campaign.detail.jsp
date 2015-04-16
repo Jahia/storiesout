@@ -64,16 +64,7 @@
         </c:if>
 
         <div class="col-sm-12">
-            <c:set var="shortText" value="${currentNode.properties.shortText.string}"/>
-            <c:choose>
-                <c:when test="${! empty fn:trim(functions:removeHtmlTags(shortText))}">
-                    ${shortText}
-                </c:when>
-                <c:otherwise>
-                    <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
-                </c:otherwise>
-            </c:choose>
-            <a class="btn btn-primary btn-xs" href="${linkUrl}"> <fmt:message key="sont_campaign.readMore"/></a>
+            ${currentNode.properties.text.string}
         </div>
     </div>
     <hr>
