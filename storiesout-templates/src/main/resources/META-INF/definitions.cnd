@@ -123,7 +123,7 @@ itemtype=content
   extends=sont:client
   - mediaVideo (string,textarea)
 
-[sont:client] > jnt:content, somix:component, mix:title
+[sont:client] > jnt:content, mix:title
  - jcr:title (string)
  - logo (weakreference, picker[type='image']) < jmix:image
  - logoBig (weakreference, picker[type='image']) < jmix:image
@@ -143,16 +143,17 @@ itemtype=content
 
 [somix:calendarEntry] > somix:tilt, mix:referenceable
  - date (date) = now() facetable
+ - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable
+
 
 [sont:buzz] > jnt:content, somix:calendarEntry, somix:component
  - author (string)
- - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable
  - relatedCampaign (weakreference,choicelist[script=getCampaign.groovy]) multiple facetable
 
 [sont:news] > jnt:content, somix:calendarEntry, somix:component
  - shortText  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
- - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable
  - relatedCampaign (weakreference,choicelist[script=getCampaign.groovy]) multiple facetable
 
 [sont:campaign] > jnt:content, somix:calendarEntry, somix:component
- - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable
+ - shortText  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
+ - author (string)
