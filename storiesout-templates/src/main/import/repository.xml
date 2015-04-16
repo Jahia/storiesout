@@ -244,12 +244,35 @@
                                     </teaser-page>
                                     <content columnsType="nogrid"
                                  gridLayout="fixed-width"
-                                 jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection"
+                                 jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createSection"
                                  jcr:primaryType="bootstrap3nt:columns"
                                  sectionElement="div"
                                  sectionId="content">
                                         <content jcr:primaryType="jnt:contentList">
-                                            <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
+                                            <header columnsType="customColumns"
+                                      gridClasses="col-md-3 col-sm-12,col-md-6 col-sm-12,col-md-3 col-sm-12"
+                                      jcr:mixinTypes="bootstrap3mix:createRow bootstrap3mix:customColumns"
+                                      jcr:primaryType="bootstrap3nt:columns">
+                                                <header-col0 jcr:primaryType="jnt:contentList">
+                                                    <main-resource-display j:mainResourceView="media" jcr:primaryType="jnt:mainResourceDisplay"/>
+                                                </header-col0>
+                                                <header-col1 jcr:primaryType="jnt:contentList">
+                                                    <main-resource-display j:mainResourceView="logo" jcr:primaryType="jnt:mainResourceDisplay"/>
+                                                </header-col1>
+                                                <header-col2 jcr:primaryType="jnt:contentList">
+                                                    <main-resource-display j:mainResourceView="quote" jcr:primaryType="jnt:mainResourceDisplay"/>
+                                                </header-col2>
+                                            </header>
+                                            <main columnsType="customColumns"
+                                    gridClasses="col-md-9 col-sm-12 , col-md-3 col-sm-12"
+                                    jcr:mixinTypes="bootstrap3mix:createRow bootstrap3mix:customColumns"
+                                    jcr:primaryType="bootstrap3nt:columns">
+                                                <main-col0 jcr:primaryType="jnt:contentList">
+                                                    <main-resource-display j:mainResourceView="description"
+                                                           jcr:primaryType="jnt:mainResourceDisplay"/>
+                                                </main-col0>
+                                                <main-col1 jcr:primaryType="jnt:contentList">
+                                                    <side j:allowedTypes="" jcr:primaryType="jnt:area"/>
                                             <tab fadeEffect="true"
                                    jcr:primaryType="bootstrap3nt:tabs"
                                    navigation="tab">
@@ -257,11 +280,11 @@
                                                     <j:translation_en jcr:language="en"
                                                       jcr:mixinTypes="mix:title"
                                                       jcr:primaryType="jnt:translation"
-                                                      jcr:title="Buzz"/>
+                                                      jcr:title="Clipping"/>
                                                     <j:translation_fr jcr:language="fr"
                                                       jcr:mixinTypes="mix:title"
                                                       jcr:primaryType="jnt:translation"
-                                                      jcr:title="Coupures de Presse"/>
+                                                      jcr:title="Retombées"/>
                                                     <main-resource-press j:mainResourceView="relatedBuzz"
                                                          jcr:primaryType="jnt:mainResourceDisplay"/>
                                                 </buzz>
@@ -269,15 +292,17 @@
                                                     <j:translation_en jcr:language="en"
                                                       jcr:mixinTypes="mix:title"
                                                       jcr:primaryType="jnt:translation"
-                                                      jcr:title="News"/>
+                                                      jcr:title="Press releases"/>
                                                     <j:translation_fr jcr:language="fr"
                                                       jcr:mixinTypes="mix:title"
                                                       jcr:primaryType="jnt:translation"
-                                                      jcr:title="Communiqués de Presse"/>
+                                                      jcr:title="Communiqués"/>
                                                     <main-resource-display j:mainResourceView="relatedNews"
                                                            jcr:primaryType="jnt:mainResourceDisplay"/>
                                                 </news>
                                             </tab>
+                                                </main-col1>
+                                            </main>
                                         </content>
                                     </content>
                                 </pagecontent>

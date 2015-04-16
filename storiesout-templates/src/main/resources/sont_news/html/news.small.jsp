@@ -18,18 +18,10 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <c:url var="linkUrl" value="${currentNode.url}"/>
-<div class="media">
-    <div class="media-left media-middle">
-        <c:set var="imageNode" value="${currentNode.properties.image.node}"/>
-        <c:if test="${! empty imageNode}">
-            <a href="${linkUrl}" target="${target}">
-                <c:url var="imageUrl" value="${imageNode.url}"/>
-                <a href="${linkUrl}"><img class="img-responsive media-object" alt="${imageNode.displayableName}" src="${imageUrl}"></a>
-            </a>
-        </c:if>
-    </div>
-    <div class="media-body">
-        <h4 class="media-heading"><a href="${linkUrl}">${currentNode.displayableName}</a></h4>
-        <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
-    </div>
-</div>
+<c:set var="date" value="${currentNode.properties.date.time}"/>
+<fmt:formatDate value="${date}" pattern="MMMM" var="month"/>
+<fmt:formatDate value="${date}" pattern="d" var="day"/>
+<fmt:formatDate value="${date}" pattern="yyyy" var="year"/>
+
+<p><strong><a href="${linkUrl}">${currentNode.displayableName}</a></strong> <small>${month} ${day}, ${year}</small><br/>
+${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>

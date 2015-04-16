@@ -21,6 +21,16 @@ itemtype=content
  - facebook (string)
  - youtube (string)
 
+[somix:newsList] mixin
+extends=jnt:virtualsite
+itemtype=content
+ - newsList (weakreference) mandatory
+
+[somix:buzzList] mixin
+extends=jnt:virtualsite
+itemtype=content
+ - buzzList (weakreference) mandatory
+
 [somix:internalLink] > jmix:templateMixin  mixin
    extends=somix:link
    - linkTitle (string) i18n
@@ -123,6 +133,7 @@ itemtype=content
  - status (string, choicelist[resourceBundle]) = 'active' autocreated facetable < 'active', 'unactive'
  - clientType (weakreference, choicelist[nodes='/sites/systemsite/categories/clientTypes;jnt:category',sort]) facetable
  - sector (weakreference, choicelist[nodes='/sites/systemsite/categories/sectors;jnt:category',sort]) multiple facetable
+ + * (jmix:droppableContent) = jmix:droppableContent
 
 [sont:clients] > jnt:contentList, somix:component, jmix:manuallyOrderable, jmix:list orderable
   orderable
@@ -136,7 +147,12 @@ itemtype=content
 [sont:buzz] > jnt:content, somix:calendarEntry, somix:component
  - author (string)
  - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable
+ - relatedCampaign (weakreference,choicelist[script=getCampaign.groovy]) multiple facetable
 
 [sont:news] > jnt:content, somix:calendarEntry, somix:component
  - shortText  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
+ - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable
+ - relatedCampaign (weakreference,choicelist[script=getCampaign.groovy]) multiple facetable
+
+[sont:campaign] > jnt:content, somix:calendarEntry, somix:component
  - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable

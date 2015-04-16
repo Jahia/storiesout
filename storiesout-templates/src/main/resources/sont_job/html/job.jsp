@@ -17,11 +17,10 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
-<%-- TODO: Hardcoded --%>
 <div class="job clearfix">
   <h2 id="${currentNode.identifier}">${currentNode.displayableName}
     <c:if test="${currentNode.properties.new.boolean == true}">
-        <small><span class="label label-primary">New</span></small>
+        <small><span class="label label-primary"><fmt:message key="sont_job.new"/></span></small>
     </c:if>
     </h2>
         <c:forEach items="${jcr:getChildrenOfType(currentNode, 'jmix:droppableContent')}" var="droppableContent">
