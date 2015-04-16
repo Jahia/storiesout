@@ -30,6 +30,12 @@
         <p>
             <i class="fa fa-calendar"></i>
             <span>${month} ${day}, ${year}</span>
+            <c:forEach items="${currentNode.properties.relatedClient}" var="client">
+                <c:set var="clientNode" value="${client.node}"/>
+                <i class="fa fa-thumb-tack" style="padding-left:10px"></i>
+                <c:url var="clientUrl" value="${clientNode.url}"/>
+                <a href="${clientUrl}">${clientNode.displayableName}</a>
+            </c:forEach>
         </p>
     </div>
     <div class="clearfix">
