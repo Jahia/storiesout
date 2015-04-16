@@ -18,40 +18,26 @@
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <c:set var="siteNode" value="${currentNode.resolveSite}"/>
 <c:choose>
-    <c:when test="${jcr:isNodeType(siteNode,'somix:buzzList')}">
-        <c:set var="buzzList" value="${siteNode.properties.buzzList.node}"/>
-        <c:if test="${! empty buzzList}">
-            <c:set var="listName" value="${buzzList.name}"/>
-            <c:set var="parentPage" value="${jcr:getParentOfType(buzzList, 'jnt:page')}"/>
-
-            <c:set var="identifier" value="${currentNode.identifier}"/>
-            <c:set var="identifier2" value="${fn:replace(identifier, '-', '\\\-')}"/>
-            <c:set var="qs" value="relatedClient###"/>
-            <c:set var="qs" value="${qs}${identifier}"/>
-            <c:set var="qs" value="${qs}###0\\\:FACET\\\:relatedClient:${identifier2}"/>
-            <%
-                String qs = (String) pageContext.findAttribute("qs");
-                String encodedParams = org.jahia.utils.Url.encodeUrlParam(qs);
-                pageContext.setAttribute("encodedParams", encodedParams);
-            %>
-            <c:url var="allClientNews" value="${parentPage.url}">
-                <c:param name="N-${listName}" value="${encodedParams}"/>
-            </c:url>
+    <c:when test="${jcr:isNodeType(siteNode,'somix:newsList')}">
+        <c:set var="newsList" value="${siteNode.properties.newsList.node}"/>
+        <c:if test="${! empty newsList}">
+            <c:set var="parentPage" value="${jcr:getParentOfType(newsList, 'jnt:page')}"/>
+            <c:url var="allClientNews" value="${parentPage.url}"/>
             <p class="text-right"><a class="btn btn-primary btn-xs" href="${allClientNews}"><i
-            class="fa fa-plus-circle"></i>&nbsp;<fmt:message key="sont_client.allBuzz"/></a>
+            class="fa fa-plus-circle"></i>&nbsp;<fmt:message key="sont_client.allNews"/></a>
         </c:if>
     </c:when>
     <c:otherwise>
         <c:if test="${renderContext.editMode}">
             <div class="alert alert-danger">
-                Well well well... I think that the buzz list has not been set in the site properties.
+                Well well well... I think that the news list has not been set in the site properties.
             </div>
         </c:if>
     </c:otherwise>
 </c:choose>
 
-<c:set var="query" value="select * from [sont:buzz] as buzz where buzz.[relatedCampaign]='${currentNode.identifier}' order by buzz.[date] desc"/>
-<jcr:sql var="buzzList" sql="${query}"/>
-<c:forEach items="${buzzList.nodes}" var="buzz">
-    <template:module path="${buzz.path}" view="small" editable="false"/>
+<c:set var="query" value="select * from [sont:news] as news where news.[relatedCampaign]='${currentNode.identifier}' order by news.[date] desc"/>
+<jcr:sql var="newsList" sql="${query}"/>
+<c:forEach items="${newsList.nodes}" var="news">
+    <template:module path="${news.path}" editable="false"/>
 </c:forEach>
