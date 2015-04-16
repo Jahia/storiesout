@@ -38,7 +38,7 @@ public class SwitchToLanguageTag extends AbstractJahiaTag {
                 buff.append(" active");
             }
             buff.append("\" title=\"").append(displayLanguage).append("\" href=\"").append(link).
-                    append("\"><img src=\"/modules/storiesout-templates/img/").append(languageCode.toUpperCase()).
+                    append("\"><img src=\"/modules/storiesout-templates/img/").append(languageCode.toLowerCase()).
                     append(".png\" alt=\"").append(displayLanguage).append("\"></a>");
 
             pageContext.getOut().print(buff.toString());
