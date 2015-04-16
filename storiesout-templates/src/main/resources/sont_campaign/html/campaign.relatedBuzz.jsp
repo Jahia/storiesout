@@ -36,7 +36,7 @@
     </c:otherwise>
 </c:choose>
 
-<c:set var="query" value="select * from [sont:buzz] as buzz where buzz.[relatedClient]='${currentNode.identifier}' order by buzz.[date] desc"/>
+<c:set var="query" value="select * from [sont:buzz] as buzz where buzz.[relatedCampaign]='${currentNode.identifier}' order by buzz.[date] desc"/>
 <jcr:sql var="buzzList" sql="${query}" limit="4"/>
 <c:forEach items="${buzzList.nodes}" var="buzz">
     <template:module path="${buzz.path}" editable="false"/>
