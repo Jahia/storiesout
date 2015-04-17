@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
     <modules jcr:primaryType="jnt:modules">
-        <storiesout-templates j:dependencies="bootstrap3-components default font-awesome"
+        <storiesout-templates j:dependencies="bootstrap3-components default font-awesome search"
                             j:installedModules="storiesout-templates"
                             j:modulePriority="0"
                             j:moduleType="templatesSet"
@@ -52,7 +52,7 @@
                                 </header-col1>
                             </header>
                             <navigation-menu j:view="storiesout"
-                                   jcr:mixinTypes="bootstrap3mix:navbarAdvanced jmix:renderable"
+                                   jcr:mixinTypes="bootstrap3mix:navbarAdvanced jmix:layoutComponentContent jmix:renderable"
                                    jcr:primaryType="bootstrap3nt:navbar"
                                    navbarClass="navbar navbar-default navbar-static-top navbar-inverse hidden-print"
                                    ulClass="nav navbar-nav"/>
@@ -451,6 +451,12 @@
                                 </pagecontent>
                             </pagecontent>
                         </campaign>
+                        <searchForm jcr:primaryType="jnt:contentList">
+                            <simple-search-form j:view="storiesout"
+                                      jcr:mixinTypes="jmix:renderable"
+                                      jcr:primaryType="jnt:simpleSearchForm"
+                                      result="/modules/storiesout-templates/search"/>
+                        </searchForm>
                 </base>
                     <content-template j:applyOn="jnt:content"
                               j:hiddenTemplate="true"
@@ -470,7 +476,30 @@
                               jcr:mixinTypes="mix:title"
                               jcr:primaryType="jnt:translation"
                               jcr:title="Home"/>
+                    <searchForm jcr:primaryType="jnt:contentList">
+                        <simple-search-form j:view="storiesout"
+                                   jcr:mixinTypes="jmix:renderable"
+                                   jcr:primaryType="jnt:simpleSearchForm"
+                                   result="/modules/storiesout-templates/search"/>
+                    </searchForm>
                 </home>
+                <search j:templateName="simple" jcr:primaryType="jnt:page">
+                    <j:translation_en jcr:language="en"
+                              jcr:mixinTypes="mix:title"
+                              jcr:primaryType="jnt:translation"
+                              jcr:title="Search"/>
+                    <j:translation_fr jcr:language="fr"
+                              jcr:mixinTypes="mix:title"
+                              jcr:primaryType="jnt:translation"
+                              jcr:title="Recherche"/>
+                    <content-main jcr:primaryType="jnt:contentList">
+                        <search-results autoSuggest="true"
+                               autoSuggestHitCount="2"
+                               autoSuggestMaxTermCount="1"
+                               autoSuggestMinimumHitCount="2"
+                               jcr:primaryType="jnt:searchResults"/>
+                    </content-main>
+                </search>
         </storiesout-templates>
     </modules>
 </content>
