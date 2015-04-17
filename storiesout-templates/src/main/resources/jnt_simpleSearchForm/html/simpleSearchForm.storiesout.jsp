@@ -16,7 +16,7 @@
             <s:site value="${renderContext.site.name}" includeReferencesFrom="systemsite" display="false"/>
             <s:language value="${renderContext.mainResource.locale}" display="false"/>
           <span class="input-group-btn">
-            <button class="btn btn-primary" type="button"><i class="fa fa-search"></i>
+            <button class="btn btn-primary" type="button" onclick="document.searchForm.submit()"><i class="fa fa-search"></i>
             </button>
           </span>
         </div>
