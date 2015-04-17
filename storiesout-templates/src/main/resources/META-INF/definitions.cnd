@@ -159,4 +159,4 @@ itemtype=content
  - author (string)
 
 [sont:feature] > jnt:content, somix:tilt, somix:component
-- layout (string,choicelist[resourceBundle]) = 'left-image' autocreated < 'left-image','right-image'
+- layout (string,choicelist[resourceBundle]) = 'left-image' autocreated < 'left-image','right-image','left-small-image'
