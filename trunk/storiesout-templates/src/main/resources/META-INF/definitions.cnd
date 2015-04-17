@@ -55,7 +55,7 @@ itemtype=content
  - logo (weakreference) mandatory internationalized < 'jnt:file'
  - slogan (weakreference) mandatory internationalized < 'jnt:file'
 
-[sont:adminBar] > jnt:content, somix:component
+[sont:adminBar] > jnt:content, somix:component, jmix:studioLayout
 
 [somix:social] mixin
  - displaySocial (boolean) = true
@@ -157,3 +157,6 @@ itemtype=content
 [sont:campaign] > jnt:content, somix:calendarEntry, somix:component
  - shortText  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
  - author (string)
+
+[sont:feature] > jnt:content, somix:tilt, somix:component
+- layout (string,choicelist[resourceBundle]) = 'left-image' autocreated < 'left-image','right-image'

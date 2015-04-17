@@ -73,7 +73,11 @@
                     <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
                 </c:otherwise>
             </c:choose>
-            <a class="btn btn-primary btn-xs" href="${linkUrl}"> <fmt:message key="sont_campaign.readMore"/></a>
+            <c:set var="linkTitle" value="${currentNode.properties.linkTitle.string}"/>
+            <c:if test="${empty linkTitle}">
+                <fmt:message key="sont_campaign.readMore" var="linkTitle"/>
+            </c:if>
+            <a class="btn btn-primary btn-xs" href="${linkUrl}"> ${linkTitle}</a>
         </div>
     </div>
     <hr>

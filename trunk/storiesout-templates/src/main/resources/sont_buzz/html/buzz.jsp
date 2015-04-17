@@ -39,6 +39,7 @@
                 <c:set var="target" value="_blank"/>
             </c:when>
         </c:choose>
+        <c:set var="linkTitle" value="${currentNode.properties.linkTitle.string}"/>
     </c:if>
     <h3 class="title"><a href="${linkUrl}" target="_blank">${currentNode.displayableName}</a></h3>
     <c:set var="date" value="${currentNode.properties.date.time}"/>
@@ -73,11 +74,18 @@
             <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
             <c:choose>
                 <c:when test="${linkType eq 'file'}">
-                    <p class="text-right"><a target="${target}" class="btn  btn-danger" href="${linkUrl}"><i class="fa fa-file-pdf-o"></i> <fmt:message key="sont_buzz.viewFile"/></a></p>
+                    <c:if test="${empty linkTitle}">
+                        <fmt:message key="sont_buzz.viewFile" var="linkTitle"/>
+                    </c:if>
+                    <p class="text-right"><a target="${target}" class="btn  btn-danger" href="${linkUrl}"><i class="fa fa-file-pdf-o"></i> ${linkTitle}</a></p>
                 </c:when>
                 <c:otherwise>
-                    <p class="text-right"><a target="${target}" class="btn btn-primary" href="${linkUrl}"><i class="fa fa-external-link"></i> <fmt:message key="sont_buzz.readMore"/></a></p>
+                    <c:if test="${empty linkTitle}">
+                        <fmt:message key="sont_buzz.readMore" var="linkTitle"/>
+                    </c:if>
+                    <p class="text-right"><a target="${target}" class="btn  btn-primary" href="${linkUrl}"><i class="fa fa-external-link"></i> ${linkTitle}</a></p>
                 </c:otherwise>
+
             </c:choose>
         </div>
     </div>
