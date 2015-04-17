@@ -41,19 +41,7 @@
                     <template:module node="${currentNode}" view="hidden.storiesout-menu"/>
                 </c:otherwise>
             </c:choose>
-            <%--
-            TODO: hardcoded form
-            --%>
-            <form class="navbar-form navbar-right" role="search">
-                <div class="input-group">
-                    <input type="text" placeholder="Rechercher" class="form-control">
-                                  <span class="input-group-btn">
-                                    <button class="btn btn-primary" type="button"><i class="fa fa-search"></i>
-                                    </button>
-                                  </span>
-                </div>
-
-            </form>
+            <template:area path="searchForm"/>
         </div>
     </div>
 </nav>

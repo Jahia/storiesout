@@ -34,7 +34,7 @@
         <configuration>
           <instructions>
             <Jahia-Module-Type>templatesSet</Jahia-Module-Type>
-            <Jahia-Depends>bootstrap3-components,default,font-awesome</Jahia-Depends>
+            <Jahia-Depends>bootstrap3-components,default,font-awesome,search</Jahia-Depends>
           </instructions>
         </configuration>
       </plugin>
