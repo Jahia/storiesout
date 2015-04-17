@@ -59,7 +59,8 @@
                     <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
                 </c:otherwise>
             </c:choose>
-            <p class="text-right"><a class="btn btn-primary" href="${linkUrl}"><i class="fa fa-external-link"></i> <fmt:message key="sont_news.readMore"/></a></p>
+            <fmt:message key="sont_news.readMore" var="linkTitle"/>
+            <p class="text-right"><a class="btn btn-primary" href="${linkUrl}"><i class="fa fa-external-link"></i> ${linkTitle}</a></p>
         </div>
     </div>
     <hr>
