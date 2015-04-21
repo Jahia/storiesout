@@ -27,13 +27,23 @@
                             <pagecontent jcr:primaryType="jnt:contentList">
                                 <banner j:allowedTypes="sont:homeSlider sont:jumbotron"
                              jcr:primaryType="jnt:area"/>
-                                <section--container--row--grid columnsType="predefinedColumns"
-                                                    grid="4_4_4"
+                                <content columnsType="nogrid"
                                                     gridLayout="fixed-width"
-                                                    jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:predefinedColumns"
+                              jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createSection"
                                                     jcr:primaryType="bootstrap3nt:columns"
                                                     sectionElement="div"
-                                                    sectionId="contebt"/>
+                              sectionId="contebt">
+                                    <content jcr:primaryType="jnt:contentList">
+                                        <row1 columnsType="predefinedColumns"
+                                 grid="12"
+                                 jcr:mixinTypes="bootstrap3mix:createRow bootstrap3mix:predefinedColumns"
+                                 jcr:primaryType="bootstrap3nt:columns"/>
+                                        <row2 columnsType="predefinedColumns"
+                                 grid="4_4_4"
+                                 jcr:mixinTypes="bootstrap3mix:createRow bootstrap3mix:predefinedColumns"
+                                 jcr:primaryType="bootstrap3nt:columns"/>
+                                </content>
+                                </content>
                             </pagecontent>
                         </home>
                             <pagecontent jcr:primaryType="jnt:contentList">

@@ -33,23 +33,13 @@
     <p><a href="${parentUrl}" class="btn btn-primary btn-block"><i class="fa fa-angle-left"></i> <fmt:message
             key="sont_video.backToList"/></a></p>
 
+            <c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>
+            <c:if test="${! empty title}"><h3 class="title">${title}</h3></c:if>
 
-    <h3 class="title">Decription</h3>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit lectus, lacinia eget feugiat
-        non, consequat et diam. Praesent in odio vitae neque tincidunt congue. Mauris vitae condimentum
-        nunc. Curabitur porttitor dignissim tempor. In hac habitasse platea dictumst.
-
-    </p>
-
-    <p>Phasellus leo elit, ultrices fermentum tempor eu, aliquet eu lorem. Vivamus rutrum elementum
-        odio. Donec eget nibh ut urna mollis bibendum. Maecenas nec neque sodales felis suscipit
-        hendrerit in sit amet augue. </p>
+  ${currentNode.properties.text.string}
 
 </div>
 <div class="col-xs-12 col-sm-12 col-md-9">
-    <iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&amp;player_id=player_1" width="100%"
-            height="400" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-
+  ${currentNode.properties.mediaVideo.string}  
 </div>
 

@@ -101,7 +101,9 @@ itemtype=content
  itemtype = content
  - intro (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
 
-[sont:video] > jnt:content, mix:title
+[sont:video] > jnt:content, mix:title, somix:text, somix:image
+ - mediaVideo (string,textarea)
+
 
 [sont:videos] > jnt:contentList, somix:component, jmix:manuallyOrderable, jmix:list orderable
   orderable

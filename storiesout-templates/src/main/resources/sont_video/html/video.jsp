@@ -22,19 +22,21 @@
         <div class="img_box">
             <c:url var="detailUrl" value='${currentNode.url}'/>
             <a href="${detailUrl}">
-                <img src="${url.currentModule}/img/video-img.png" alt="video-img.png" class="img-responsive">
+              <c:set var="imageNode" value="${currentNode.properties.image.node }"/>
+              <c:if test="${! empty imageNode}">
+                <c:url var="imageUrl" value="${imageNode.url}"/>
+                <img src="${imageUrl}" alt="${fn:escapeXml(imageNode.displayableName)}" class="img-responsive">
+              </c:if>
                                 <span class="circle">
                                     <span class="plus"><i class="fa fa-play fa-fw"></i></span>
                                 </span>
+                
             </a>
         </div>
         <div class="text">
             <c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>
             <c:if test="${! empty title}"><h3>${title}</h3></c:if>
-            <p>
-                [THIS IS AN HARDCODED COMPONENT]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-                finibus sem in vestibulum.
-            </p>
+            <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
         </div>
     </div>
 </div>
