@@ -149,7 +149,10 @@ itemtype=content
 
 
 [sont:buzz] > jnt:content, somix:calendarEntry, somix:component
+ - jcr:title (string)
+ - text (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js'])
  - author (string)
+ - language (string, choicelist[resourceBundle]) = 'active' autocreated facetable < 'active', 'unactive'
  - relatedCampaign (weakreference,choicelist[script=getCampaign.groovy]) multiple facetable
 
 [sont:news] > jnt:content, somix:calendarEntry, somix:component
