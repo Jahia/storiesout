@@ -141,27 +141,25 @@ itemtype=content
   orderable
 + * (sont:client)
 
-[somix:tilt] > mix:title, somix:link, somix:image, somix:text mixin
 
-[somix:calendarEntry] > somix:tilt, mix:referenceable
+[somix:calendarEntry] > mix:referenceable mixin
  - date (date) = now() facetable
  - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable
 
-
-[sont:buzz] > jnt:content, somix:calendarEntry, somix:component
+[sont:buzz] > jnt:content, somix:calendarEntry, mix:title, somix:link, somix:image, somix:component
  - jcr:title (string)
  - text (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js'])
  - author (string)
  - language (string, choicelist[resourceBundle]) = 'active' autocreated facetable < 'active', 'unactive'
  - relatedCampaign (weakreference,choicelist[script=getCampaign.groovy]) multiple facetable
 
-[sont:news] > jnt:content, somix:calendarEntry, somix:component
+[sont:news] > jnt:content, somix:calendarEntry, mix:title, somix:link, somix:image, somix:text, somix:component
  - shortText  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
  - relatedCampaign (weakreference,choicelist[script=getCampaign.groovy]) multiple facetable
 
-[sont:campaign] > jnt:content, somix:calendarEntry, somix:component
+[sont:campaign] > jnt:content, somix:calendarEntry, mix:title, somix:link, somix:image, somix:text, somix:component
  - shortText  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
  - author (string)
 
-[sont:feature] > jnt:content, somix:tilt, somix:component
+[sont:feature] > jnt:content, mix:title, somix:link, somix:image, somix:text, somix:component
 - layout (string,choicelist[resourceBundle]) = 'left-image' autocreated < 'left-image','right-image','left-small-image'
