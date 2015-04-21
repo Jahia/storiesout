@@ -32,7 +32,7 @@
                               jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createSection"
                                                     jcr:primaryType="bootstrap3nt:columns"
                                                     sectionElement="div"
-                              sectionId="contebt">
+                              sectionId="content">
                                     <content jcr:primaryType="jnt:contentList">
                                         <row1 columnsType="predefinedColumns"
                                  grid="12"
