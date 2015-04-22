@@ -37,7 +37,8 @@ while ($row = mysql_fetch_object($result)) {
 
     $language = empty($titleEn) ? 'fr' : 'en';
     $title = empty($titleEn) ? $titleFr : $titleEn;
-    $title = utf8_encode(str_replace("\\'", "'", $title));
+    $title = html_entity_decode(utf8_encode(str_replace("\\'", "'", $title)));
+    $text = str_replace("ampamp", "amp", $text);
 
     $text = empty($titleEn) ? $textFr : $textEn;
     $text = utf8_encode($text);
@@ -47,6 +48,7 @@ while ($row = mysql_fetch_object($result)) {
     $text = str_replace(" style=\"color: rgb(51, 204, 255);\"", "", $text);
     $text = html_entity_decode($text);
     $text = html_entity_decode($text);
+    $text = str_replace("ampamp", "amp", $text);
     $text = str_replace("amamp", "amp", $text);
     $text = str_replace("aamp", "amp", $text);
     $text = str_replace("ququot", "quot", $text);
@@ -207,7 +209,7 @@ while ($row = mysql_fetch_object($result)) {
     $buzz->setAttribute("jcr:title", trim($title));
     $buzz->setAttribute("language", $language);
     $buzz->setAttribute("linkType", "external");
-    $buzz->setAttribute("relatedClient", "/sites/storiesout/home/clients/content-main/clients/" . $firm);
+    $buzz->setAttribute("relatedClient", "/sites/storiesout/home/clients/content-main/client-list/" . $firm);
     $buzz->setAttribute("text", trim($text));
     $translation_fr = $domtree->createElement("j:translation_fr");
     $buzz->appendChild($translation_fr);
