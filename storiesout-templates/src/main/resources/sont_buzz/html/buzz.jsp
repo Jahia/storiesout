@@ -71,7 +71,7 @@
                     </a>
                 </div>
             </c:if>
-            <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
+            <p>${functions:removeHtmlTags(currentNode.properties.text.string)}</p>
             <c:choose>
                 <c:when test="${linkType eq 'file'}">
                     <c:if test="${empty linkTitle}">
