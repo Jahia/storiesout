@@ -19,7 +19,7 @@
 <c:set var="list" value="${currentNode.properties.list.node}"/>
 <c:if test="${! empty list}">
     <c:set var="query"
-           value="select * from [somix:calendarEntry] as calendarEntry WHERE ISDESCENDANTNODE('${list.path}') order by buzz.[entry] desc"/>
+           value="select * from [somix:calendarEntry] as entry WHERE ISDESCENDANTNODE('${list.path}') order by entry.[date] desc"/>
     <jcr:sql var="calendarEntries" sql="${query}" limit="${currentNode.properties.size.long}"/>
     <c:set var="entries" value="${calendarEntries.nodes}"/>
     <c:choose>
