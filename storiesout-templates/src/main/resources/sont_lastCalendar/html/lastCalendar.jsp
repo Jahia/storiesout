@@ -17,27 +17,31 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <c:set var="list" value="${currentNode.properties.list.node}"/>
-<c:if test="${! empty list}">
-    <c:set var="query"
-           value="select * from [somix:calendarEntry] as entry WHERE ISDESCENDANTNODE('${list.path}') order by entry.[date] desc"/>
-    <jcr:sql var="calendarEntries" sql="${query}" limit="${currentNode.properties.size.long}"/>
-    <c:set var="entries" value="${calendarEntries.nodes}"/>
-    <c:choose>
-        <c:when test="${fn:length(entries) > 0}">
-            <ul class="media-list">
-                <c:forEach items="${entries}" var="entry">
-                    <li class="media-small">
-                        <template:module path="${entry.path}" editable="false" view="list"/>
-                    </li>
-                </c:forEach>
-            </ul>
-        </c:when>
-        <c:otherwise>
-            <c:if test="${renderContext.editMode}">
-                <div class="alert alert-warning">
-                    Could not get entry entry; check that your list is correct.
-                </div>
-            </c:if>
-        </c:otherwise>
-    </c:choose>
-</c:if>
+<c:choose>
+    <c:when test="${! empty list}">
+        <c:set var="query"
+               value="select * from [somix:calendarEntry] as entry WHERE ISDESCENDANTNODE('${list.path}') order by entry.[date] desc"/>
+        <jcr:sql var="calendarEntries" sql="${query}" limit="${currentNode.properties.size.long}"/>
+        <c:set var="emptyList" value="true"/>
+        <ul class="media-list">
+            <c:forEach items="${calendarEntries.nodes}" var="entry">
+                <c:set var="emptyList" value="false"/>
+                <li class="media-small">
+                    <template:module path="${entry.path}" editable="false" view="list"/>
+                </li>
+            </c:forEach>
+        </ul>
+        <c:if test="${renderContext.editMode && emptyList}">
+            <div class="alert alert-warning">
+                Could not get entry entry; check that your list is correct.
+            </div>
+        </c:if>
+    </c:when>
+    <c:otherwise>
+        <c:if test="${renderContext.editMode}">
+            <div class="alert alert-warning">
+                Error: Could not get the entry point.
+            </div>
+        </c:if>
+    </c:otherwise>
+</c:choose>
