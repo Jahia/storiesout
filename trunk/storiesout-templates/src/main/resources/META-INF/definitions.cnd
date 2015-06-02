@@ -141,7 +141,6 @@ itemtype=content
   orderable
 + * (sont:client)
 
-
 [somix:calendarEntry] > mix:referenceable mixin
  - date (date) = now() facetable
  - relatedClient (weakreference,choicelist[script=getClients.groovy]) multiple facetable
@@ -163,3 +162,7 @@ itemtype=content
 
 [sont:feature] > jnt:content, mix:title, somix:link, somix:image, somix:text, somix:component
 - layout (string,choicelist[resourceBundle]) = 'left-image' autocreated < 'left-image','right-image','left-small-image'
+
+[sont:lastCalendar] > jnt:content, somix:component
+ - list (weakreference) mandatory
+ - size (long) = 10 mandatory
