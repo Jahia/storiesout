@@ -4,6 +4,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="jcr" uri="http://www.jahia.org/tags/jcr" %>
 <%@ taglib prefix="ui" uri="http://www.jahia.org/tags/uiComponentsLib" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="out" type="java.io.PrintWriter"--%>
 <%--@elvariable id="script" type="org.jahia.services.render.scripting.Script"--%>
@@ -30,7 +31,7 @@
             <h3 class="pull-left panel-title">${title}</h3>
             <c:if test="${! empty linkNode}">
                 <c:url var="linkUrl" value="${linkNode.url}"/>
-                <a class="pull-right" href="${linkUrl}"><i class="fa fa-angle-right"></i> Plus</a>
+                <a class="pull-right" href="${linkUrl}"><i class="fa fa-angle-right"></i> <fmt:message key="bootstrap3nt_panel.panel.more"/></a>
             </c:if>
         </div>
     </c:if>
