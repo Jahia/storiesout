@@ -40,10 +40,14 @@
 </c:if>
 
 <c:set var="date" value="${currentNode.properties.date.time}"/>
-<fmt:formatDate value="${date}" pattern="MMMM" var="month"/>
-<fmt:formatDate value="${date}" pattern="d" var="day"/>
-<fmt:formatDate value="${date}" pattern="yyyy" var="year"/>
-
+<c:choose>
+    <c:when test="${currentResource.locale.language eq 'fr'}">
+        <fmt:formatDate value="${date}" pattern="d MMMM yyyy" var="formatedDate"/>
+    </c:when>
+    <c:otherwise>
+        <fmt:formatDate value="${date}" pattern="MMMM d, yyyy" var="formatedDate"/>
+    </c:otherwise>
+</c:choose>
 <article>
     <c:set var="imageNode" value="${currentNode.properties.image.node}"/>
     <c:if test="${! empty imageNode}">
@@ -55,7 +59,7 @@
 
         <h4 class="media-heading"><a href="${linkUrl}">${currentNode.displayableName}</a></h4>
 
-        <p class="media-info"><span class="small"><i class="fa fa-newspaper-o"></i>${month} ${day}, ${year}</span></p>
+        <p class="media-info"><span class="small"><i class="fa fa-newspaper-o"></i>${formatedDate}</span></p>
         <c:set var="shortText" value="${currentNode.properties.shortText.string}"/>
         <c:choose>
             <c:when test="${! empty fn:trim(functions:removeHtmlTags(shortText))}">

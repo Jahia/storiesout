@@ -27,10 +27,15 @@
         <a class="btn btn-link" href="#">
             <i class="fa fa-calendar"></i>
             <c:set var="date" value="${currentNode.properties.date.time}"/>
-            <fmt:formatDate value="${date}" pattern="MMMM" var="month"/>
-            <fmt:formatDate value="${date}" pattern="d" var="day"/>
-            <fmt:formatDate value="${date}" pattern="yyyy" var="year"/>
-            <span>${month} ${day}, ${year}</span>
+            <c:choose>
+                <c:when test="${currentResource.locale.language eq 'fr'}">
+                    <fmt:formatDate value="${date}" pattern="d MMMM yyyy" var="formatedDate"/>
+                </c:when>
+                <c:otherwise>
+                    <fmt:formatDate value="${date}" pattern="MMMM d, yyyy" var="formatedDate"/>
+                </c:otherwise>
+            </c:choose>
+            <span>${formatedDate}</span>
 
         </a>
         <a class="btn btn-link" href="#">

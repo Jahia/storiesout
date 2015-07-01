@@ -39,11 +39,14 @@
     </c:choose>
 </c:if>
 <c:set var="date" value="${currentNode.properties.date.time}"/>
-<fmt:formatDate value="${date}" pattern="MMMM" var="month"/>
-<fmt:formatDate value="${date}" pattern="d" var="day"/>
-<fmt:formatDate value="${date}" pattern="yyyy" var="year"/>
+<c:choose>
+    <c:when test="${currentResource.locale.language eq 'fr'}">
+        <fmt:formatDate value="${date}" pattern="d MMMM yyyy" var="formatedDate"/>
+    </c:when>
+    <c:otherwise>
+        <fmt:formatDate value="${date}" pattern="MMMM d, yyyy" var="formatedDate"/>
+    </c:otherwise>
+</c:choose>
 
-
-
-<p><strong><a href="${linkUrl}">${currentNode.displayableName}</a></strong> <small>${month} ${day}, ${year}</small><br/>
+<p><strong><a href="${linkUrl}">${currentNode.displayableName}</a></strong> <small>${formatedDate}</small><br/>
 ${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
