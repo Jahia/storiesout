@@ -43,14 +43,18 @@
     </c:if>
     <h3 class="title"><a href="${linkUrl}" target="_blank">${currentNode.displayableName}</a></h3>
     <c:set var="date" value="${currentNode.properties.date.time}"/>
-    <fmt:formatDate value="${date}" pattern="MMMM" var="month"/>
-    <fmt:formatDate value="${date}" pattern="d" var="day"/>
-    <fmt:formatDate value="${date}" pattern="yyyy" var="year"/>
-
+    <c:choose>
+        <c:when test="${currentResource.locale.language eq 'fr'}">
+            <fmt:formatDate value="${date}" pattern="d MMMM yyyy" var="formatedDate"/>
+        </c:when>
+        <c:otherwise>
+            <fmt:formatDate value="${date}" pattern="MMMM d, yyyy" var="formatedDate"/>
+        </c:otherwise>
+    </c:choose>
     <div class="toolbar">
         <p>
             <i class="fa fa-calendar"></i>
-            <span>${month} ${day}, ${year}</span>
+            <span>${formatedDate}</span>
             <c:forEach items="${currentNode.properties.relatedClient}" var="client">
                 <c:set var="clientNode" value="${client.node}"/>
                 <i class="fa fa-thumb-tack" style="padding-left:10px"></i>
