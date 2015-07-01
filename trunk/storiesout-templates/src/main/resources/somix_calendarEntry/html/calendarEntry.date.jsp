@@ -4,8 +4,10 @@
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 
 <c:set var="date" value="${currentNode.properties.date.time}"/>
+<c:set var="language" value="${currentResource.locale.language}"/>
+<fmt:setLocale value="${language}" scope="session"/>
 <c:choose>
-  <c:when test="${currentResource.locale.language eq 'fr'}">
+  <c:when test="${language eq 'fr'}">
     <fmt:formatDate value="${date}" pattern="d MMMM yyyy" var="formatedDate"/>
   </c:when>
   <c:otherwise>

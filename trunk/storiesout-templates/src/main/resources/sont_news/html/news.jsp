@@ -22,8 +22,10 @@
 
     <h3 class="title"><a href="${linkUrl}">${currentNode.displayableName}</a></h3>
     <c:set var="date" value="${currentNode.properties.date.time}"/>
+    <c:set var="language" value="${currentResource.locale.language}"/>
+    <fmt:setLocale value="${language}" scope="session"/>
     <c:choose>
-        <c:when test="${currentResource.locale.language eq 'fr'}">
+        <c:when test="${language eq 'fr'}">
             <fmt:formatDate value="${date}" pattern="d MMMM yyyy" var="formatedDate"/>
         </c:when>
         <c:otherwise>
