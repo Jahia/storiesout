@@ -62,7 +62,7 @@
 
         <h4 class="media-heading"><a href="${linkUrl}">${currentNode.displayableName}</a></h4>
 
-        <p class="media-info"><span class="small"><i class="fa fa-newspaper-o"></i>${formatedDate}</span></p>
+        <p class="media-info"><span class="small"><i class="fa fa-newspaper-o"></i> ${formatedDate}</span></p>
         <c:set var="shortText" value="${currentNode.properties.shortText.string}"/>
         <c:choose>
             <c:when test="${! empty fn:trim(functions:removeHtmlTags(shortText))}">
