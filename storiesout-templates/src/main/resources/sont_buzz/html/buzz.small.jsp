@@ -51,5 +51,13 @@
 </c:choose>
 
 
-<p><strong><a href="${linkUrl}">${currentNode.displayableName}</a></strong> <small>${formatedDate}</small><br/>
-${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
+<p>
+    <c:set var="imageNode" value="${currentNode.properties.image.node}"/>
+    <c:if test="${! empty imageNode}">
+        <c:url var="imageUrl" value="${imageNode.url}"/>
+        <a class="media-photo" href="${linkUrl}"><img src="${imageUrl}" alt="${imageNode.displayableName}"></a>
+    </c:if>
+
+    <strong><a href="${linkUrl}">${currentNode.displayableName}</a></strong><br/>
+    <small>${formatedDate}</small>
+</p>

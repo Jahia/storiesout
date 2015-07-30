@@ -31,5 +31,4 @@
 </c:choose>
 
 
-<p><strong><a href="${linkUrl}">${currentNode.displayableName}</a></strong> <small>${formatedDate}</small><br/>
-${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
+<p><strong><a href="${linkUrl}">${currentNode.displayableName}</a></strong><br/><small>${formatedDate}</small></p>
