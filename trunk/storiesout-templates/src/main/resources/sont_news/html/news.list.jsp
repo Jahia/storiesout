@@ -45,7 +45,7 @@
         <c:set var="shortText" value="${currentNode.properties.shortText.string}"/>
         <c:choose>
             <c:when test="${! empty fn:trim(functions:removeHtmlTags(shortText))}">
-                ${shortText}
+                ${functions:abbreviate(fn:trim(functions:removeHtmlTags(shortText)),280,300,'...')}
             </c:when>
             <c:otherwise>
                 <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 100, 120, '...')}</p>
