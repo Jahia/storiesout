@@ -48,7 +48,7 @@
                 ${shortText}
             </c:when>
             <c:otherwise>
-                <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 200, 300, '...')}</p>
+                <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.text.string), 80, 100, '...')}</p>
             </c:otherwise>
         </c:choose>
     </div>
