@@ -260,7 +260,7 @@
                                  sectionId="content">
                                         <content jcr:primaryType="jnt:contentList">
                                             <header columnsType="customColumns"
-                                      gridClasses="col-md-3 col-sm-12,col-md-6 col-sm-12,col-md-3 col-sm-12"
+                                      gridClasses="col-md-5 col-sm-12,col-md-4 col-sm-12,col-md-3 col-sm-12"
                                       jcr:mixinTypes="bootstrap3mix:createRow bootstrap3mix:customColumns"
                                       jcr:primaryType="bootstrap3nt:columns">
                                                 <header-col0 jcr:primaryType="jnt:contentList">
