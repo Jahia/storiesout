@@ -51,7 +51,7 @@
 </c:choose>
 
 
-<p>
+<p style="clear:both;">
     <c:set var="imageNode" value="${currentNode.properties.image.node}"/>
     <c:if test="${! empty imageNode}">
         <c:url var="imageUrl" value="${imageNode.url}"/>
