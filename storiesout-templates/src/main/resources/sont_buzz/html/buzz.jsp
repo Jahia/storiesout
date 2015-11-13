@@ -64,6 +64,10 @@
                 <c:url var="clientUrl" value="${clientNode.url}"/>
                 <a href="${clientUrl}">${clientNode.displayableName}</a>
             </c:forEach>
+            <c:set var="author" value="${currentNode.properties.author.string}"/>
+            <c:if test="${! empty author}">
+                <i class="fa fa-user">" style="padding-left:10px"></i>${author}
+            </c:if>
         </p>
     </div>
     <div class="clearfix">
