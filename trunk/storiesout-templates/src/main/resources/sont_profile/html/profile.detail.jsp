@@ -17,17 +17,14 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
-<div class="row">
-    <div class="col-md-5">
+    <div class="col-md-2" style="text-align: center">
 
         <c:set var="photo" value="${currentNode.properties.photo.node}"/>
         <c:if test="${! empty photo}">
             <c:url var="photoUrl" value="${photo.url}"/>
-            <a data-toggle="modal" data-target="#modal-${currentNode.identifier}" href="#"
-               title="${fn:escapeXml(currentNode.displayableName)}">
+
                 <img alt="${fn:escapeXml(currentNode.displayableName)}" width="165" height="165" class="img-circle"
                      src="${photoUrl}">
-            </a>
         </c:if>
         <c:set var="parentPage" value="${jcr:getParentOfType(renderContext.mainResource.node, 'jnt:page')}" />
         <c:choose>
@@ -39,12 +36,14 @@
             </c:otherwise>
         </c:choose>
         <p>
+        <p>
+            <br/>
+            <br/>
             <a href="${parentUrl}" class="btn  btn-primary"><span><i class="icon-line-arrow-left"></i><fmt:message key="sont_profile.back"/></span></a>
         </p>
     </div>
-    <div class="col-md-7">
-        <h3 class="name"><a data-toggle="modal" data-target="#modal-${currentNode.identifier}" href="#"
-                            title="Anne">${currentNode.displayableName}</a></h3>
+    <div class="col-md-10">
+        <h3 class="name">${currentNode.displayableName}</h3>
         <h4 class="position">${currentNode.properties.subtitle.string}</h4>
         ${currentNode.properties.text.string}
 
