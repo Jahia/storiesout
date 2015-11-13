@@ -19,7 +19,9 @@
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 
 <template:include view="hidden.header"/>
+
 <%--<c:set var="clients" value="${jcr:getChildrenOfType(currentNode, 'sont:client')}"/>--%>
+
 <c:set var="clients" value="${moduleMap.currentList}"/>
 
 <ul class="client-list clearfix">
@@ -35,3 +37,10 @@
 <c:if test="${renderContext.editMode}">
     <template:module path="*" nodeTypes="sont:client"/>
 </c:if>
+
+
+<%--
+     <template:include view="hidden.prout">
+    <template:param name="N-client-list" value="eJwrLkksKS1WVlZOTC7JLEsFMgxirNwcnV1DYqyKwXJWEBkAH2kODA"/>
+</template:include>
+    --%>
