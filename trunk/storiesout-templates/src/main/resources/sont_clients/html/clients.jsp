@@ -18,8 +18,20 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 
-que dalle 
-<template:include view="hidden.prout">
-    <template:param name="N-client-list" value="eJwrLkksKS1WVlZOTC7JLEsFMgxirNwcnV1DYqyKwXJWEBkAH2kODA"/>
-</template:include>
-    
+<template:include view="hidden.header"/>
+<%--<c:set var="clients" value="${jcr:getChildrenOfType(currentNode, 'sont:client')}"/>--%>
+<c:set var="clients" value="${moduleMap.currentList}"/>
+
+<ul class="client-list clearfix">
+    <c:forEach items="${clients}" var="client" varStatus="status" begin="${moduleMap.begin}" end="${moduleMap.end}">
+        <li class="client-item">
+            <article>
+                <template:module node="${client}" nodeTypes="sont:client" editable="true"/>
+            </article>
+        </li>
+    </c:forEach>
+</ul>
+
+<c:if test="${renderContext.editMode}">
+    <template:module path="*" nodeTypes="sont:client"/>
+</c:if>
