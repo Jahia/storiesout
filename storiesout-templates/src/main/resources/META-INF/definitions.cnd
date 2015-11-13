@@ -7,6 +7,12 @@
 
 [somix:component] > jmix:droppableContent, jmix:editorialContent mixin
 
+[somix:hidePage] mixin
+ extends = jmix:navMenuItem
+ itemtype = content
+ - value (string) = 'This page will be hidden in the menu.' protected
+
+
 [somix:text] mixin
  - text  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
 
