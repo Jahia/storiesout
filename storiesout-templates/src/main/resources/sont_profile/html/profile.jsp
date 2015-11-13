@@ -46,7 +46,7 @@
                             </span></a>
             </c:if>
             <c:set var="linkedin" value="${currentNode.properties.linkedin.string}"/>
-            <c:if test="${! empty facebook}">
+            <c:if test="${! empty linkedin}">
                 <a href="${linkedin}"><span class="fa-stack fa-lg">
                               <i class="fa fa-circle fa-stack-2x"></i>
                               <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
