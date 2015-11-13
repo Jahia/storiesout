@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-	$("#content a[href^='http://']").attr("target","_blank");
+	$("#content a[href^='http']").attr("target","_blank");
 
 	// browser window scroll (in pixels) after which the "back to top" link is shown
 	var offset = 300,
