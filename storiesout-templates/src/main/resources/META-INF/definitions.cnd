@@ -90,6 +90,7 @@ itemtype=content
  - twitter (string)
  - facebook (string)
  - google (string)
+ - linkedin (string)
 
 [sont:job] > jnt:content, somix:component, mix:title, jmix:manuallyOrderable, jmix:list
   orderable
