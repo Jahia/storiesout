@@ -377,7 +377,7 @@
                             <pagecontent jcr:primaryType="jnt:contentList">
                                 <pagecontent jcr:primaryType="jnt:contentList">
                                     <teaser-page columnsType="customColumns"
-                                     gridClasses="col-md-6,col-md-6 hidden-print"
+                                     gridClasses="col-md-12"
                                      gridLayout="fixed-width"
                                      jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
                                      jcr:primaryType="bootstrap3nt:columns"
@@ -393,7 +393,6 @@
                                           jcr:primaryType="bootstrap3nt:pageTitle"/>
                                             <main-resource-display j:mainResourceView="date" jcr:primaryType="jnt:mainResourceDisplay"/>
                                         </teaser-page-col0>
-                                        <teaser-page-col1 jcr:primaryType="jnt:contentList"/>
                                     </teaser-page>
                                     <content columnsType="nogrid"
                                  gridLayout="fixed-width"
@@ -530,3 +529,4 @@
         </storiesout-templates>
     </modules>
 </content>
+
