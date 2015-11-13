@@ -45,6 +45,13 @@
                               <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
                             </span></a>
             </c:if>
+            <c:set var="linkedin" value="${currentNode.properties.linkedin.string}"/>
+            <c:if test="${! empty facebook}">
+                <a href="${linkedin}"><span class="fa-stack fa-lg">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                           </span></a>
+            </c:if>
             <c:set var="facebook" value="${currentNode.properties.facebook.string}"/>
             <c:if test="${! empty facebook}">
                 <a href="${facebook}"><span class="fa-stack fa-lg">
