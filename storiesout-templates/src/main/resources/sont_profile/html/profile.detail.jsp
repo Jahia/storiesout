@@ -23,20 +23,30 @@
         <c:set var="photo" value="${currentNode.properties.photo.node}"/>
         <c:if test="${! empty photo}">
             <c:url var="photoUrl" value="${photo.url}"/>
-            <c:url var="detailView" value="${currentNode.url}"/>
-            <a  href="${detailView}"
+            <a data-toggle="modal" data-target="#modal-${currentNode.identifier}" href="#"
                title="${fn:escapeXml(currentNode.displayableName)}">
                 <img alt="${fn:escapeXml(currentNode.displayableName)}" width="165" height="165" class="img-circle"
                      src="${photoUrl}">
             </a>
         </c:if>
+        <c:set var="parentPage" value="${jcr:getParentOfType(renderContext.mainResource.node, 'jnt:page')}" />
+        <c:choose>
+            <c:when test="${! empty parentPage}">
+                <c:url var="parentUrl" value='${parentPage.url}'/>
+            </c:when>
+            <c:otherwise>
+                <c:set var="parentUrl">javascript:history.back()</c:set>
+            </c:otherwise>
+        </c:choose>
+        <p>
+            <a href="${parentUrl}" class="btn  btn-primary"><span><i class="icon-line-arrow-left"></i><fmt:message key="sont_profile.back"/></span></a>
+        </p>
     </div>
     <div class="col-md-7">
-        <h3 class="name"><a href="${detailView}"
+        <h3 class="name"><a data-toggle="modal" data-target="#modal-${currentNode.identifier}" href="#"
                             title="Anne">${currentNode.displayableName}</a></h3>
         <h4 class="position">${currentNode.properties.subtitle.string}</h4>
-
-        <p>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.bio.string), 200, 300, '...')}</p>
+        ${currentNode.properties.text.string}
 
         <div class="social-links hidden-print">
             <c:set var="twitter" value="${currentNode.properties.twitter.string}"/>
@@ -71,4 +81,3 @@
         </div>
     </div>
 </div>
-
