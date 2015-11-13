@@ -39,7 +39,7 @@
     <template:addResources type="javascript" resources="respond.min.js"/>
 
     <!-- google fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
 
 </head>
