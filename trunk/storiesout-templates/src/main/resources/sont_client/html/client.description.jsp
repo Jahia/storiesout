@@ -15,9 +15,13 @@
 
 ${currentNode.properties.description.string}
 
+<template:area path="subcontent"/>
+<%--
+
         <c:forEach items="${jcr:getChildrenOfType(currentNode, 'jmix:droppableContent')}" var="droppableContent">
             <template:module node="${droppableContent}" editable="true"/>
         </c:forEach>
         <c:if test="${renderContext.editMode}">
             <template:module path="*" nodeTypes="jmix:droppableContent"/>
         </c:if>
+--%>
