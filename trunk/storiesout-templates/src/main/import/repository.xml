@@ -14,16 +14,16 @@
                     <src jcr:mixinTypes="jmix:sourceControl" jcr:primaryType="jnt:folder">
                         <main jcr:mixinTypes="jmix:sourceControl" jcr:primaryType="jnt:folder">
                             <resources jcr:mixinTypes="jmix:sourceControl" jcr:primaryType="jnt:folder">
-                                <sont_clients jcr:mixinTypes="jmix:sourceControl"
+                                <sont_clients jcr:primaryType="jnt:nodeTypeFolder">
+                                    <html jcr:primaryType="jnt:templateTypeFolder">
+                                        <clients.jsp jcr:primaryType="jnt:viewFile"/>
+                                    </html>
+                                </sont_clients>
+                                <sont_client jcr:mixinTypes="jmix:sourceControl"
                                   jcr:primaryType="jnt:nodeTypeFolder">
                                     <html jcr:mixinTypes="jmix:sourceControl"
                               jcr:primaryType="jnt:templateTypeFolder">
-                                        <clients.jsp jcr:mixinTypes="jmix:sourceControl" jcr:primaryType="jnt:viewFile"/>
-                                    </html>
-                                </sont_clients>
-                                <sont_client jcr:primaryType="jnt:nodeTypeFolder">
-                                    <html jcr:primaryType="jnt:templateTypeFolder">
-                                        <client.description.jsp jcr:primaryType="jnt:viewFile"/>
+                                        <client.description.jsp jcr:mixinTypes="jmix:sourceControl" jcr:primaryType="jnt:viewFile"/>
                                     </html>
                                 </sont_client>
                             </resources>
@@ -304,7 +304,9 @@
                                                            jcr:primaryType="jnt:mainResourceDisplay"/>
                                                 </main-col0>
                                                 <main-col1 jcr:primaryType="jnt:contentList">
-                                                    <side jcr:primaryType="jnt:area"/>
+                                                    <side jcr:primaryType="jnt:area">
+                                                        <side jcr:primaryType="jnt:contentList"/>
+                                                    </side>
                                             <tab fadeEffect="true"
                                    jcr:primaryType="bootstrap3nt:tabs"
                                    navigation="tab">
@@ -432,6 +434,32 @@
                                             <main-resource-display j:mainResourceView="default"
                                                      j:workInProgress="false"
                                                      jcr:primaryType="jnt:mainResourceDisplay"/>
+                                            <tab fadeEffect="true"
+                                   jcr:primaryType="bootstrap3nt:tabs"
+                                   navigation="tab">
+                                                <clippings jcr:primaryType="jnt:contentList">
+                                                    <j:translation_fr jcr:language="fr"
+                                                      jcr:primaryType="jnt:translation"
+                                                      jcr:title="Retombées"/>
+                                                    <j:translation_en jcr:language="en"
+                                                      jcr:primaryType="jnt:translation"
+                                                      jcr:title="Clippings"/>
+                                                    <main-resource-display j:mainResourceView="relatedBuzz"
+                                                           j:workInProgress="false"
+                                                           jcr:primaryType="jnt:mainResourceDisplay"/>
+                                                </clippings>
+                                                <press-releases jcr:primaryType="jnt:contentList">
+                                                    <j:translation_fr jcr:language="fr"
+                                                      jcr:primaryType="jnt:translation"
+                                                      jcr:title="Communiqués"/>
+                                                    <j:translation_en jcr:language="en"
+                                                      jcr:primaryType="jnt:translation"
+                                                      jcr:title="Press Releases"/>
+                                                    <main-resource-display j:mainResourceView="relatedNews"
+                                                           j:workInProgress="false"
+                                                           jcr:primaryType="jnt:mainResourceDisplay"/>
+                                                </press-releases>
+                                            </tab>
                                         </content>
                                     </content>
                                 </pagecontent>
