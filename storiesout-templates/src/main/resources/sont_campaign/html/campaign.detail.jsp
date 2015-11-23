@@ -21,6 +21,19 @@
 
 
 <div class="press-item-big">
+    <c:set var="parentPage" value="${jcr:getParentOfType(renderContext.mainResource.node, 'jnt:page')}" />
+    <c:choose>
+        <c:when test="${! empty parentPage}">
+            <c:url var="parentUrl" value='${parentPage.url}'/>
+        </c:when>
+        <c:otherwise>
+            <c:set var="parentUrl">javascript:history.back()</c:set>
+        </c:otherwise>
+    </c:choose>
+
+
+    <p><a href="${parentUrl}" class="btn btn-primary "><i class="fa fa-angle-left"></i> <fmt:message key="sont_client.backToList"/></a></p>
+
     <h2 class="title"><a href="${linkUrl}">${currentNode.displayableName}</a></h2>
 
     <div class="toolbar">
@@ -73,6 +86,7 @@
 
         <div class="col-sm-12">
             ${currentNode.properties.text.string}
+
         </div>
     </div>
     <hr>

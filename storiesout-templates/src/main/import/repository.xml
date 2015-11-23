@@ -427,9 +427,7 @@
                                  sectionElement="div"
                                  sectionId="content">
                                         <content jcr:primaryType="jnt:contentList">
-                                            <main-resource-display j:mainResourceView="default"
-                                                     j:workInProgress="false"
-                                                     jcr:primaryType="jnt:mainResourceDisplay"/>
+                                            <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
                                             <tab fadeEffect="true"
                                    jcr:primaryType="bootstrap3nt:tabs"
                                    navigation="tab">
