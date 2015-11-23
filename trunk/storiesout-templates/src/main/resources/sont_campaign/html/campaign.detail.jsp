@@ -32,7 +32,7 @@
     </c:choose>
 
 
-    <p><a href="${parentUrl}" class="btn btn-primary "><i class="fa fa-angle-left"></i> <fmt:message key="sont_client.backToList"/></a></p>
+    <p><a href="${parentUrl}" class="btn btn-primary "><i class="fa fa-angle-left"></i> <fmt:message key="sont_campaign.backToList"/></a></p>
 
     <h2 class="title"><a href="${linkUrl}">${currentNode.displayableName}</a></h2>
 
