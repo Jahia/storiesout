@@ -17,7 +17,7 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <c:set var="list" value="${currentNode.properties.list.node}"/>
-<jcr:node var="storiesOutNode" path="/sites/storiesout/home/clients/content-main/client-list/storiesout"/>
+<jcr:node var="storiesOutNode" path="/sites/storiesout/home/about-us/client-storiesout/content-main/storiesout/storiesout"/>
 <c:choose>
     <c:when test="${empty storiesOutNode}">
         Sorry dude. could not found storiesOut Node (hardcoded in template)
