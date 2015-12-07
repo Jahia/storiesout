@@ -28,7 +28,7 @@
             <c:set var="identifier2" value="${fn:replace(identifier, '-', '\\\-')}"/>
             <c:set var="qs" value="relatedCampaign###"/>
             <c:set var="qs" value="${qs}${identifier}"/>
-            <c:set var="qs" value="${qs}###0\\\:FACET\\\:relatedClient:${identifier2}"/>
+            <c:set var="qs" value="${qs}###0\\\:FACET\\\:relatedCampaign:${identifier2}"/>
             <%
                 String qs = (String) pageContext.findAttribute("qs");
                 String encodedParams = org.jahia.utils.Url.encodeUrlParam(qs);
