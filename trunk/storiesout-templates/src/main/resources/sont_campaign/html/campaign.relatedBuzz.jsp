@@ -21,8 +21,22 @@
     <c:when test="${jcr:isNodeType(siteNode,'somix:buzzList')}">
         <c:set var="buzzList" value="${siteNode.properties.buzzList.node}"/>
         <c:if test="${! empty buzzList}">
+            <c:set var="listName" value="${buzzList.name}"/>
             <c:set var="parentPage" value="${jcr:getParentOfType(buzzList, 'jnt:page')}"/>
-            <c:url var="allClientNews" value="${parentPage.url}"/>
+
+            <c:set var="identifier" value="${currentNode.identifier}"/>
+            <c:set var="identifier2" value="${fn:replace(identifier, '-', '\\\-')}"/>
+            <c:set var="qs" value="relatedCampaign###"/>
+            <c:set var="qs" value="${qs}${identifier}"/>
+            <c:set var="qs" value="${qs}###0\\\:FACET\\\:relatedClient:${identifier2}"/>
+            <%
+                String qs = (String) pageContext.findAttribute("qs");
+                String encodedParams = org.jahia.utils.Url.encodeUrlParam(qs);
+                pageContext.setAttribute("encodedParams", encodedParams);
+            %>
+            <c:url var="allClientNews" value="${parentPage.url}">
+                <c:param name="N-${listName}" value="${encodedParams}"/>
+            </c:url>
             <p class="text-right"><a class="btn btn-primary btn-xs" href="${allClientNews}"><i
             class="fa fa-plus-circle"></i>&nbsp;<fmt:message key="sont_client.allBuzz"/></a>
         </c:if>
