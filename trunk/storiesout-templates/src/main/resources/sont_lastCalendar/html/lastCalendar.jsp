@@ -33,7 +33,7 @@
         </ul>
         <c:if test="${renderContext.editMode && emptyList}">
             <div class="alert alert-warning">
-                Could not get entry entry; check that your list is correct.
+                Could not get entry; check that your list is correct.
             </div>
         </c:if>
     </c:when>
