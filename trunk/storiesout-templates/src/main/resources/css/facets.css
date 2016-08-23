@@ -50,7 +50,8 @@ button.button-close-facet {
     opacity: 1;
     margin-left: 5px;
     text-shadow: none;
-}.facets select.form-control {
+}
+.facets select.form-control {
     clear: both;
     display: block;
     margin-bottom: 5px;
