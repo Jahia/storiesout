@@ -275,7 +275,7 @@
     vertical-align: middle;
     width: 50px;
     margin-left: 10px;
-    padding-top: 6px
+    padding-top: 10px
 }
 
 .social .btn {
@@ -1234,3 +1234,6 @@ body.error-page .logo {
   margin-top:30px;
 }
 p.banner a {color:#fff;}
+.dropdown-menu {
+    z-index: 1031 !important;
+}

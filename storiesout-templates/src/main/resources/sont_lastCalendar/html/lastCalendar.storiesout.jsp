@@ -17,31 +17,44 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <c:set var="list" value="${currentNode.properties.list.node}"/>
+
+<jcr:node var="storiesOutNode" path="/sites/storiesout/home/about-us/client-storiesout/content-main/storiesout/storiesout"/>
 <c:choose>
-    <c:when test="${! empty list}">
-        <c:set var="query"
-               value="select * from [somix:calendarEntry] as entry WHERE ISDESCENDANTNODE('${list.path}') AND entry.[relatedClient]='89594476-cb2b-4290-a23d-b1d693388c56' order by entry.[date] desc"/>
-        <jcr:sql var="calendarEntries" sql="${query}" limit="${currentNode.properties.size.long}"/>
-        <c:set var="emptyList" value="true"/>
-        <ul class="media-list">
-            <c:forEach items="${calendarEntries.nodes}" var="entry">
-                <c:set var="emptyList" value="false"/>
-                <li class="media-small">
-                    <template:module path="${entry.path}" editable="false" view="list"/>
-                </li>
-            </c:forEach>
-        </ul>
-        <c:if test="${renderContext.editMode && emptyList}">
-            <div class="alert alert-warning">
-                Could not get entry; check that your list is correct. Query is <br/>${query}
-            </div>
-        </c:if>
+    <c:when test="${empty storiesOutNode}">
+        Sorry dude. could not found storiesOut Node (hardcoded in template)
     </c:when>
     <c:otherwise>
-        <c:if test="${renderContext.editMode}">
-            <div class="alert alert-warning">
-                Error: Could not get the entry point.
-            </div>
-        </c:if>
+        <c:choose>
+            <c:when test="${! empty list}">
+                <c:set var="query"
+                       value="select * from [somix:calendarEntry] as entry WHERE ISDESCENDANTNODE('${list.path}') AND entry.[relatedClient]='${storiesOutNode.identifier}' order by entry.[date] desc"/>
+                <c:if test="${renderContext.editMode}">
+                    ${query}
+                </c:if>
+                <jcr:sql var="calendarEntries" sql="${query}" limit="${currentNode.properties.size.long}"/>
+                <c:set var="emptyList" value="true"/>
+                <ul class="media-list">
+                    <c:forEach items="${calendarEntries.nodes}" var="entry">
+                        <c:set var="emptyList" value="false"/>
+                        <li class="media-small">
+                            <template:module path="${entry.path}" editable="false" view="list"/>
+                        </li>
+                    </c:forEach>
+                </ul>
+                <c:if test="${renderContext.editMode && emptyList}">
+                    <div class="alert alert-warning">
+                        Could not get entry entry; check that your list is correct.
+                    </div>
+                </c:if>
+            </c:when>
+            <c:otherwise>
+                <c:if test="${renderContext.editMode}">
+                    <div class="alert alert-warning">
+                        Error: Could not get the entry point.
+                    </div>
+                </c:if>
+            </c:otherwise>
+        </c:choose>
     </c:otherwise>
 </c:choose>
+
