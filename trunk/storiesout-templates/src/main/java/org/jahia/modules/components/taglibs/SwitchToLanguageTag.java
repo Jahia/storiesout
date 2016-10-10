@@ -33,13 +33,14 @@ public class SwitchToLanguageTag extends AbstractJahiaTag {
 
             // finish anchor tag
             // <a class="btn btn-sm btn-primary active" title="French" href="#"><img src="${url.currentModule}/img/fr.png" alt="French"></a>
-            buff.append("<a class=\"btn btn-sm btn-primary");
+            buff.append("<a class=\"btn btn-sm ");
             if (currentLocale.equals(languageCode)) {
-                buff.append(" active");
+                buff.append(" btn-primary active");
+            } else {
+                buff.append(" btn-inverse");
             }
             buff.append("\" title=\"").append(displayLanguage).append("\" href=\"").append(link).
-                    append("\"><img src=\"/modules/storiesout-templates/img/").append(languageCode.toLowerCase()).
-                    append(".png\" alt=\"").append(displayLanguage).append("\"></a>");
+                    append("\">").append(languageCode.toUpperCase()).append("</a>");
 
             pageContext.getOut().print(buff.toString());
         } catch (IOException e) {

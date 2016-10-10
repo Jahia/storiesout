@@ -84,7 +84,7 @@
                             <navigation-menu j:view="storiesout"
                                    jcr:mixinTypes="bootstrap3mix:navbarAdvanced jmix:layoutComponentContent jmix:renderable"
                                    jcr:primaryType="bootstrap3nt:navbar"
-                                   navbarClass="navbar navbar-default navbar-static-top navbar-inverse hidden-print"
+                                   navbarClass="navbar navbar-default navbar-static-top color-green hidden-print"
                                    ulClass="nav navbar-nav"/>
                             <pagecontent jcr:primaryType="jnt:area"/>
                             <footer columnsType="nogrid"
@@ -121,7 +121,7 @@
                                   gridLayout="fixed-width"
                                   jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
                                   jcr:primaryType="bootstrap3nt:columns"
-                                  sectionCssClass="teaser-page"
+                                  sectionCssClass="teaser-page color-green"
                                   sectionElement="section">
                                     <teaser-page-col0 jcr:primaryType="jnt:contentList">
                                         <breadcrumb cssClass="breadcrumb-so"
@@ -142,7 +142,7 @@
                         <simple jcr:primaryType="jnt:pageTemplate">
                             <pagecontent jcr:primaryType="jnt:contentList">
                                 <teaser-page columnsType="customColumns"
-                                  gridClasses="col-md-6,col-md-6 hidden-print"
+                                  gridClasses="col-md-8,col-md-4 hidden-print"
                                   gridLayout="fixed-width"
                                   jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
                                   jcr:primaryType="bootstrap3nt:columns"
@@ -280,7 +280,7 @@
                                  sectionId="content">
                                         <content jcr:primaryType="jnt:contentList">
                                             <header columnsType="customColumns"
-                                      gridClasses="col-md-5 col-sm-12,col-md-4 col-sm-12,col-md-3 col-sm-12"
+                                      gridClasses="col-md-5 col-sm-12,col-md-4 col-sm-12,col-md-3 col-sm-12 client-header-side"
                                       jcr:mixinTypes="bootstrap3mix:createRow bootstrap3mix:customColumns"
                                       jcr:primaryType="bootstrap3nt:columns">
                                                 <header-col0 jcr:primaryType="jnt:contentList">
@@ -294,7 +294,7 @@
                                                 </header-col2>
                                             </header>
                                             <main columnsType="customColumns"
-                                    gridClasses="col-md-9 col-sm-12 , col-md-3 col-sm-12"
+                                    gridClasses="col-md-9 col-sm-12 , col-md-3 col-sm-12 client-main-side"
                                     jcr:mixinTypes="bootstrap3mix:createRow bootstrap3mix:customColumns"
                                     jcr:primaryType="bootstrap3nt:columns">
                                                 <main-col0 jcr:primaryType="jnt:contentList">
@@ -341,7 +341,7 @@
                         <simple-left-side jcr:primaryType="jnt:pageTemplate">
                             <pagecontent jcr:primaryType="jnt:contentList">
                                 <teaser-page columnsType="customColumns"
-                                  gridClasses="col-md-6,col-md-6 hidden-print"
+                                  gridClasses="col-md-10,col-md-2 hidden-print"
                                   gridLayout="fixed-width"
                                   jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
                                   jcr:primaryType="bootstrap3nt:columns"

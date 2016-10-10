@@ -59,7 +59,7 @@ itemtype=content
  - siteName (string) mandatory internationalized
  - siteTeaser (string) mandatory internationalized
  - logo (weakreference) mandatory internationalized < 'jnt:file'
- - slogan (weakreference) mandatory internationalized < 'jnt:file'
+ - slogan (weakreference)  internationalized hidden < 'jnt:file'
 
 [sont:adminBar] > jnt:content, somix:component, jmix:studioLayout
 

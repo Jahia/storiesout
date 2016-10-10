@@ -31,4 +31,11 @@
 </c:choose>
 
 
-<p><strong><a href="${linkUrl}">${currentNode.displayableName}</a></strong><br/><small>${formatedDate}</small></p>
+<%--<p><strong><a href="${linkUrl}">${currentNode.displayableName}</a></strong><br/><small>${formatedDate}</small></p>--%>
+
+
+<article>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="${linkUrl}">${currentNode.displayableName}<br/><span class="small"><i class="fa fa-newspaper-o"></i> ${formatedDate}</span></a></h4>
+    </div>
+</article>

@@ -22,12 +22,15 @@
     <jcr:nodeProperty var="logo" node="${currentNode}" name="logo"/>
     <c:if test="${! empty logo.node }">
         <c:url var="logoUrl" value="${logo.node.url}"/>
-        <a class="img-logo" href="${homePageURL}"><img alt="StoriesOut" height="30" src="${logoUrl}"></a>
+        <a class="navbar-brand" href="${homePageURL}"><img alt="StoriesOut" height="120" src="${logoUrl}"></a>
     </c:if>
+    <%--
+
     <jcr:nodeProperty var="slogan" node="${currentNode}" name="slogan"/>
     <c:if test="${! empty slogan.node }">
         <c:url var="sloganUrl" value="${slogan.node.url}"/>
         <img class="img-slogan hidden-print" alt="StoriesOut" height="25" src="${sloganUrl}">
     </c:if>
+    --%>
 
 </div>

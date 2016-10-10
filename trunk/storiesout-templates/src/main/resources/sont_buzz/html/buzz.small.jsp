@@ -51,13 +51,15 @@
 </c:choose>
 
 
-<p style="clear:both;">
+<article>
     <c:set var="imageNode" value="${currentNode.properties.image.node}"/>
     <c:if test="${! empty imageNode}">
-        <c:url var="imageUrl" value="${imageNode.url}"/>
-        <a class="media-photo" href="${linkUrl}"><img src="${imageUrl}" alt="${imageNode.displayableName}"></a>
+        <c:url var="imageUrl" value="${imageNode.url}" context="/"/>
+        <a class="media-photo" href="${linkUrl}"><img src="${imageUrl}"
+                                                      alt="${fn:escapeXml(imageNode.displayableName)}"></a>
     </c:if>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="${linkUrl}">${currentNode.displayableName}<br/><span class="small"><i class="fa fa-newspaper-o"></i> ${formatedDate}</span></a></h4>
+    </div>
+</article>
 
-    <strong><a href="${linkUrl}">${currentNode.displayableName}</a></strong><br/>
-    <small>${formatedDate}</small>
-</p>
