@@ -1,3 +1,58 @@
+/*FONT FOR TITLES*/
+
+@font-face {
+    font-family: 'blackout2_am';
+    src: url('blackout-2am-webfont.woff2') format('woff2'),
+    url('blackout-2am-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'blackoutmidnight';
+    src: url('blackout-midnight-webfont.woff2') format('woff2'),
+    url('blackout-midnight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Blackout Sunrise */
+@font-face {
+    font-family: 'blackout_sunrise';
+    src: url('blackout_sunrise-webfont.eot');
+    src: url('blackout_sunrise-webfont.eot?#iefix') format('embedded-opentype'),
+    url('blackout_sunrise-webfont.woff') format('woff'),
+    url('blackout_sunrise-webfont.ttf') format('truetype'),
+    url('blackout_sunrise-webfont.svg#BlackoutSunrise') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+
+    font-family: 'Dosis', Arial, sans-serif;
+    font-size: 1.5em;
+}
+
+h1, h2 {
+    font-family: 'blackout_sunrise', sans-serif;
+    font-size: 4em;
+}
+
+button, a{
+    color: #037A7C;
+}
+
+button:hover, a:hover{
+    color: #035A62;
+    text-decoration: underline;
+}
+
+
 #twitter-widget-0 {
     width: 100% !important;
     margin-bottom: 15px !important
@@ -51,11 +106,11 @@
 }
 
 .color-blue {
-    color: #009eff
+    color: #037a7c
 }
 
 .color-green {
-    color: #5cb85c
+    color: #037a7c
 }
 
 .color-blue2 {
@@ -103,7 +158,7 @@
 }
 
 .bg-blue {
-    background-color: #009eff
+    background-color: #037a7c
 }
 
 .bg-green {
@@ -195,7 +250,7 @@
     -moz-transition: all 500ms linear;
     -o-transition: all 500ms linear;
     transition: all 500ms linear;
-    background-color: rgba(255, 255, 255, .7);
+    /*background-color: rgba(255, 255, 255, .7);*/
     color: #434955
 }
 
@@ -255,27 +310,26 @@
 
 .social .btn {
     border-radius: 100%;
-    height: 40px;
-    line-height: 35px;
+    height: 25px;
+    line-height: 25px;
     overflow: hidden;
     padding: 0;
     text-align: center;
     vertical-align: middle;
-    width: 40px;
+    width: 25px;
     margin-left: 10px
 }
 
 .social-big .btn {
     border-radius: 100%;
-    height: 50px;
-    line-height: 45px;
+    height: 30px;
+    line-height: 20px;
     overflow: hidden;
     padding: 0;
     text-align: center;
     vertical-align: middle;
-    width: 50px;
+    width: 30px;
     margin-left: 10px;
-    padding-top: 10px
 }
 
 .social .btn {
@@ -286,14 +340,14 @@
 }
 
 .social .btn:hover, .social .btn:focus {
-    background-color: #009eff;
-    border-color: #009eff;
+    background-color: #037a7c;
+    border-color: #037a7c;
     color: #fff
 }
 
 .social .btn:active, .social .btn.active {
-    background-color: #009eff;
-    border-color: #009eff;
+    background-color: #037a7c;
+    border-color: #037a7c;
     color: #fff
 }
 
@@ -378,7 +432,7 @@ h1.h1-home, h2.h2-home {
 }
 
 #header {
-    padding: 20px 0
+    padding: 20px 0 50px 0;
 }
 
 #header a {
@@ -387,7 +441,7 @@ h1.h1-home, h2.h2-home {
 }
 
 #header a:hover, #header a:focus {
-    color: #009eff;
+    color: #037A7C;
     text-decoration: none
 }
 
@@ -437,13 +491,25 @@ h1.h1-home, h2.h2-home {
 }
 
 .navbar {
-    margin-bottom: 0
+    margin-bottom: 0;
+    margin-top: 35px;
+    background-color: white;
 }
+
+.navbar-brand {
+    margin-top: -20px;
+
+}
+
 
 nav .form-control {
     background-color: #353b47;
     border-color: #353b47;
     color: #aab2bd
+}
+
+.navbar li a {
+    color: #037A7C;
 }
 
 .map {
@@ -457,12 +523,12 @@ nav .form-control {
 }
 
 .teaser-page {
-    background-color: #009eff
+    background-color: #037A7C;
 }
 
 .teaser-page h1 {
     color: #fff;
-    margin-top: 5px
+    margin-top: 20px
 }
 
 .teaser-page p {
@@ -535,7 +601,7 @@ nav .form-control {
 }
 
 #footer #footer-main [class^=fa-], #footer #footer-main [class*=" fa-"] {
-    color: #009eff;
+    color: #037A7C;
     font-size: 15px;
     margin-top: 2px
 }
@@ -697,7 +763,7 @@ li.media-small h3, li.media-smallwithextract h3 {
 }
 
 .media-heading a:hover, .media-heading a:focus {
-    color: #009eff;
+    color: #037a7c;
     text-decoration: none
 }
 
@@ -760,7 +826,7 @@ div.media-date {
     min-width: 60px;
     float: left;
     margin: 0 5px 5px 0;
-    background: #009eff;
+    background: #037a7c;
     text-align: center
 }
 
@@ -826,7 +892,7 @@ div.media-date .year {
 }
 
 .video_wrapper .video-item .img_box span.circle {
-    background: rgba(0, 153, 255, .8);
+    background: rgba(3, 122, 124, .8);
     width: 48px;
     height: 48px;
     display: none;
@@ -886,7 +952,7 @@ div.media-date .year {
 }
 
 .profile-box h3 a:hover, .media-heading a:focus {
-    color: #009eff;
+    color: #03515A;
     text-decoration: none
 }
 
@@ -954,7 +1020,7 @@ ul.client-list {
     font-weight: 700;
     text-overflow: ellipsis;
     height: 36px;
-    overflow: hidden
+    overflow: hidden;
 }
 
 article.client figure {
@@ -976,7 +1042,7 @@ article.client figure {
     transform: rotate(45deg);
     width: 103px;
     color: #FFF;
-    background-color: #f79406;
+    background-color: #ED1164;
     z-index: 5
 }
 
@@ -1152,11 +1218,11 @@ article.client figure {
 }
 
 .media .content.staff {
-    border-color: #009eff
+    border-color: #037A7C;
 }
 
 .media .content.staff:before {
-    border-right-color: #009eff
+    border-right-color: #037A7C;
 }
 
 .media-comments .media-body {
@@ -1164,7 +1230,7 @@ article.client figure {
 }
 
 body.error-page {
-    background: url(../img/error-bg.jpg) no-repeat center center fixed;
+    background: url(../../img/error-bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1191,9 +1257,9 @@ body.error-page .code span {
     }
 }
 
-body.error-page .code [class^=fa-], body.error-page .code [class*=" fa-"] {
-    color: #009eff
-}
+/*body.error-page .code [class^=fa-], body.error-page .code [class*=" fa-"] {
+    color: #037a7c
+}*/
 
 body.error-page .message {
     font-size: 18px;
@@ -1201,7 +1267,6 @@ body.error-page .message {
     margin-top: 50px;
     margin-bottom: 0;
     font-weight: 300;
-    color: #000
 }
 
 @media (min-width: 768px) {
@@ -1219,21 +1284,48 @@ body.error-page .btn {
 body.error-page .wrapper {
     padding: 10px;
     display: inline-block;
-    background: rgba(255, 255, 255, .6);
     overflow: hidden
 }
 
 body.error-page .logo {
     margin-top: 50px;
     display: inline-block
-}
-.tab-content {
-    padding-top:15px;
-}
+}.tab-content {
+     padding-top:15px;
+ }
 .nav-tabs {
-  margin-top:30px;
+    margin-top:30px;
 }
 p.banner a {color:#fff;}
+
 .dropdown-menu {
-    z-index: 1031 !important;
+    z-index: 1031;
+}
+.tab-content .media-heading a {
+    font-size: 15px;
+}
+.tab-content article {
+    clear: both;
+    padding-bottom: 10px;
+}
+.client-header-side h2, .news h2 {
+    font-family: 'Dosis', Arial, sans-serif;
+    font-size: 2em;
+}
+.navbar-nav > li > a {
+    font-size: 1.4em;
+}
+.social .btn .fa {
+    line-height: 25px;
+    font-size: large;
+}
+.social-big .btn .fa {
+    padding-top: 3px;
+}
+
+.navbar .form-control {
+    background: white;
+    height: 28px;
+    border-color: #aab2bd;
+    color: #aab2bd;
 }

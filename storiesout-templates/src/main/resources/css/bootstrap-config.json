@@ -33,7 +33,7 @@
     "@border-radius-small":"0px",
     "@brand-danger":"#d9534f",
     "@brand-info":"#5bc0de",
-    "@brand-primary":"#009eff",
+    "@brand-primary":"#037a7c",
     "@brand-success":"#5cb85c",
     "@brand-warning":"#f0ad4e",
     "@breadcrumb-active-color":"@gray-light",

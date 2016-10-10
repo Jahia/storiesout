@@ -14,4 +14,4 @@
     <a href="${clientUrl}"><img src="${logoUrl}" class="client-logo" alt="${fn:escapeXml(logo.displayableName)}"></a>
 </c:if>
 
-<p class="client-name" style="word-wrap: break-word;"><a href="${clientUrl}">${currentNode.displayableName}</a></p>
+<p class="client-name" style="word-wrap: break-word;"><a href="${clientUrl}" class="color-gray">${currentNode.displayableName}</a></p>

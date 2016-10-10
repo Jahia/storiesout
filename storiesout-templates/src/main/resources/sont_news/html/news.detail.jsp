@@ -37,7 +37,9 @@
     </div>
 </c:if>
 
-${currentNode.properties.text.string}
+<div class="news">
+    ${currentNode.properties.text.string}
+</div>
 
 <c:set var="linkUrl" value="#"/>
 <c:set var="linkType" value="noLink"/>

@@ -1,3 +1,4 @@
+<%@ page import="java.text.Normalizer" %>
 <%@ page language="java" contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="template" uri="http://www.jahia.org/tags/templateLib" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -40,8 +41,23 @@
                value="${alternateTitle}"/>
     </c:if>
 </c:if>
+<%!
+    public static String flattenToAscii(String string) {
+        StringBuilder sb = new StringBuilder(string.length());
+        string = Normalizer.normalize(string, Normalizer.Form.NFD);
+        for (char c : string.toCharArray()) {
+            if (c <= '\u007F') sb.append(c);
+        }
+        return sb.toString();
+    }
+%>
+<%
+    String pageTitle = (String) pageContext.findAttribute("pageTitle");
+    pageTitle = flattenToAscii(pageTitle);
+    pageContext.setAttribute("pageTitle",pageTitle);
 
 
+%>
 <${hx}<c:if test="${! empty cssClass}"><c:out value=" "/>class="${cssClass}"</c:if>>${pageTitle}</${hx}>
 
 <c:if test="${jcr:isNodeType(renderContext.mainResource.node, 'somix:intro')}">
