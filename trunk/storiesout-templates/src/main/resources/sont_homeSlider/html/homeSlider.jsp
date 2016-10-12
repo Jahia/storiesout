@@ -14,7 +14,6 @@
 <c:set var="homeSliderItems" value="${jcr:getChildrenOfType(currentNode, 'somix:homeSliderItem')}"/>
 
 <section class="slider hidden-print">
-    <div class="container relative">
         <c:choose>
             <c:when test="${renderContext.editMode}">
                 <c:forEach items="${homeSliderItems}" var="homeSliderItem" varStatus="status">
@@ -50,6 +49,5 @@
                 </template:addResources>
             </c:otherwise>
         </c:choose>
-    </div>
 </section>
 

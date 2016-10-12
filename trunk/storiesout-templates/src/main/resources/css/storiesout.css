@@ -1,19 +1,9 @@
 /*FONT FOR TITLES*/
 
 @font-face {
-    font-family: 'blackout2_am';
-    src: url('blackout-2am-webfont.woff2') format('woff2'),
-    url('blackout-2am-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-@font-face {
     font-family: 'blackoutmidnight';
-    src: url('blackout-midnight-webfont.woff2') format('woff2'),
-    url('blackout-midnight-webfont.woff') format('woff');
+    src: url('blackout_midnight-webfont.woff2') format('woff2'),
+    url('blackout_midnight-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -29,8 +19,17 @@
     url('blackout_sunrise-webfont.svg#BlackoutSunrise') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
+@font-face {
+    font-family: 'blackout_two_am';
+    src: url('blackout_two_am-webfont.eot');
+    src: url('blackout_two_am-webfont.woff') format('woff'),
+    url('blackout_two_am-webfont.ttf') format('truetype'),
+    url('blackout_two_am-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 body {
 
@@ -564,7 +563,8 @@ nav .form-control {
 }
 
 .slider {
-    background-color: #bcc1ca
+    /*background-color: #bcc1ca*/
+    position: relative;
 }
 
 .jumbotron-so h1, .jumbotron-so .h1 {
@@ -1230,7 +1230,7 @@ article.client figure {
 }
 
 body.error-page {
-    background: url(../../img/error-bg.jpg) no-repeat center center fixed;
+    background: url(../img/error-bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
