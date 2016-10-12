@@ -6,38 +6,39 @@
 <c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>
 <c:set var="text" value="${currentNode.properties.text.string}"/>
 <c:set var="image" value="${currentNode.properties.image.node}"/>
-
-<c:choose>
-    <c:when test="${renderContext.editMode}">
-        <div class="media">
-            <div class="media-left">
-                <c:if test="${! empty image}">
-                    <c:url var="imageUrl" value="${image.url}"/>
-                </c:if>
-                <img class="media-object" src="${imageUrl}" style="max-width: 64px"/>
+<div class="container relative">
+    <c:choose>
+        <c:when test="${renderContext.editMode}">
+            <div class="media">
+                <div class="media-left">
+                    <c:if test="${! empty image}">
+                        <c:url var="imageUrl" value="${image.url}"/>
+                    </c:if>
+                    <img class="media-object" src="${imageUrl}" style="max-width: 64px"/>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">${title}</h4>
+                        ${text}
+                    <template:include view="link"/>
+                </div>
             </div>
-            <div class="media-body">
-                <h4 class="media-heading">${title}</h4>
-                    ${text}
-                <template:include view="link"/>
+        </c:when>
+        <c:otherwise>
+            <div class="container-fluid">
+                <div class="carousel-caption">
+                    <c:if test="${! empty title}">
+                        <h2>${title}</h2>
+                    </c:if>
+                        ${text}
+                    <template:include view="link-btn"/>
+                </div>
+                <div class="carousel-img">
+                    <c:if test="${! empty image}">
+                        <c:url var="imageUrl" value="${image.url}"/>
+                        <img class="img-responsive" src="${imageUrl}" alt="alt">
+                    </c:if>
+                </div>
             </div>
-        </div>
-    </c:when>
-    <c:otherwise>
-        <div class="container-fluid">
-            <div class="carousel-caption">
-                <c:if test="${! empty title}">
-                    <h2>${title}</h2>
-                </c:if>
-                    ${text}
-                <template:include view="link-btn"/>
-            </div>
-            <div class="carousel-img">
-                <c:if test="${! empty image}">
-                    <c:url var="imageUrl" value="${image.url}"/>
-                    <img class="img-responsive" src="${imageUrl}" alt="alt">
-                </c:if>
-            </div>
-        </div>
-    </c:otherwise>
-</c:choose>
+        </c:otherwise>
+    </c:choose>
+</div>

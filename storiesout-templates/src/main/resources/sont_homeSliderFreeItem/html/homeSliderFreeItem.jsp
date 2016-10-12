@@ -7,22 +7,23 @@
 
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
-
-<c:choose>
-    <c:when test="${renderContext.editMode}">
-        <div class="media">
-            <div class="media-left">
+<div class="container-fluid relative">
+    <c:choose>
+        <c:when test="${renderContext.editMode}">
+            <div class="media">
+                <div class="media-left">
                 <span class="fa-stack fa-2x">
                   <i class="fa fa-square fa-stack-2x"></i>
                   <i class="fa fa-code fa-stack-1x fa-inverse"></i>
                 </span>
+                </div>
+                <div class="media-body">
+                    <p>${fn:escapeXml(currentNode.properties.free.string)}</p>
+                </div>
             </div>
-            <div class="media-body">
-                <p>${fn:escapeXml(currentNode.properties.free.string)}</p>
-            </div>
-        </div>
-    </c:when>
-    <c:otherwise>
-        ${currentNode.properties.free.string}
-    </c:otherwise>
-</c:choose>
+        </c:when>
+        <c:otherwise>
+            ${currentNode.properties.free.string}
+        </c:otherwise>
+    </c:choose>
+</div>
