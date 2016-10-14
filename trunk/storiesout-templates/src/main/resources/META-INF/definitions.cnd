@@ -164,6 +164,7 @@ itemtype=content
  - relatedCampaign (weakreference,choicelist[script=getCampaign.groovy]) multiple facetable
 
 [sont:news] > jnt:content, somix:calendarEntry, mix:title, somix:link, somix:image, somix:text, somix:component
+ - shortTitle (string) i18n
  - shortText  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
  - relatedCampaign (weakreference,choicelist[script=getCampaign.groovy]) multiple facetable
 
