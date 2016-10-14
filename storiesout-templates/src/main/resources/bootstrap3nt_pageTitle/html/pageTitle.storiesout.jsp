@@ -34,6 +34,17 @@
 
 <c:set var="pageTitle"
        value="${renderContext.mainResource.node.displayableName}"/>
+
+
+
+<c:if test="${jcr:isNodeType(renderContext.mainResource.node, 'sont:news')}">
+    <c:set var="shortTitle" value="${renderContext.mainResource.node.properties.shortTitle.string}"/>
+    <c:if test="${not empty shortTitle}">
+        <c:set var="pageTitle"
+               value="${shortTitle}"/>
+    </c:if>
+</c:if>
+
 <c:if test="${jcr:isNodeType(renderContext.mainResource.node, 'somix:alternateTitle')}">
     <c:set var="alternateTitle" value="${renderContext.mainResource.node.properties.alternateTitle.string}"/>
     <c:if test="${not empty alternateTitle}">
