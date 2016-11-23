@@ -25,7 +25,7 @@
 </c:if>
 
 
-<div class="panel panel-${state}">
+<div class="panel panel-${state}" id="${currentNode.identifier}">
     <c:if test="${! empty title}">
         <div class="panel-heading clearfix">
             <h3 class="pull-left panel-title">${title}</h3>

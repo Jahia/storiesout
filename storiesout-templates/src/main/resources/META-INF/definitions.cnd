@@ -40,7 +40,7 @@ itemtype=content
 [somix:internalLink] > jmix:templateMixin  mixin
    extends=somix:link
    - linkTitle (string) i18n
-   - internalLink (weakreference, picker[type='page']) < jnt:page
+   - internalLink (weakreference, picker[type='editoriallink']) < jnt:page
 
 [somix:externalLink] > jmix:templateMixin  mixin
    extends=somix:link
