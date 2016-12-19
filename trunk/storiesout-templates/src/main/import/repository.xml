@@ -117,7 +117,7 @@
                         <full jcr:primaryType="jnt:pageTemplate">
                             <pagecontent jcr:primaryType="jnt:contentList">
                                 <teaser-page columnsType="customColumns"
-                                  gridClasses="col-md-6,col-md-6 hidden-print"
+                                  gridClasses="col-md-12"
                                   gridLayout="fixed-width"
                                   jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
                                   jcr:primaryType="bootstrap3nt:columns"
@@ -132,9 +132,6 @@
                                        jcr:mixinTypes="bootstrap3mix:advancedPageTitle jmix:renderable"
                                        jcr:primaryType="bootstrap3nt:pageTitle"/>
                                     </teaser-page-col0>
-                                    <teaser-page-col1 jcr:primaryType="jnt:contentList">
-                                        <social jcr:primaryType="sont:social"/>
-                                    </teaser-page-col1>
                                 </teaser-page>
                                 <pagecontent jcr:primaryType="jnt:area"/>
                             </pagecontent>
@@ -142,7 +139,7 @@
                         <simple jcr:primaryType="jnt:pageTemplate">
                             <pagecontent jcr:primaryType="jnt:contentList">
                                 <teaser-page columnsType="customColumns"
-                                  gridClasses="col-md-8,col-md-4 hidden-print"
+                                  gridClasses="col-md-12"
                                   gridLayout="fixed-width"
                                   jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
                                   jcr:primaryType="bootstrap3nt:columns"
@@ -157,9 +154,6 @@
                                        jcr:mixinTypes="bootstrap3mix:advancedPageTitle jmix:renderable"
                                        jcr:primaryType="bootstrap3nt:pageTitle"/>
                                     </teaser-page-col0>
-                                    <teaser-page-col1 jcr:primaryType="jnt:contentList">
-                                        <social jcr:primaryType="sont:social"/>
-                                    </teaser-page-col1>
                                 </teaser-page>
                                 <content columnsType="predefinedColumns"
                               grid="8_4"
@@ -181,7 +175,7 @@
                             <pagecontent jcr:primaryType="jnt:contentList">
                                 <pagecontent jcr:primaryType="jnt:contentList">
                                     <teaser-page columnsType="customColumns"
-                                     gridClasses="col-md-6,col-md-6 hidden-print"
+                                     gridClasses="col-md-12"
                                      gridLayout="fixed-width"
                                      jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
                                      jcr:primaryType="bootstrap3nt:columns"
@@ -196,9 +190,6 @@
                                           jcr:mixinTypes="bootstrap3mix:advancedPageTitle jmix:renderable"
                                           jcr:primaryType="bootstrap3nt:pageTitle"/>
                                         </teaser-page-col0>
-                                        <teaser-page-col1 jcr:primaryType="jnt:contentList">
-                                            <social jcr:primaryType="sont:social"/>
-                                        </teaser-page-col1>
                                     </teaser-page>
                                     <content columnsType="nogrid"
                                  gridLayout="fixed-width"
@@ -216,7 +207,7 @@
                         <videos jcr:primaryType="jnt:pageTemplate">
                             <pagecontent jcr:primaryType="jnt:contentList">
                                 <teaser-page columnsType="customColumns"
-                                  gridClasses="col-md-6,col-md-6 hidden-print"
+                                  gridClasses="col-md-12"
                                   gridLayout="fixed-width"
                                   jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
                                   jcr:primaryType="bootstrap3nt:columns"
@@ -231,9 +222,6 @@
                                        jcr:mixinTypes="bootstrap3mix:advancedPageTitle jmix:renderable"
                                        jcr:primaryType="bootstrap3nt:pageTitle"/>
                                     </teaser-page-col0>
-                                    <teaser-page-col1 jcr:primaryType="jnt:contentList">
-                                        <social jcr:primaryType="sont:social"/>
-                                    </teaser-page-col1>
                                 </teaser-page>
                                 <content columnsType="customColumns"
                               gridClasses="col-xs-12 col-sm-12 col-md-3 hidden-print,col-xs-12 col-sm-12 col-md-9"
@@ -255,7 +243,7 @@
                             <pagecontent jcr:primaryType="jnt:contentList">
                                 <pagecontent jcr:primaryType="jnt:contentList">
                                     <teaser-page columnsType="customColumns"
-                                     gridClasses="col-md-6,col-md-6 hidden-print"
+                                     gridClasses="col-md-12"
                                      gridLayout="fixed-width"
                                      jcr:mixinTypes="bootstrap3mix:createContainer bootstrap3mix:createRow bootstrap3mix:createSection bootstrap3mix:customColumns"
                                      jcr:primaryType="bootstrap3nt:columns"
@@ -270,7 +258,6 @@
                                           jcr:mixinTypes="bootstrap3mix:advancedPageTitle jmix:renderable"
                                           jcr:primaryType="bootstrap3nt:pageTitle"/>
                                         </teaser-page-col0>
-                                        <teaser-page-col1 jcr:primaryType="jnt:contentList"/>
                                     </teaser-page>
                                     <content columnsType="nogrid"
                                  gridLayout="fixed-width"
