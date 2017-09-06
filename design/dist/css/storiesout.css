@@ -51,7 +51,7 @@
 }
 
 .color-blue {
-    color: #009eff
+    color: #037a7c
 }
 
 .color-green {
@@ -103,7 +103,7 @@
 }
 
 .bg-blue {
-    background-color: #009eff
+    background-color: #037a7c
 }
 
 .bg-green {
@@ -267,15 +267,14 @@
 
 .social-big .btn {
     border-radius: 100%;
-    height: 50px;
-    line-height: 45px;
+    height: 30px;
+    line-height: 20px;
     overflow: hidden;
     padding: 0;
     text-align: center;
     vertical-align: middle;
-    width: 50px;
+    width: 30px;
     margin-left: 10px;
-    padding-top: 6px
 }
 
 .social .btn {
@@ -286,14 +285,14 @@
 }
 
 .social .btn:hover, .social .btn:focus {
-    background-color: #009eff;
-    border-color: #009eff;
+    background-color: #037a7c;
+    border-color: #037a7c;
     color: #fff
 }
 
 .social .btn:active, .social .btn.active {
-    background-color: #009eff;
-    border-color: #009eff;
+    background-color: #037a7c;
+    border-color: #037a7c;
     color: #fff
 }
 
@@ -387,7 +386,7 @@ h1.h1-home, h2.h2-home {
 }
 
 #header a:hover, #header a:focus {
-    color: #009eff;
+    color: #037a7c;
     text-decoration: none
 }
 
@@ -457,7 +456,7 @@ nav .form-control {
 }
 
 .teaser-page {
-    background-color: #009eff
+    background-color: #037a7c
 }
 
 .teaser-page h1 {
@@ -535,7 +534,7 @@ nav .form-control {
 }
 
 #footer #footer-main [class^=fa-], #footer #footer-main [class*=" fa-"] {
-    color: #009eff;
+    color: #037a7c;
     font-size: 15px;
     margin-top: 2px
 }
@@ -697,7 +696,7 @@ li.media-small h3, li.media-smallwithextract h3 {
 }
 
 .media-heading a:hover, .media-heading a:focus {
-    color: #009eff;
+    color: #037a7c;
     text-decoration: none
 }
 
@@ -760,7 +759,7 @@ div.media-date {
     min-width: 60px;
     float: left;
     margin: 0 5px 5px 0;
-    background: #009eff;
+    background: #037a7c;
     text-align: center
 }
 
@@ -886,7 +885,7 @@ div.media-date .year {
 }
 
 .profile-box h3 a:hover, .media-heading a:focus {
-    color: #009eff;
+    color: #037a7c;
     text-decoration: none
 }
 
@@ -1152,11 +1151,11 @@ article.client figure {
 }
 
 .media .content.staff {
-    border-color: #009eff
+    border-color: #037a7c
 }
 
 .media .content.staff:before {
-    border-right-color: #009eff
+    border-right-color: #037a7c
 }
 
 .media-comments .media-body {
@@ -1192,7 +1191,7 @@ body.error-page .code span {
 }
 
 body.error-page .code [class^=fa-], body.error-page .code [class*=" fa-"] {
-    color: #009eff
+    color: #037a7c
 }
 
 body.error-page .message {
@@ -1226,4 +1225,15 @@ body.error-page .wrapper {
 body.error-page .logo {
     margin-top: 50px;
     display: inline-block
+}
+.social .btn .fa {
+    line-height: 25px;
+    font-size: large;
+    padding-top: 3px;
+}
+.navbar .form-control {
+    background: white;
+    height: 28px;
+    border-color: #aab2bd;
+    color: #aab2bd;
 }

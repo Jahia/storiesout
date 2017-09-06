@@ -143,8 +143,8 @@ itemtype=content
  - quote  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
  - description  (string, richtext[ckeditor.customConfig='$context/modules/bootstrap3-components/javascript/ckconfig.js']) i18n
  - status (string, choicelist[resourceBundle]) = 'active' autocreated facetable < 'active', 'unactive'
- - clientType (weakreference, choicelist[nodes='/sites/systemsite/categories/clientTypes;jnt:category',sort]) facetable
- - sector (weakreference, choicelist[nodes='/sites/systemsite/categories/sectors;jnt:category',sort]) multiple facetable
+ - clientType (weakreference, choicelist[nodes='/sites/systemsite/categories/clientTypes;jnt:category',sort]) facetable hierarchical
+ - sector (weakreference, choicelist[nodes='/sites/systemsite/categories/sectors;jnt:category',sort]) multiple facetable hierarchical
  + toto (jnt:contentList)
  + * (jmix:droppableContent) = jmix:droppableContent
 

@@ -67,7 +67,7 @@ printMenu = { node, navMenuLevel ->
                                     ulIsOpen = true;
                                 }
                                 println "<li ${listItemCssClass}>";
-                                print "<a href=\"${link} ${linkTitle}\">" + menuItem.displayableName + "</a>";
+                                print "<a href=\"${link}\"${linkTitle}>" + menuItem.displayableName + "</a>";
                                 if (hasChildren && navMenuLevel < maxDepth) {
                                     printMenu(menuItem, navMenuLevel + 1);
                                 }
