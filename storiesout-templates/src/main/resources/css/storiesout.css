@@ -399,7 +399,7 @@ button:hover, a:hover{
     color: #fff
 }
 
-h1.h1-home span, h2.h2-home span {
+.h1-home span, .h2-home span {
     float: left;
     line-height: 0;
     text-indent: -9999px;
@@ -407,7 +407,7 @@ h1.h1-home span, h2.h2-home span {
     height: 0
 }
 
-h1.h1-home, h2.h2-home {
+.h1-home, .h2-home {
     float: left;
     text-indent: -9999px;
     line-height: 0;

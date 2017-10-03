@@ -15,8 +15,8 @@
 
 <div class="logo-container">
     <c:if test="${renderContext.mainResource.node.path eq renderContext.site.home.path}">
-        <h1 class="h1-home"><span>${currentNode.properties.siteName.string}</span></h1>
-        <h2 class="h2-home"><span>${currentNode.properties.siteTeaser.string}</span></h2>
+        <div class="h1-home"><span>${currentNode.properties.siteName.string}</span></div>
+        <div class="h2-home"><span>${currentNode.properties.siteTeaser.string}</span></div>
     </c:if>
     <c:url var="homePageURL" value="${renderContext.site.home.url}"/>
     <jcr:nodeProperty var="logo" node="${currentNode}" name="logo"/>
