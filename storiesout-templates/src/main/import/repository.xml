@@ -45,7 +45,7 @@
                   jcr:primaryType="jnt:template">
                         <home jcr:primaryType="jnt:pageTemplate">
                             <pagecontent jcr:primaryType="jnt:contentList">
-                                <banner j:allowedTypes="sont:homeSlider sont:jumbotron"
+                                <banner j:allowedTypes="sont:homeSlider sont:jumbotron sont:banner"
                              jcr:primaryType="jnt:area"/>
                                 <content columnsType="nogrid"
                                                     gridLayout="fixed-width"

@@ -178,3 +178,8 @@ itemtype=content
 [sont:lastCalendar] > jnt:content, somix:component
  - list (weakreference) mandatory
  - size (long) = 10 mandatory
+
+[sont:banner] > jnt:content, somix:component, mix:title, somix:image, somix:link, somix:text
+ - lead (string) internationalized
+ - logo (weakreference, picker[type='image']) < 'jmix:image'
+ - theme (string, choicelist[resourceBundle]) = 'blue' < 'blue', 'red', 'purple', 'yellow', 'orange','lime-green'

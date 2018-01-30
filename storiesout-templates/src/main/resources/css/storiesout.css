@@ -1330,3 +1330,274 @@ p.banner a {color:#fff;}
     border-color: #aab2bd;
     color: #aab2bd;
 }
+.container-fluid.so-banner{
+    padding: 0;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    font-family: Dosis;
+}
+
+.so-banner .so-banner-content{
+    position: relative;
+    z-index: 0;
+    padding: 80px 0 80px 100px;
+}
+
+.so-banner .so-banner-content h1{
+    color: white;
+    font-size: 40px;
+    width: calc(100% - 440px);
+    font-weight: 600;
+    line-height: 50px;
+}
+
+.so-banner .so-banner-content p{
+    color: white;
+    font-size: 26px;
+    width: calc(100% - 400px);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.so-banner .so-banner-content .so-product-logo{
+    background: white;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 20px 50px;
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.so-banner .so-banner-content-wrapper{
+    position: relative;
+    width: 100%;
+}
+
+.so-banner .so-banner-content-wrapper h1 {
+    font-size: 60px;
+    text-shadow: 2px 2px #000;
+    font-family: Dosis;
+}
+
+.so-banner .so-banner-content-wrapper p {
+    font-size: 40px;
+    text-shadow: 2px 2px #000;
+    font-family: Dosis;
+}
+
+.so-banner .so-banner-content .so-product-logo img{
+    height: 54px;
+    width: auto;
+}
+
+.so-banner .so-banner-cta{
+    width: 100%;
+    z-index: 2;
+    bottom: 0;
+    height: auto;
+    padding: 20px 100px 20px 100px;
+}
+
+.so-banner.red .so-banner-cta{
+    background: rgba(218, 30, 93, 0.8);
+}
+
+.so-banner.blue .so-banner-cta{
+    background: rgba(5, 50, 78, 0.8);
+}
+
+.so-banner.purple .so-banner-cta{
+    background: rgba(68, 5, 112, 0.8);
+}
+
+.so-banner.yellow .so-banner-cta{
+    background: rgba(216, 133, 3, 0.8);
+}
+
+.so-banner.orange .so-banner-cta{
+    background: rgba(212, 86, 4, 0.8);
+}
+.so-banner.lime-green .so-banner-cta{
+    background: rgba(115, 204, 54, 0.8);
+}
+.so-banner .so-banner-cta p{
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+    padding: 0;
+    margin-bottom: 0;
+    line-height: 1.5!important;
+}
+
+.btn.btn-cta{
+    background: #037a7c;
+    border-radius: 100px;
+    color: white;
+    padding: 10px 40px;
+    font-size: 20px;
+    margin: 15px auto 20px auto;
+}
+
+.btn.btn-main{
+    background: #037a7c;
+    border-radius: 100px;
+    color: white;
+    padding: 10px 40px;
+    font-size: 20px;
+    margin: 15px auto 20px auto;
+}
+
+
+
+
+@media only screen and (max-width: 1160px) {
+
+    .so-banner{
+        overflow: hidden;
+        min-height: inherit;
+        height: auto;
+    }
+
+    .so-banner .cover-img{
+        width: 100%;
+        height: auto;
+    }
+
+    .so-banner .so-banner-cta{
+        position: relative;
+        width: 100%;
+        z-index: 2;
+        bottom: 0;
+        height: auto;
+        background: rgba(218, 30, 93, 0.8);
+        padding: 20px 100px 10px 100px;
+    }
+
+    .so-banner .so-banner-content{
+        padding: 0;
+        margin: 0;
+        height: auto;
+    }
+
+    .so-banner .so-banner-content .so-product-logo{
+        background: white;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding: 20px 50px;
+        width: auto;
+        position: relative;
+        width: 100%;
+        background: rgba(255,255,255,0.9);
+    }
+
+    .so-banner .so-banner-content .so-product-logo img{
+        position: relative;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .so-banner .so-banner-content{
+        width: 100%;
+        position: relative;
+        z-index: 0;
+        padding: 0 0 70px 0;
+    }
+
+    .so-banner .so-banner-content h1{
+        color: white;
+        font-size: 40px;
+        width: calc(100% - 50px);
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 15px;
+        padding-top: 70px;
+    }
+
+    .so-banner .so-banner-content p{
+        color: white;
+        font-size: 26px;
+        width: 100%;
+        text-align: center;
+        width: calc(100% - 50px);
+    }
+
+    .btn.btn-cta{
+        background: #037a7c;
+        border-radius: 100px;
+        color: white;
+        padding: 10px 40px;
+        font-size: 16px;
+        margin: 20px auto 20px auto;
+    }
+
+    .btn.btn-main{
+        background: #037a7c;
+        border-radius: 100px;
+        color: white;
+        padding: 10px 40px;
+        font-size: 16px;
+        display: table;
+        margin: 50px auto 20px auto;
+    }
+}
+
+
+@media only screen and (max-width: 660px) {
+    .btn.btn-cta{
+        background: #037a7c;
+        border-radius: 100px;
+        color: white;
+        padding: 10px 40px;
+        font-size: 16px;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .so-banner .so-banner-content{
+        width: 100%;
+        position: relative;
+        z-index: 0;
+        padding: 0 0 40px 0;
+    }
+
+    .so-banner .so-banner-content h1{
+        color: white;
+        font-size: 30px;
+        width: calc(100% - 20px);
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
+
+    .so-banner .so-banner-content p{
+        color: white;
+        font-size: 20px;
+        width: calc(100% - 20px);
+        margin: 0 auto;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .so-banner .so-banner-cta{
+        position: relative;
+        width: 100%;
+        z-index: 2;
+        bottom: 0;
+        height: auto;
+        background: rgba(218, 30, 93, 0.8);
+        padding: 20px 30px 10px 30px;
+    }
+
+    .so-banner .so-banner-cta p{
+        color: white;
+        font-size: 18px;
+        font-weight: 300;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 0;
+        line-height: 1.5!important;
+    }
+}
