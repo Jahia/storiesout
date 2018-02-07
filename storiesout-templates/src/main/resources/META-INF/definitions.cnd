@@ -183,3 +183,8 @@ itemtype=content
  - lead (string) internationalized
  - logo (weakreference, picker[type='image']) < 'jmix:image'
  - theme (string, choicelist[resourceBundle]) = 'blue' < 'blue', 'red', 'purple', 'yellow', 'orange','lime-green'
+
+[somix:keywordsI18n] mixin
+ extends = nt:hierarchyNode, jnt:content, jnt:page
+ itemtype = metadata
+ - j:keywordsI18n (string, textarea) internationalized itemtype = metadata

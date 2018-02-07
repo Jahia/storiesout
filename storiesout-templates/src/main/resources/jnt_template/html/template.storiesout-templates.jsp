@@ -14,12 +14,13 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <!DOCTYPE html>
-<html lang="en">
+<c:set var="mainResourceNode" value="${renderContext.mainResource.node}"/>
+<c:set var="currentLang" value="${renderContext.mainResourceLocale.language}"/>
+<html lang="${currentLang}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="meta description">
     <meta name="author" content="">
     <link rel="icon" href="${url.currentModule}/img/favicon.ico">
     <link rel="apple-touch-icon" sizes="57x57" href="${url.currentModule}/img/apple-icon-57x57.png">
@@ -39,8 +40,42 @@
     <meta name="msapplication-TileImage" content="${url.currentModule}/img/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <c:set var="pageTitle" value="${renderContext.mainResource.node.displayableName}"/>
+    <c:if test="${jcr:isNodeType(renderContext.mainResource.node, 'somix:alternateTitle')}">
+        <c:set var="alternateTitle" value="${renderContext.mainResource.node.properties.alternateTitle.string}"/>
+        <c:if test="${not empty alternateTitle}">
+            <c:set var="pageTitle"
+                   value="${alternateTitle}"/>
+        </c:if>
+    </c:if>
 
-    <title>${fn:escapeXml(renderContext.mainResource.node.displayableName)}</title>
+    <title>${pageTitle}</title>
+    <c:if test="${not empty mainResourceNode.properties['jcr:description'].string}">
+        <c:set var="pageDescription"
+               value="${fn:substring(mainResourceNode.properties['jcr:description'].string,0,160)}"/>
+        <meta name="description" content="${fn:escapeXml(pageDescription)}"/>
+        <meta property="og:description" content="${fn:escapeXml(pageDescription)}" />
+    </c:if>
+
+    <c:set var="keywordsI18n" value="${renderContext.mainResource.node.properties['j:keywordsI18n'].string}"/>
+    <c:choose>
+        <c:when test="${! empty keywordsI18n}">
+            <meta name="keywords" content="${fn:trim(keywordsI18n)}"/>
+        </c:when>
+        <c:otherwise>
+            <jcr:nodeProperty node="${renderContext.mainResource.node}" name="j:keywords"  var="keywords"/>
+            <c:set var="keywordsStr" value=""/>
+            <c:forEach items="${keywords}" var="keyword">
+                <c:set var="keywordsStr">${fn:escapeXml(keywordsStr)}--${fn:escapeXml(keyword.string)}</c:set>
+            </c:forEach>
+            <c:if test="${!empty keywordsStr}">
+                <meta name="keywords" content="${fn:trim(fn:replace(keywordsStr,'--',' '))}"/>
+            </c:if>
+        </c:otherwise>
+    </c:choose>
+
+
+    <meta property="og:title" content="${fn:escapeXml(pageTitle)}" />
 
     <template:addResources type="css" resources="font-awesome.min.css"/>
     <template:addResources type="css" resources="bootstrap.min.css"/>

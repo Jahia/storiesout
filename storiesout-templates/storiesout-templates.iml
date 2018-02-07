@@ -2,7 +2,7 @@
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Osmorc" name="OSGi">
-      <configuration manifestGenerationMode="OsmorcControlled" manifestLocation="" jarfileLocation="storiesout-templates-2.6-SNAPSHOT.jar" outputPathType="CompilerOutputPath" bndFileLocation="" bundlorFileLocation="" bundleActivator="" bundleSymbolicName="storiesout-templates" bundleVersion="2.6.0.SNAPSHOT" ignoreFilePattern="" useProjectDefaultManifestFileLocation="true" alwaysRebuildBundleJAR="false" doNotSynchronizeWithMaven="false">
+      <configuration manifestGenerationMode="OsmorcControlled" manifestLocation="" jarfileLocation="storiesout-templates-2.9-SNAPSHOT.jar" outputPathType="CompilerOutputPath" bndFileLocation="" bundlorFileLocation="" bundleActivator="" bundleSymbolicName="storiesout-templates" bundleVersion="2.9.0.SNAPSHOT" ignoreFilePattern="" useProjectDefaultManifestFileLocation="true" alwaysRebuildBundleJAR="false" doNotSynchronizeWithMaven="false">
         <additionalProperties>
           <property key="Bundle-Description" value="This is the custom profile module (Storiesout Templates) for running on a Digital Factory server." />
           <property key="Bundle-Vendor" value="Jahia Solutions Group SA" />
@@ -13,36 +13,43 @@
           <property key="Bundle-Name" value="Storiesout Templates" />
           <property key="Bundle-Category" value="jahia-module" />
           <property key="Implementation-Title" value="Storiesout Templates" />
-          <property key="Implementation-Version" value="2.6-SNAPSHOT" />
+          <property key="Implementation-Version" value="2.9-SNAPSHOT" />
           <property key="Implementation-Vendor" value="Jahia Solutions Group SA" />
           <property key="Implementation-URL" value="http://www.jahia.com" />
           <property key="Specification-Title" value="Storiesout Templates" />
-          <property key="Specification-Version" value="2.6-SNAPSHOT" />
+          <property key="Specification-Version" value="2.9-SNAPSHOT" />
           <property key="Specification-Vendor" value="Jahia Solutions Group SA" />
           <property key="Jahia-GroupId" value="org.jahia.modules" />
           <property key="Jahia-Source-Folders" value="$MODULE_DIR$" />
           <property key="Jahia-Source-Control-Connection" value="scm:dummy:uri" />
           <property key="Jahia-Source-Control-DeveloperConnection" value="scm:dummy:uri" />
+          <property key="Jahia-Source-Control-Tag" value="HEAD" />
+          <property key="Jahia-Download-Sources-Available" value="${jahia-download-sources-available}" />
           <property key="Jahia-Required-Version" value="${jahia.version}" />
           <property key="Jahia-Static-Resources" value="/css,/icons,/images,/img,/javascript" />
           <property key="Jahia-Private-App-Store" value="${jahia-private-app-store}" />
+          <property key="Jahia-Deploy-On-Site" value="${jahia-deploy-on-site}" />
+          <property key="Jahia-Block-Edit-Mode" value="${jahia-block-edit-mode}" />
+          <property key="Export-Package" value="${export-package}" />
           <property key="Import-Package" value="${jahia.plugin.projectPackageImport},*" />
-          <property key="Provide-Capability" value="${jahia.plugin.providedNodeTypes}" />
-          <property key="Require-Capability" value="${jahia.plugin.requiredNodeTypes}" />
-          <property key="Embed-Dependency" value="*; scope=compile; type=!pom; inline=true" />
+          <property key="Provide-Capability" value="${jahia.plugin.providedNodeTypes}${jahia.plugin.providedModulesCapabilities}" />
+          <property key="Require-Capability" value="${jahia.plugin.requiredNodeTypes}${jahia.plugin.requiredModulesCapabilities}" />
+          <property key="Embed-Dependency" value="*; scope=compile|runtime; type=!pom; inline=false" />
           <property key="Embed-Transitive" value="true" />
+          <property key="Dynamic-ImportPackage" value="*" />
           <property key="-removeheaders" value="Include-Resource,Private-Package,Embed-Dependency,Embed-Transitive" />
-          <property key="Include-Resource" value="bootstrap3nt_navbar/html/navbar.hidden.storiesout-menu.groovy=$MODULE_DIR$/src/main/resources/bootstrap3nt_navbar/html/navbar.hidden.storiesout-menu.groovy,bootstrap3nt_navbar/html/navbar.hidden.storiesout-menu.properties=$MODULE_DIR$/src/main/resources/bootstrap3nt_navbar/html/navbar.hidden.storiesout-menu.properties,bootstrap3nt_navbar/html/navbar.storiesout.jsp=$MODULE_DIR$/src/main/resources/bootstrap3nt_navbar/html/navbar.storiesout.jsp,bootstrap3nt_pageTitle/html/pageTitle.storiesout.jsp=$MODULE_DIR$/src/main/resources/bootstrap3nt_pageTitle/html/pageTitle.storiesout.jsp,bootstrap3nt_panel/html/panel.jsp=$MODULE_DIR$/src/main/resources/bootstrap3nt_panel/html/panel.jsp,bootstrap3nt_textBox/html/textBox.footer.jsp=$MODULE_DIR$/src/main/resources/bootstrap3nt_textBox/html/textBox.footer.jsp,bootstrap3nt_textBox/html/textBox.jsp=$MODULE_DIR$/src/main/resources/bootstrap3nt_textBox/html/textBox.jsp,css/backgroundsize.min.htc=$MODULE_DIR$/src/main/resources/css/backgroundsize.min.htc,css/blackout_midnight-webfont.woff=$MODULE_DIR$/src/main/resources/css/blackout_midnight-webfont.woff,css/blackout_midnight-webfont.woff2=$MODULE_DIR$/src/main/resources/css/blackout_midnight-webfont.woff2,css/blackout_sunrise-webfont.eot=$MODULE_DIR$/src/main/resources/css/blackout_sunrise-webfont.eot,css/blackout_sunrise-webfont.svg=$MODULE_DIR$/src/main/resources/css/blackout_sunrise-webfont.svg,css/blackout_sunrise-webfont.ttf=$MODULE_DIR$/src/main/resources/css/blackout_sunrise-webfont.ttf,css/blackout_sunrise-webfont.woff=$MODULE_DIR$/src/main/resources/css/blackout_sunrise-webfont.woff,css/blackout_two_am-webfont.eot=$MODULE_DIR$/src/main/resources/css/blackout_two_am-webfont.eot,css/blackout_two_am-webfont.svg=$MODULE_DIR$/src/main/resources/css/blackout_two_am-webfont.svg,css/blackout_two_am-webfont.ttf=$MODULE_DIR$/src/main/resources/css/blackout_two_am-webfont.ttf,css/blackout_two_am-webfont.woff=$MODULE_DIR$/src/main/resources/css/blackout_two_am-webfont.woff,css/bootstrap-config.json=$MODULE_DIR$/src/main/resources/css/bootstrap-config.json,css/bootstrap-theme.css=$MODULE_DIR$/src/main/resources/css/bootstrap-theme.css,css/bootstrap-theme.min.css=$MODULE_DIR$/src/main/resources/css/bootstrap-theme.min.css,css/bootstrap.css=$MODULE_DIR$/src/main/resources/css/bootstrap.css,css/bootstrap.min.css=$MODULE_DIR$/src/main/resources/css/bootstrap.min.css,css/docs.css=$MODULE_DIR$/src/main/resources/css/docs.css,css/facets.css=$MODULE_DIR$/src/main/resources/css/facets.css,css/flexslider.css=$MODULE_DIR$/src/main/resources/css/flexslider.css,css/gem.css=$MODULE_DIR$/src/main/resources/css/gem.css,css/storiesout.css=$MODULE_DIR$/src/main/resources/css/storiesout.css,img/android-icon-144x144.png=$MODULE_DIR$/src/main/resources/img/android-icon-144x144.png,img/android-icon-192x192.png=$MODULE_DIR$/src/main/resources/img/android-icon-192x192.png,img/android-icon-36x36.png=$MODULE_DIR$/src/main/resources/img/android-icon-36x36.png,img/android-icon-48x48.png=$MODULE_DIR$/src/main/resources/img/android-icon-48x48.png,img/android-icon-72x72.png=$MODULE_DIR$/src/main/resources/img/android-icon-72x72.png,img/android-icon-96x96.png=$MODULE_DIR$/src/main/resources/img/android-icon-96x96.png,img/anne.png=$MODULE_DIR$/src/main/resources/img/anne.png,img/apple-icon-114x114.png=$MODULE_DIR$/src/main/resources/img/apple-icon-114x114.png,img/apple-icon-120x120.png=$MODULE_DIR$/src/main/resources/img/apple-icon-120x120.png,img/apple-icon-144x144.png=$MODULE_DIR$/src/main/resources/img/apple-icon-144x144.png,img/apple-icon-152x152.png=$MODULE_DIR$/src/main/resources/img/apple-icon-152x152.png,img/apple-icon-180x180.png=$MODULE_DIR$/src/main/resources/img/apple-icon-180x180.png,img/apple-icon-57x57.png=$MODULE_DIR$/src/main/resources/img/apple-icon-57x57.png,img/apple-icon-60x60.png=$MODULE_DIR$/src/main/resources/img/apple-icon-60x60.png,img/apple-icon-72x72.png=$MODULE_DIR$/src/main/resources/img/apple-icon-72x72.png,img/apple-icon-76x76.png=$MODULE_DIR$/src/main/resources/img/apple-icon-76x76.png,img/apple-icon-precomposed.png=$MODULE_DIR$/src/main/resources/img/apple-icon-precomposed.png,img/apple-icon.png=$MODULE_DIR$/src/main/resources/img/apple-icon.png,img/apple-touch-icon.png=$MODULE_DIR$/src/main/resources/img/apple-touch-icon.png,img/bg-content.png=$MODULE_DIR$/src/main/resources/img/bg-content.png,img/bg_direction_nav.png=$MODULE_DIR$/src/main/resources/img/bg_direction_nav.png,img/book.jpg=$MODULE_DIR$/src/main/resources/img/book.jpg,img/browserconfig.xml=$MODULE_DIR$/src/main/resources/img/browserconfig.xml,img/cd-top-arrow.svg=$MODULE_DIR$/src/main/resources/img/cd-top-arrow.svg,img/de.png=$MODULE_DIR$/src/main/resources/img/de.png,img/en.png=$MODULE_DIR$/src/main/resources/img/en.png,img/error-bg.jpg=$MODULE_DIR$/src/main/resources/img/error-bg.jpg,img/favicon-16x16.png=$MODULE_DIR$/src/main/resources/img/favicon-16x16.png,img/favicon-32x32.png=$MODULE_DIR$/src/main/resources/img/favicon-32x32.png,img/favicon-96x96.png=$MODULE_DIR$/src/main/resources/img/favicon-96x96.png,img/favicon.ico=$MODULE_DIR$/src/main/resources/img/favicon.ico,img/fr.png=$MODULE_DIR$/src/main/resources/img/fr.png,img/illustration-big.jpg=$MODULE_DIR$/src/main/resources/img/illustration-big.jpg,img/illustration-small.png=$MODULE_DIR$/src/main/resources/img/illustration-small.png,img/illustration.png=$MODULE_DIR$/src/main/resources/img/illustration.png,img/logo-client-big.jpg=$MODULE_DIR$/src/main/resources/img/logo-client-big.jpg,img/logo-client-big.png=$MODULE_DIR$/src/main/resources/img/logo-client-big.png,img/logo-client.jpg=$MODULE_DIR$/src/main/resources/img/logo-client.jpg,img/logo-client.png=$MODULE_DIR$/src/main/resources/img/logo-client.png,img/logo-presse.png=$MODULE_DIR$/src/main/resources/img/logo-presse.png,img/manifest.json=$MODULE_DIR$/src/main/resources/img/manifest.json,img/ms-icon-144x144.png=$MODULE_DIR$/src/main/resources/img/ms-icon-144x144.png,img/ms-icon-150x150.png=$MODULE_DIR$/src/main/resources/img/ms-icon-150x150.png,img/ms-icon-310x310.png=$MODULE_DIR$/src/main/resources/img/ms-icon-310x310.png,img/ms-icon-70x70.png=$MODULE_DIR$/src/main/resources/img/ms-icon-70x70.png,img/slogan-en.svg=$MODULE_DIR$/src/main/resources/img/slogan-en.svg,img/slogan-fr.svg=$MODULE_DIR$/src/main/resources/img/slogan-fr.svg,img/storiesout-logo-small.png=$MODULE_DIR$/src/main/resources/img/storiesout-logo-small.png,img/storiesout-logo.png=$MODULE_DIR$/src/main/resources/img/storiesout-logo.png,img/storiesout-logo.svg=$MODULE_DIR$/src/main/resources/img/storiesout-logo.svg,img/storiesout-white.svg=$MODULE_DIR$/src/main/resources/img/storiesout-white.svg,img/storiesout.svg=$MODULE_DIR$/src/main/resources/img/storiesout.svg,img/test.jpg=$MODULE_DIR$/src/main/resources/img/test.jpg,img/us.png=$MODULE_DIR$/src/main/resources/img/us.png,img/video-img.png=$MODULE_DIR$/src/main/resources/img/video-img.png,javascript/html5shiv.min.js=$MODULE_DIR$/src/main/resources/javascript/html5shiv.min.js,javascript/ie-emulation-modes-warning.js=$MODULE_DIR$/src/main/resources/javascript/ie-emulation-modes-warning.js,javascript/ie10-viewport-bug-workaround.js=$MODULE_DIR$/src/main/resources/javascript/ie10-viewport-bug-workaround.js,javascript/ie8-responsive-file-warning.js=$MODULE_DIR$/src/main/resources/javascript/ie8-responsive-file-warning.js,javascript/jquery.flexslider-min.js=$MODULE_DIR$/src/main/resources/javascript/jquery.flexslider-min.js,javascript/main.js=$MODULE_DIR$/src/main/resources/javascript/main.js,javascript/modernizr.js=$MODULE_DIR$/src/main/resources/javascript/modernizr.js,javascript/respond.min.js=$MODULE_DIR$/src/main/resources/javascript/respond.min.js,jnt_facets/html/activeFacets.jspf=$MODULE_DIR$/src/main/resources/jnt_facets/html/activeFacets.jspf,jnt_facets/html/facetDisplay.jspf=$MODULE_DIR$/src/main/resources/jnt_facets/html/facetDisplay.jspf,jnt_facets/html/facets.dropDown.jsp=$MODULE_DIR$/src/main/resources/jnt_facets/html/facets.dropDown.jsp,jnt_facets/html/facets.dropDown.properties=$MODULE_DIR$/src/main/resources/jnt_facets/html/facets.dropDown.properties,jnt_simpleSearchForm/html/simpleSearchForm.storiesout.jsp=$MODULE_DIR$/src/main/resources/jnt_simpleSearchForm/html/simpleSearchForm.storiesout.jsp,jnt_template/html/template.storiesout-templates.jsp=$MODULE_DIR$/src/main/resources/jnt_template/html/template.storiesout-templates.jsp,META-INF/definitions.cnd=$MODULE_DIR$/src/main/resources/META-INF/definitions.cnd,META-INF/rules.drl.disabled=$MODULE_DIR$/src/main/resources/META-INF/rules.drl.disabled,META-INF/spring/storiesout-templates.xml=$MODULE_DIR$/src/main/resources/META-INF/spring/storiesout-templates.xml,META-INF/storiesout-templates.tld=$MODULE_DIR$/src/main/resources/META-INF/storiesout-templates.tld,resources/storiesout-templates.properties=$MODULE_DIR$/src/main/resources/resources/storiesout-templates.properties,resources/storiesout-templates_fr.properties=$MODULE_DIR$/src/main/resources/resources/storiesout-templates_fr.properties,scripts/getCampaign.groovy=$MODULE_DIR$/src/main/resources/scripts/getCampaign.groovy,scripts/getClients.groovy=$MODULE_DIR$/src/main/resources/scripts/getClients.groovy,scripts/set-seo.groovy=$MODULE_DIR$/src/main/resources/scripts/set-seo.groovy,somix_calendarEntry/html/calendarEntry.date.jsp=$MODULE_DIR$/src/main/resources/somix_calendarEntry/html/calendarEntry.date.jsp,somix_link/html/link.link-btn.jsp=$MODULE_DIR$/src/main/resources/somix_link/html/link.link-btn.jsp,somix_link/html/link.link.jsp=$MODULE_DIR$/src/main/resources/somix_link/html/link.link.jsp,somix_social/html/displayLinks.jspf=$MODULE_DIR$/src/main/resources/somix_social/html/displayLinks.jspf,somix_social/html/social.social-big-absolute.jsp=$MODULE_DIR$/src/main/resources/somix_social/html/social.social-big-absolute.jsp,somix_social/html/social.social-big.jsp=$MODULE_DIR$/src/main/resources/somix_social/html/social.social-big.jsp,somix_social/html/social.social.jsp=$MODULE_DIR$/src/main/resources/somix_social/html/social.social.jsp,sont_adminBar/html/adminBar.jsp=$MODULE_DIR$/src/main/resources/sont_adminBar/html/adminBar.jsp,sont_adminBar/html/adminBar.properties=$MODULE_DIR$/src/main/resources/sont_adminBar/html/adminBar.properties,sont_buzz/html/buzz.jsp=$MODULE_DIR$/src/main/resources/sont_buzz/html/buzz.jsp,sont_buzz/html/buzz.list.jsp=$MODULE_DIR$/src/main/resources/sont_buzz/html/buzz.list.jsp,sont_buzz/html/buzz.small.jsp=$MODULE_DIR$/src/main/resources/sont_buzz/html/buzz.small.jsp,sont_campaign/html/campaign.detail.jsp=$MODULE_DIR$/src/main/resources/sont_campaign/html/campaign.detail.jsp,sont_campaign/html/campaign.jsp=$MODULE_DIR$/src/main/resources/sont_campaign/html/campaign.jsp,sont_campaign/html/campaign.relatedBuzz.jsp=$MODULE_DIR$/src/main/resources/sont_campaign/html/campaign.relatedBuzz.jsp,sont_campaign/html/campaign.relatedNews.jsp=$MODULE_DIR$/src/main/resources/sont_campaign/html/campaign.relatedNews.jsp,sont_client/html/client.description.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.description.jsp,sont_client/html/client.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.jsp,sont_client/html/client.logo.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.logo.jsp,sont_client/html/client.media.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.media.jsp,sont_client/html/client.quote.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.quote.jsp,sont_client/html/client.relatedBuzz.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.relatedBuzz.jsp,sont_client/html/client.relatedNews.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.relatedNews.jsp,sont_clients/html/clients.hidden.prout.jsp=$MODULE_DIR$/src/main/resources/sont_clients/html/clients.hidden.prout.jsp,sont_clients/html/clients.jsp=$MODULE_DIR$/src/main/resources/sont_clients/html/clients.jsp,sont_clients/html/clients.properties=$MODULE_DIR$/src/main/resources/sont_clients/html/clients.properties,sont_feature/html/feature.jsp=$MODULE_DIR$/src/main/resources/sont_feature/html/feature.jsp,sont_feature/html/feature.left-image.jsp=$MODULE_DIR$/src/main/resources/sont_feature/html/feature.left-image.jsp,sont_feature/html/feature.left-small-image.jsp=$MODULE_DIR$/src/main/resources/sont_feature/html/feature.left-small-image.jsp,sont_feature/html/feature.right-image.jsp=$MODULE_DIR$/src/main/resources/sont_feature/html/feature.right-image.jsp,sont_homeSlider/html/homeSlider.jsp=$MODULE_DIR$/src/main/resources/sont_homeSlider/html/homeSlider.jsp,sont_homeSliderFreeItem/html/homeSliderFreeItem.jsp=$MODULE_DIR$/src/main/resources/sont_homeSliderFreeItem/html/homeSliderFreeItem.jsp,sont_homeSliderFullItem/html/homeSliderFullItem.jsp=$MODULE_DIR$/src/main/resources/sont_homeSliderFullItem/html/homeSliderFullItem.jsp,sont_homeSliderSplashItem/html/homeSliderSplashItem.jsp=$MODULE_DIR$/src/main/resources/sont_homeSliderSplashItem/html/homeSliderSplashItem.jsp,sont_job/html/job.jsp=$MODULE_DIR$/src/main/resources/sont_job/html/job.jsp,sont_jumbotron/html/jumbotron.jsp=$MODULE_DIR$/src/main/resources/sont_jumbotron/html/jumbotron.jsp,sont_lastCalendar/html/lastCalendar.jsp=$MODULE_DIR$/src/main/resources/sont_lastCalendar/html/lastCalendar.jsp,sont_lastCalendar/html/lastCalendar.storiesout.jsp=$MODULE_DIR$/src/main/resources/sont_lastCalendar/html/lastCalendar.storiesout.jsp,sont_logo/html/logo.jsp=$MODULE_DIR$/src/main/resources/sont_logo/html/logo.jsp,sont_news/html/news.detail.jsp=$MODULE_DIR$/src/main/resources/sont_news/html/news.detail.jsp,sont_news/html/news.jsp=$MODULE_DIR$/src/main/resources/sont_news/html/news.jsp,sont_news/html/news.list.jsp=$MODULE_DIR$/src/main/resources/sont_news/html/news.list.jsp,sont_news/html/news.small.jsp=$MODULE_DIR$/src/main/resources/sont_news/html/news.small.jsp,sont_profile/html/profile.detail.jsp=$MODULE_DIR$/src/main/resources/sont_profile/html/profile.detail.jsp,sont_profile/html/profile.jsp=$MODULE_DIR$/src/main/resources/sont_profile/html/profile.jsp,sont_sideMenuAnchor/html/sideMenuAnchor.jsp=$MODULE_DIR$/src/main/resources/sont_sideMenuAnchor/html/sideMenuAnchor.jsp,sont_social/html/social.jsp=$MODULE_DIR$/src/main/resources/sont_social/html/social.jsp,sont_video/html/video.detail.jsp=$MODULE_DIR$/src/main/resources/sont_video/html/video.detail.jsp,sont_video/html/video.jsp=$MODULE_DIR$/src/main/resources/sont_video/html/video.jsp,sont_videos/html/videos.jsp=$MODULE_DIR$/src/main/resources/sont_videos/html/videos.jsp,sont_videos/html/videos.properties=$MODULE_DIR$/src/main/resources/sont_videos/html/videos.properties" />
+          <property key="Include-Resource" value="sont_homeSliderSplashItem/html/homeSliderSplashItem.jsp=$MODULE_DIR$/src/main/resources/sont_homeSliderSplashItem/html/homeSliderSplashItem.jsp,sont_job/html/job.jsp=$MODULE_DIR$/src/main/resources/sont_job/html/job.jsp,sont_profile/html/profile.jsp=$MODULE_DIR$/src/main/resources/sont_profile/html/profile.jsp,sont_profile/html/profile.detail.jsp=$MODULE_DIR$/src/main/resources/sont_profile/html/profile.detail.jsp,sont_homeSliderFreeItem/html/homeSliderFreeItem.jsp=$MODULE_DIR$/src/main/resources/sont_homeSliderFreeItem/html/homeSliderFreeItem.jsp,sont_homeSliderFullItem/html/homeSliderFullItem.jsp=$MODULE_DIR$/src/main/resources/sont_homeSliderFullItem/html/homeSliderFullItem.jsp,css/bootstrap.min.css=$MODULE_DIR$/src/main/resources/css/bootstrap.min.css,css/blackout_midnight-webfont.woff=$MODULE_DIR$/src/main/resources/css/blackout_midnight-webfont.woff,css/facets.css=$MODULE_DIR$/src/main/resources/css/facets.css,css/flexslider.css=$MODULE_DIR$/src/main/resources/css/flexslider.css,css/bootstrap.css=$MODULE_DIR$/src/main/resources/css/bootstrap.css,css/blackout_sunrise-webfont.eot=$MODULE_DIR$/src/main/resources/css/blackout_sunrise-webfont.eot,css/blackout_two_am-webfont.svg=$MODULE_DIR$/src/main/resources/css/blackout_two_am-webfont.svg,css/blackout_sunrise-webfont.woff=$MODULE_DIR$/src/main/resources/css/blackout_sunrise-webfont.woff,css/blackout_sunrise-webfont.ttf=$MODULE_DIR$/src/main/resources/css/blackout_sunrise-webfont.ttf,css/storiesout.css=$MODULE_DIR$/src/main/resources/css/storiesout.css,css/gem.css=$MODULE_DIR$/src/main/resources/css/gem.css,css/blackout_two_am-webfont.ttf=$MODULE_DIR$/src/main/resources/css/blackout_two_am-webfont.ttf,css/backgroundsize.min.htc=$MODULE_DIR$/src/main/resources/css/backgroundsize.min.htc,css/blackout_two_am-webfont.woff=$MODULE_DIR$/src/main/resources/css/blackout_two_am-webfont.woff,css/blackout_sunrise-webfont.svg=$MODULE_DIR$/src/main/resources/css/blackout_sunrise-webfont.svg,css/blackout_two_am-webfont.eot=$MODULE_DIR$/src/main/resources/css/blackout_two_am-webfont.eot,css/bootstrap-theme.css=$MODULE_DIR$/src/main/resources/css/bootstrap-theme.css,css/blackout_midnight-webfont.woff2=$MODULE_DIR$/src/main/resources/css/blackout_midnight-webfont.woff2,css/bootstrap-config.json=$MODULE_DIR$/src/main/resources/css/bootstrap-config.json,css/docs.css=$MODULE_DIR$/src/main/resources/css/docs.css,css/bootstrap-theme.min.css=$MODULE_DIR$/src/main/resources/css/bootstrap-theme.min.css,jnt_simpleSearchForm/html/simpleSearchForm.storiesout.jsp=$MODULE_DIR$/src/main/resources/jnt_simpleSearchForm/html/simpleSearchForm.storiesout.jsp,bootstrap3nt_navbar/html/navbar.storiesout.jsp=$MODULE_DIR$/src/main/resources/bootstrap3nt_navbar/html/navbar.storiesout.jsp,bootstrap3nt_navbar/html/navbar.hidden.storiesout-menu.groovy=$MODULE_DIR$/src/main/resources/bootstrap3nt_navbar/html/navbar.hidden.storiesout-menu.groovy,bootstrap3nt_navbar/html/navbar.hidden.storiesout-menu.properties=$MODULE_DIR$/src/main/resources/bootstrap3nt_navbar/html/navbar.hidden.storiesout-menu.properties,sont_campaign/html/campaign.relatedBuzz.jsp=$MODULE_DIR$/src/main/resources/sont_campaign/html/campaign.relatedBuzz.jsp,sont_campaign/html/campaign.relatedNews.jsp=$MODULE_DIR$/src/main/resources/sont_campaign/html/campaign.relatedNews.jsp,sont_campaign/html/campaign.jsp=$MODULE_DIR$/src/main/resources/sont_campaign/html/campaign.jsp,sont_campaign/html/campaign.detail.jsp=$MODULE_DIR$/src/main/resources/sont_campaign/html/campaign.detail.jsp,jnt_template/html/template.storiesout-templates.jsp=$MODULE_DIR$/src/main/resources/jnt_template/html/template.storiesout-templates.jsp,resources/storiesout-templates.properties=$MODULE_DIR$/src/main/resources/resources/storiesout-templates.properties,resources/storiesout-templates_fr.properties=$MODULE_DIR$/src/main/resources/resources/storiesout-templates_fr.properties,bootstrap3nt_textBox/html/textBox.footer.jsp=$MODULE_DIR$/src/main/resources/bootstrap3nt_textBox/html/textBox.footer.jsp,bootstrap3nt_textBox/html/textBox.jsp=$MODULE_DIR$/src/main/resources/bootstrap3nt_textBox/html/textBox.jsp,sont_sideMenuAnchor/html/sideMenuAnchor.jsp=$MODULE_DIR$/src/main/resources/sont_sideMenuAnchor/html/sideMenuAnchor.jsp,META-INF/rules.drl.disabled=$MODULE_DIR$/src/main/resources/META-INF/rules.drl.disabled,META-INF/storiesout-templates.tld=$MODULE_DIR$/src/main/resources/META-INF/storiesout-templates.tld,META-INF/definitions.cnd=$MODULE_DIR$/src/main/resources/META-INF/definitions.cnd,META-INF/spring/storiesout-templates.xml=$MODULE_DIR$/src/main/resources/META-INF/spring/storiesout-templates.xml,jnt_facets/html/activeFacets.jspf=$MODULE_DIR$/src/main/resources/jnt_facets/html/activeFacets.jspf,jnt_facets/html/facets.dropDown.properties=$MODULE_DIR$/src/main/resources/jnt_facets/html/facets.dropDown.properties,jnt_facets/html/facetDisplay.jspf=$MODULE_DIR$/src/main/resources/jnt_facets/html/facetDisplay.jspf,jnt_facets/html/facets.dropDown.jsp=$MODULE_DIR$/src/main/resources/jnt_facets/html/facets.dropDown.jsp,somix_link/html/link.link.jsp=$MODULE_DIR$/src/main/resources/somix_link/html/link.link.jsp,somix_link/html/link.link-btn.jsp=$MODULE_DIR$/src/main/resources/somix_link/html/link.link-btn.jsp,sont_feature/html/feature.left-image.jsp=$MODULE_DIR$/src/main/resources/sont_feature/html/feature.left-image.jsp,sont_feature/html/feature.left-small-image.jsp=$MODULE_DIR$/src/main/resources/sont_feature/html/feature.left-small-image.jsp,sont_feature/html/feature.right-image.jsp=$MODULE_DIR$/src/main/resources/sont_feature/html/feature.right-image.jsp,sont_feature/html/feature.jsp=$MODULE_DIR$/src/main/resources/sont_feature/html/feature.jsp,bootstrap3nt_panel/html/panel.jsp=$MODULE_DIR$/src/main/resources/bootstrap3nt_panel/html/panel.jsp,img/favicon-16x16.png=$MODULE_DIR$/src/main/resources/img/favicon-16x16.png,img/illustration-big.jpg=$MODULE_DIR$/src/main/resources/img/illustration-big.jpg,img/error-bg.jpg=$MODULE_DIR$/src/main/resources/img/error-bg.jpg,img/bg_direction_nav.png=$MODULE_DIR$/src/main/resources/img/bg_direction_nav.png,img/logo-client.png=$MODULE_DIR$/src/main/resources/img/logo-client.png,img/logo-client.jpg=$MODULE_DIR$/src/main/resources/img/logo-client.jpg,img/book.jpg=$MODULE_DIR$/src/main/resources/img/book.jpg,img/favicon.ico=$MODULE_DIR$/src/main/resources/img/favicon.ico,img/logo-presse.png=$MODULE_DIR$/src/main/resources/img/logo-presse.png,img/us.png=$MODULE_DIR$/src/main/resources/img/us.png,img/anne.png=$MODULE_DIR$/src/main/resources/img/anne.png,img/apple-touch-icon.png=$MODULE_DIR$/src/main/resources/img/apple-touch-icon.png,img/apple-icon.png=$MODULE_DIR$/src/main/resources/img/apple-icon.png,img/apple-icon-144x144.png=$MODULE_DIR$/src/main/resources/img/apple-icon-144x144.png,img/android-icon-192x192.png=$MODULE_DIR$/src/main/resources/img/android-icon-192x192.png,img/apple-icon-precomposed.png=$MODULE_DIR$/src/main/resources/img/apple-icon-precomposed.png,img/storiesout-logo-small.png=$MODULE_DIR$/src/main/resources/img/storiesout-logo-small.png,img/apple-icon-114x114.png=$MODULE_DIR$/src/main/resources/img/apple-icon-114x114.png,img/storiesout.svg=$MODULE_DIR$/src/main/resources/img/storiesout.svg,img/ms-icon-310x310.png=$MODULE_DIR$/src/main/resources/img/ms-icon-310x310.png,img/en.png=$MODULE_DIR$/src/main/resources/img/en.png,img/illustration-small.png=$MODULE_DIR$/src/main/resources/img/illustration-small.png,img/ms-icon-144x144.png=$MODULE_DIR$/src/main/resources/img/ms-icon-144x144.png,img/video-img.png=$MODULE_DIR$/src/main/resources/img/video-img.png,img/storiesout-white.svg=$MODULE_DIR$/src/main/resources/img/storiesout-white.svg,img/illustration.png=$MODULE_DIR$/src/main/resources/img/illustration.png,img/fr.png=$MODULE_DIR$/src/main/resources/img/fr.png,img/apple-icon-57x57.png=$MODULE_DIR$/src/main/resources/img/apple-icon-57x57.png,img/apple-icon-152x152.png=$MODULE_DIR$/src/main/resources/img/apple-icon-152x152.png,img/bg-content.png=$MODULE_DIR$/src/main/resources/img/bg-content.png,img/test.jpg=$MODULE_DIR$/src/main/resources/img/test.jpg,img/ms-icon-150x150.png=$MODULE_DIR$/src/main/resources/img/ms-icon-150x150.png,img/android-icon-72x72.png=$MODULE_DIR$/src/main/resources/img/android-icon-72x72.png,img/android-icon-96x96.png=$MODULE_DIR$/src/main/resources/img/android-icon-96x96.png,img/android-icon-36x36.png=$MODULE_DIR$/src/main/resources/img/android-icon-36x36.png,img/slogan-fr.svg=$MODULE_DIR$/src/main/resources/img/slogan-fr.svg,img/apple-icon-180x180.png=$MODULE_DIR$/src/main/resources/img/apple-icon-180x180.png,img/storiesout-logo.svg=$MODULE_DIR$/src/main/resources/img/storiesout-logo.svg,img/favicon-96x96.png=$MODULE_DIR$/src/main/resources/img/favicon-96x96.png,img/manifest.json=$MODULE_DIR$/src/main/resources/img/manifest.json,img/slogan-en.svg=$MODULE_DIR$/src/main/resources/img/slogan-en.svg,img/de.png=$MODULE_DIR$/src/main/resources/img/de.png,img/android-icon-48x48.png=$MODULE_DIR$/src/main/resources/img/android-icon-48x48.png,img/apple-icon-76x76.png=$MODULE_DIR$/src/main/resources/img/apple-icon-76x76.png,img/apple-icon-60x60.png=$MODULE_DIR$/src/main/resources/img/apple-icon-60x60.png,img/storiesout-logo.png=$MODULE_DIR$/src/main/resources/img/storiesout-logo.png,img/cd-top-arrow.svg=$MODULE_DIR$/src/main/resources/img/cd-top-arrow.svg,img/browserconfig.xml=$MODULE_DIR$/src/main/resources/img/browserconfig.xml,img/android-icon-144x144.png=$MODULE_DIR$/src/main/resources/img/android-icon-144x144.png,img/apple-icon-72x72.png=$MODULE_DIR$/src/main/resources/img/apple-icon-72x72.png,img/apple-icon-120x120.png=$MODULE_DIR$/src/main/resources/img/apple-icon-120x120.png,img/logo-client-big.jpg=$MODULE_DIR$/src/main/resources/img/logo-client-big.jpg,img/logo-client-big.png=$MODULE_DIR$/src/main/resources/img/logo-client-big.png,img/favicon-32x32.png=$MODULE_DIR$/src/main/resources/img/favicon-32x32.png,img/ms-icon-70x70.png=$MODULE_DIR$/src/main/resources/img/ms-icon-70x70.png,sont_videos/html/videos.properties=$MODULE_DIR$/src/main/resources/sont_videos/html/videos.properties,sont_videos/html/videos.jsp=$MODULE_DIR$/src/main/resources/sont_videos/html/videos.jsp,sont_social/html/social.jsp=$MODULE_DIR$/src/main/resources/sont_social/html/social.jsp,scripts/set-seo.groovy=$MODULE_DIR$/src/main/resources/scripts/set-seo.groovy,scripts/getClients.groovy=$MODULE_DIR$/src/main/resources/scripts/getClients.groovy,scripts/getCampaign.groovy=$MODULE_DIR$/src/main/resources/scripts/getCampaign.groovy,sont_clients/html/clients.properties=$MODULE_DIR$/src/main/resources/sont_clients/html/clients.properties,sont_clients/html/clients.jsp=$MODULE_DIR$/src/main/resources/sont_clients/html/clients.jsp,sont_clients/html/clients.hidden.prout.jsp=$MODULE_DIR$/src/main/resources/sont_clients/html/clients.hidden.prout.jsp,sont_buzz/html/buzz.list.jsp=$MODULE_DIR$/src/main/resources/sont_buzz/html/buzz.list.jsp,sont_buzz/html/buzz.small.jsp=$MODULE_DIR$/src/main/resources/sont_buzz/html/buzz.small.jsp,sont_buzz/html/buzz.jsp=$MODULE_DIR$/src/main/resources/sont_buzz/html/buzz.jsp,somix_calendarEntry/html/calendarEntry.date.jsp=$MODULE_DIR$/src/main/resources/somix_calendarEntry/html/calendarEntry.date.jsp,sont_homeSlider/html/homeSlider.jsp=$MODULE_DIR$/src/main/resources/sont_homeSlider/html/homeSlider.jsp,sont_adminBar/html/adminBar.jsp=$MODULE_DIR$/src/main/resources/sont_adminBar/html/adminBar.jsp,sont_adminBar/html/adminBar.properties=$MODULE_DIR$/src/main/resources/sont_adminBar/html/adminBar.properties,sont_lastCalendar/html/lastCalendar.storiesout.jsp=$MODULE_DIR$/src/main/resources/sont_lastCalendar/html/lastCalendar.storiesout.jsp,sont_lastCalendar/html/lastCalendar.jsp=$MODULE_DIR$/src/main/resources/sont_lastCalendar/html/lastCalendar.jsp,javascript/respond.min.js=$MODULE_DIR$/src/main/resources/javascript/respond.min.js,javascript/ie10-viewport-bug-workaround.js=$MODULE_DIR$/src/main/resources/javascript/ie10-viewport-bug-workaround.js,javascript/sobanner.js=$MODULE_DIR$/src/main/resources/javascript/sobanner.js,javascript/ie8-responsive-file-warning.js=$MODULE_DIR$/src/main/resources/javascript/ie8-responsive-file-warning.js,javascript/main.js=$MODULE_DIR$/src/main/resources/javascript/main.js,javascript/ie-emulation-modes-warning.js=$MODULE_DIR$/src/main/resources/javascript/ie-emulation-modes-warning.js,javascript/jquery.flexslider-min.js=$MODULE_DIR$/src/main/resources/javascript/jquery.flexslider-min.js,javascript/html5shiv.min.js=$MODULE_DIR$/src/main/resources/javascript/html5shiv.min.js,javascript/modernizr.js=$MODULE_DIR$/src/main/resources/javascript/modernizr.js,somix_social/html/social.social-big.jsp=$MODULE_DIR$/src/main/resources/somix_social/html/social.social-big.jsp,somix_social/html/social.social.jsp=$MODULE_DIR$/src/main/resources/somix_social/html/social.social.jsp,somix_social/html/social.social-big-absolute.jsp=$MODULE_DIR$/src/main/resources/somix_social/html/social.social-big-absolute.jsp,somix_social/html/displayLinks.jspf=$MODULE_DIR$/src/main/resources/somix_social/html/displayLinks.jspf,bootstrap3nt_pageTitle/html/pageTitle.storiesout.jsp=$MODULE_DIR$/src/main/resources/bootstrap3nt_pageTitle/html/pageTitle.storiesout.jsp,sont_video/html/video.jsp=$MODULE_DIR$/src/main/resources/sont_video/html/video.jsp,sont_video/html/video.detail.jsp=$MODULE_DIR$/src/main/resources/sont_video/html/video.detail.jsp,sont_jumbotron/html/jumbotron.jsp=$MODULE_DIR$/src/main/resources/sont_jumbotron/html/jumbotron.jsp,sont_banner/html/banner.jsp=$MODULE_DIR$/src/main/resources/sont_banner/html/banner.jsp,sont_logo/html/logo.jsp=$MODULE_DIR$/src/main/resources/sont_logo/html/logo.jsp,jnt_page/xml/page.sitemap.jsp=$MODULE_DIR$/src/main/resources/jnt_page/xml/page.sitemap.jsp,sont_news/html/news.list.jsp=$MODULE_DIR$/src/main/resources/sont_news/html/news.list.jsp,sont_news/html/news.small.jsp=$MODULE_DIR$/src/main/resources/sont_news/html/news.small.jsp,sont_news/html/news.jsp=$MODULE_DIR$/src/main/resources/sont_news/html/news.jsp,sont_news/html/news.detail.jsp=$MODULE_DIR$/src/main/resources/sont_news/html/news.detail.jsp,sont_client/html/client.relatedNews.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.relatedNews.jsp,sont_client/html/client.quote.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.quote.jsp,sont_client/html/client.description.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.description.jsp,sont_client/html/client.logo.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.logo.jsp,sont_client/html/client.relatedBuzz.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.relatedBuzz.jsp,sont_client/html/client.media.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.media.jsp,sont_client/html/client.jsp=$MODULE_DIR$/src/main/resources/sont_client/html/client.jsp" />
         </additionalProperties>
         <additionalJARContents />
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false" />
+      </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6">
-    <perl5 />
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -52,22 +59,31 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="jahia-plugin-base-cnd-files">
+        <CLASSES>
+          <root url="jar://$APPLICATION_PLUGINS_DIR$/.IntelliJ_Jahia_Plugin/jahia/jahia-plugin-cnds.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet.jsp:jsp-api:2.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jahia.server:jahia-impl:7.0.0.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jahia.server:jahia-api:7.0.0.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jahia.server:jahia-gwt:7.0.0.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jahia.server:jahia-impl:7.2.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jahia.server:jahia-api:7.2.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jahia.server:jahia-gwt:7.2.0.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.extjs:gxt:2.3.1-gwt22" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.code.gwt-log:gwt-log:3.1.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jahia.configuration:deployers:4.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jahia.commons:jahia-commons:1.0.4" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jahia.configuration:deployers:5.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jahia.commons:jahia-commons:1.0.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-beanutils:commons-beanutils:1.8.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-codec:commons-codec:1.8" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-collections:commons-collections:3.2.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-fileupload:commons-fileupload:1.3.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-fileupload:commons-fileupload:1.3.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-httpclient:commons-httpclient:3.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-id:commons-id:0.1-dev" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-discovery:commons-discovery:0.5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.commons:commons-exec:1.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.commons:commons-exec:1.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-io:commons-io:2.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-jexl:commons-jexl:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-lang:commons-lang:2.6" level="project" />
@@ -99,8 +115,8 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.lucene:lucene-highlighter:3.0.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.lucene:lucene-memory:3.0.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.lucene:lucene-spellchecker:3.0.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.solr:solr-core:3.1.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.solr:solr-solrj:3.1.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.solr:solr-core:3.1.0-jahia1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.solr:solr-solrj:3.1.0-jahia1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.zookeeper:zookeeper:3.3.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: jline:jline:0.9.94" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.woodstox:wstx-asl:3.2.7" level="project" />
@@ -111,10 +127,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.lucene:lucene-spatial:3.1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.solr:solr-commons-csv:3.1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: dom4j:dom4j:1.6.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.phloc:phloc-css:3.6.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.phloc:phloc-commons:4.0.9" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.code.findbugs:annotations:2.0.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.hibernate:hibernate-core:4.2.7.SP1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.hibernate:hibernate-core:4.2.7.SP1-jahia1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.logging:jboss-logging:3.1.0.GA" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.javassist:javassist:3.18.1-GA" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec:1.0.1.Final" level="project" />
@@ -125,18 +138,21 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.hibernate:hibernate-validator-annotation-processor:5.0.1.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.hibernate:hibernate-entitymanager:4.2.7.SP1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.jcr:jcr:2.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-api:2.4.5-jahia5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-core:2.4.5-jahia5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-api:2.4.5-jahia12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-core:2.4.5-jahia12" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: edu.ucar:netcdf:4.2-min" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:jcl-over-slf4j:1.6.4" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-jcr-commons:2.4.5-jahia5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-jcr-rmi:2.4.5-jahia5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-spi:2.4.5-jahia5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-spi-commons:2.4.5-jahia5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-webdav:2.4.5-jahia5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-jcr-server:2.4.5-jahia5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-webapp:2.4.5-jahia5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-jcr-servlet:2.4.5-jahia5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-jcr-commons:2.4.5-jahia12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-jcr-rmi:2.4.5-jahia12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-spi:2.4.5-jahia12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-spi-commons:2.4.5-jahia12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-webdav:2.4.5-jahia12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-jcr-server:2.4.5-jahia12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-jcr2dav:2.4.5-jahia12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-jcr2spi:2.4.5-jahia12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-spi2dav:2.4.5-jahia12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-webapp:2.4.5-jahia12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-jcr-servlet:2.4.5-jahia12" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-api:1.6.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-log4j12:1.6.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-ext:1.6.6" level="project" />
@@ -147,49 +163,39 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: xom:xom:1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jdom:jdom:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: jlibdiff:jlibdiff:1.01" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: jfree:jcommon:1.0.14" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-jxpath:commons-jxpath:1.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.quartz-scheduler:quartz:1.8.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: taglibs:standard:1.1.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-tx:3.2.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-orm:3.2.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-beans:3.2.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-core:3.2.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-web:3.2.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-aop:3.2.8.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-tx:3.2.13.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-orm:3.2.13.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-beans:3.2.13.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-core:3.2.13.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-web:3.2.13.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-aop:3.2.13.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: aopalliance:aopalliance:1.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-webmvc:3.2.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-expression:3.2.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-context:3.2.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-context-support:3.2.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-jdbc:3.2.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework.webflow:spring-webflow:2.3.2.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework.webflow:spring-binding:2.3.2.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework.webflow:spring-js:2.3.2.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework.webflow:spring-js-resources:2.3.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-webmvc:3.2.13.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-expression:3.2.13.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-context:3.2.13.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-context-support:3.2.13.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-jdbc:3.2.13.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework.webflow:spring-webflow:2.4.1.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: opensymphony:ognl:2.6.11" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework.webflow:spring-binding:2.4.1.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework.webflow:spring-js:2.4.1.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework.webflow:spring-js-resources:2.4.1.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.fasterxml.jackson.core:jackson-core:2.2.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.2.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.2.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.groovy:groovy:2.2.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ow2.asm:asm-tree:4.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ow2.asm:asm-util:4.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ow2.asm:asm-commons:4.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ow2.asm:asm:4.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ow2.asm:asm-analysis:4.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.groovy:groovy-jsr223:2.2.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.groovy:groovy-xml:2.2.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.groovy:groovy-json:2.2.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.groovy:groovy:2.3.11" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.groovy:groovy-jsr223:2.3.11" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.groovy:groovy-xml:2.3.11" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.groovy:groovy-json:2.3.11" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.maven:maven-model:3.0.5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.plexus:plexus-utils:2.0.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.googlecode.java-diff-utils:diffutils:1.3.0-20120702" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.sun.script.freemarker:jsr223-freemarker-engine:1.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.sun.script.js:jsr223-js-engine:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.sun.script.velocity:jsr223-velocity-engine:1.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: rhino:js:1.7R2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: xerces:xmlParserAPIs:2.11.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: xerces:xercesImpl:2.11.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: xml-apis:xml-apis:1.4.01" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: xalan:xalan:2.7.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: xalan:serializer:2.7.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: net.sf.saxon:Saxon-HE:compressed:9.5.1-5" level="project" />
@@ -200,44 +206,40 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-digester:commons-digester:1.8" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.portals.pluto:pluto-util:2.0.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: de.l3s.boilerpipe:boilerpipe:1.1.0-jahia1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tika:tika-core:1.5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tika:tika-parsers:1.5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.gagravarr:vorbis-java-tika:0.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.gagravarr:vorbis-java-core:tests:0.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tika:tika-core:1.14" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tika:tika-parsers:1.14" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.gagravarr:vorbis-java-tika:0.8" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.james:apache-mime4j-core:0.7.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.james:apache-mime4j-dom:0.7.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.commons:commons-compress:1.5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.tukaani:xz:1.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.bouncycastle:bcmail-jdk15:1.45" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.bouncycastle:bcprov-jdk15:1.45" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.commons:commons-compress:1.12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.pdfbox:pdfbox:2.0.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.pdfbox:fontbox:2.0.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.pdfbox:pdfbox-tools:2.0.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.pdfbox:pdfbox-debugger:2.0.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.pdfbox:jempbox:1.8.12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.bouncycastle:bcmail-jdk15on:1.54" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.54" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.bouncycastle:bcprov-jdk15on:1.54" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.poi:poi:3.15" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.commons:commons-collections4:4.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.poi:poi-scratchpad:3.15" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.poi:poi-ooxml:3.15" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.poi:poi-ooxml-schemas:3.15" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.xmlbeans:xmlbeans:2.6.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.github.virtuald:curvesapi:1.04" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.ccil.cowan.tagsoup:tagsoup:1.2.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ow2.asm:asm-debug-all:4.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.googlecode.mp4parser:isoparser:1.0-RC-1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.aspectj:aspectjrt:1.6.11" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.drewnoakes:metadata-extractor:2.6.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.drewnoakes:metadata-extractor:2.9.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.adobe.xmp:xmpcore:5.1.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.gagravarr:vorbis-java-core:0.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.gagravarr:vorbis-java-core:0.8" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.googlecode.juniversalchardet:juniversalchardet:1.0.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.uwyn:jhighlight:1.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.pdfbox:pdfbox:1.8.5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.pdfbox:fontbox:1.8.5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.pdfbox:jempbox:1.8.5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.poi:poi:3.10-FINAL" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.poi:poi-scratchpad:3.10-FINAL" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.poi:poi-ooxml:3.10-FINAL" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.poi:poi-ooxml-schemas:3.10-FINAL" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.xmlbeans:xmlbeans:2.3.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: net.sf.ehcache:ehcache:2.8.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: net.sf.ehcache:ehcache:2.8.5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: concurrent:concurrent:1.3.4-jahia6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.gwt:gwt-servlet:2.5.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: net.htmlparser.jericho:jericho-html:3.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.thoughtworks.xstream:xstream:1.4.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: xmlpull:xmlpull:1.1.3.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: xpp3:xpp3_min:1.1.4c" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: rome:rome:1.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: rome:rome-fetcher:1.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-logging:commons-logging-api:1.0.4" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: rome:opensearch:0.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.json:json:20070829" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.ibm.icu:icu4j:4.0.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.velocity:velocity:1.6.4" level="project" />
@@ -245,17 +247,16 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.velocity:velocity-tools:2.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-chain:commons-chain:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-validator:commons-validator:1.3.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.freemarker:freemarker:2.3.16" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jbpm:jbpm-bpmn2:6.0.0.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jbpm:jbpm-flow:6.0.0.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jbpm:jbpm-flow-builder:6.0.0.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jbpm:jbpm-workitems:6.0.0.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: jivesoftware:smack:3.1.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: rome:rome:1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-net:commons-net:2.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: wsdl4j:wsdl4j:1.6.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.neethi:neethi:3.0.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.woodstox:woodstox-core-asl:4.0.8" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.xml.stream:stax-api:1.0-2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.woodstox:stax2-api:3.0.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.ws.xmlschema:xmlschema-core:2.0.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jbpm:jbpm-human-task-core:nocdi:6.0.0.Final-jahia" level="project" />
@@ -281,7 +282,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.core.runtime:eclipse-core-runtime:20070801" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: net.sourceforge.nekohtml:nekohtml:1.9.21" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.code.kaptcha:kaptcha:2.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.artofsolving.jodconverter:jodconverter-core:3.0-beta-4-jahia4" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.artofsolving.jodconverter:jodconverter-core:3.0-beta-4-jahia5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.openoffice:juh:3.2.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.openoffice:jurt:3.2.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.openoffice:ridl:3.2.1" level="project" />
@@ -290,43 +291,43 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.shiro:shiro-spring:1.1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.shiro:shiro-web:1.1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: joda-time:joda-time:1.6" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: de.odysseus.juel:juel-impl:2.2.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: de.odysseus.juel:juel-spi:2.2.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: net.sf.opencsv:opencsv:2.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-core:2.12.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-spring:2.12.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-rss:2.12.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-atom:2.12.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-core:2.12.5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-spring:2.12.5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-rss:2.12.5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-atom:2.12.5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.abdera:abdera-core:1.1.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.abdera:abdera-i18n:1.1.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.abdera:abdera-parser:1.1.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.ws.commons.axiom:axiom-api:1.2.14" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.ws.commons.axiom:axiom-impl:1.2.14" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-mail:2.12.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-stream:2.12.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-script:2.12.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.osgi:org.osgi.compendium:4.3.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.felix:org.apache.felix.framework:4.2.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-mail:2.12.5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-stream:2.12.5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.camel:camel-script:2.12.5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.osgi:org.osgi.compendium:5.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.osgi:org.osgi.core:6.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ops4j.pax.swissbox:pax-swissbox-extender:1.5.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ops4j.pax.swissbox:pax-swissbox-lifecycle:1.5.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ops4j.base:ops4j-base-lang:1.3.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ops4j.pax.swissbox:pax-swissbox-core:1.5.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jasypt:jasypt:lite:1.9.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.tuckey:urlrewritefilter:3.2.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.yahoo.platform.yui:yuicompressor:standalone:2.4.7" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.atmosphere:atmosphere-runtime:2.1.5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.atmosphere.extensions:atmosphere-gwt20-client:2.1.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.atmosphere.extensions:atmosphere-gwt20-common:2.1.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.atmosphere.extensions:atmosphere-gwt20-managed:2.1.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.atmosphere.extensions:atmosphere-gwt20-server:2.1.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.yahoo.platform.yui:yuicompressor:standalone:2.4.9-20161014" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.atmosphere:atmosphere-runtime:2.3.1-jahia2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.atmosphere.extensions:atmosphere-gwt20-client:2.3.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.atmosphere.extensions:atmosphere-gwt20-common:2.3.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.atmosphere.extensions:atmosphere-gwt20-managed:2.3.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.atmosphere.extensions:atmosphere-gwt20-server:2.3.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.guava:guava:cdi1.0:15.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jahia.server:jahia-taglib:7.0.0.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.code.findbugs:jsr305:3.0.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.karaf:org.apache.karaf.main:4.0.7" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.karaf:org.apache.karaf.util:4.0.7" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.felix:org.apache.felix.utils:1.8.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.karaf.jaas:org.apache.karaf.jaas.boot:4.0.7" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: net.java.dev.jna:jna:4.2.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: net.java.dev.jna:jna-platform:4.2.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jahia.server:jahia-taglib:7.2.0.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: taglibs:taglibs-unstandard:20060829" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
-    <orderEntry type="module-library">
-      <library name="jahia-plugin-base-cnd-files">
-        <CLASSES>
-          <root url="jar://$APPLICATION_PLUGINS_DIR$/.IntelliJ_Jahia_Plugin/jahia/jahia-plugin-cnds.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
   </component>
 </module>
