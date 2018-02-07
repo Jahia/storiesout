@@ -28,7 +28,7 @@ boolean executeOnContent = true;
 
 // list of languages to ignore
 Set<String> langToIgnore = new HashSet<String>();
-langToIgnore.add("en");
+//langToIgnore.add("en");
 
 // list of path to ignore for any reason...
 Set<String> pathToIgnore = new HashSet<String>();
@@ -102,6 +102,7 @@ for (Locale locale : site.getLanguagesAsLocales()) {
                 contentTypes.remove("jnt:virtualsite");
                 contentTypes.remove("wemnt:optimizationTest");
                 contentTypes.remove("wemnt:personalizedContent");
+                contentTypes.remove("fcnt:formDisplay");
 
                 // add wanted types
                 contentTypes.add("jnt:page");
@@ -128,14 +129,19 @@ for (Locale locale : site.getLanguagesAsLocales()) {
                                     }
                                 }
                             }
-                            if (! "fr".equals(locale.toString())) {
+                            //if (! "fr".equals(locale.toString())) {
                                 url = "/${locale.toString()}${url}"
-                            }
+                            //}
 
                             if(urlMgr.findExistingVanityUrls(url,site.getSiteKey(),session).isEmpty()) {
                                 VanityUrl vanityUrl = new VanityUrl(url, site.getSiteKey(),locale.toString(),true,true);
                                 if (doIt) {
-                                    urlMgr.saveVanityUrlMapping(page,vanityUrl,session);
+                                    try {
+                                        urlMgr.saveVanityUrlMapping(page,vanityUrl,session);
+                                    } catch (java.lang.NullPointerException npe) {
+                                        logger.info("Could now save vanity for ${page.getPath()} (NPE)");
+                                    }
+
                                 }
                                 logger.info("    [" + locale.toString() + "] [" + contentType + "] " + page.getPath() + " [" + url + "]");
                                 if (hasPendingModification(page)) {

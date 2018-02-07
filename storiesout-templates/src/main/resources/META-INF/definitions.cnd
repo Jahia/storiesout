@@ -4,6 +4,7 @@
 <sont = 'http://www.jahia.org/storiesout/nt/1.0'>
 <bootstrap3mix = 'http://www.jahia.org/bootstrap3/mix/1.0'>
 <bootstrap3nt = 'http://www.jahia.org/bootstrap3/nt/1.0'>
+<mix='http://www.jcp.org/jcr/mix/1.0'>
 
 [somix:component] > jmix:droppableContent, jmix:editorialContent mixin
 

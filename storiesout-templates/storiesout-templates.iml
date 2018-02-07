@@ -21,8 +21,8 @@
           <property key="Specification-Vendor" value="Jahia Solutions Group SA" />
           <property key="Jahia-GroupId" value="org.jahia.modules" />
           <property key="Jahia-Source-Folders" value="$MODULE_DIR$" />
-          <property key="Jahia-Source-Control-Connection" value="scm:dummy:uri" />
-          <property key="Jahia-Source-Control-DeveloperConnection" value="scm:dummy:uri" />
+          <property key="Jahia-Source-Control-Connection" value="scm:git:git@github.com:Jahia/storiesout.git/storiesout-templates" />
+          <property key="Jahia-Source-Control-DeveloperConnection" value="scm:git:git@github.com:Jahia/storiesout.git/storiesout-templates" />
           <property key="Jahia-Source-Control-Tag" value="HEAD" />
           <property key="Jahia-Download-Sources-Available" value="${jahia-download-sources-available}" />
           <property key="Jahia-Required-Version" value="${jahia.version}" />
