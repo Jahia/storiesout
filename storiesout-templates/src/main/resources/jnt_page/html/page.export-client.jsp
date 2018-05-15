@@ -56,6 +56,7 @@
                 <thead>
                     <tr>
                         <th>name</th>
+                        <th>client UUID</th>
                         <th>logo</th>
                         <th>logo-big</th>
                         <th>media</th>
@@ -71,6 +72,7 @@
                     <c:forEach items="${newses.nodes}" var="news">
                         <tr>
                             <td>${news.displayableName}</td>
+                            <td>${news.identifier}</td>
                             <td>
                                 <c:set var="logoPath" value=""/>
                                 <c:set var="logo" value="${news.properties.logo.node}"/>
@@ -131,7 +133,17 @@
         "paging":false,
         dom: 'Bfrtip',
         buttons: [
-            'copy', 'csv'
+            'copy', 'csv',{
+                text: 'JSON',
+                action: function ( e, dt, button, config ) {
+                    var data = dt.buttons.exportData();
+ 
+                    $.fn.dataTable.fileSave(
+                        new Blob( [ JSON.stringify( data ) ] ),
+                        'Export.json'
+                    );
+                }
+            }
         ]
     } );
 </script>

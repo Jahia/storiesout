@@ -58,7 +58,9 @@
                 <thead>
                     <tr>
                         <th>date</th>
+                        <th>buzz UUID</th>
                         <th>client</th>
+                        <th>client UUID</th>
                         <th>author</th>
                         <%--<th>image</th>--%>
                         <th>title</th>
@@ -81,11 +83,18 @@
                                 ${formatedDate}
                             </td>
                             <td>
+                                    ${news.identifier}
+                            </td>
+                            <td>
                                 <c:forEach items="${news.properties.relatedClient}" var="relatedClient" varStatus="sta">
                                     <c:if test="${! sta.first}">, </c:if>${relatedClient.node.displayableName}
                                 </c:forEach>
                             </td>
-
+                            <td>
+                                <c:forEach items="${news.properties.relatedClient}" var="relatedClient" varStatus="sta">
+                                    <c:if test="${! sta.first}">, </c:if>${relatedClient.node.identifier}
+                                </c:forEach>
+                            </td>
                             <td>${news.properties.author.string}</td>
                             <%--
                             <td>
@@ -138,7 +147,17 @@
         "paging":false,
         dom: 'Bfrtip',
         buttons: [
-            'copy', 'csv'
+            'copy', 'csv',{
+                text: 'JSON',
+                action: function ( e, dt, button, config ) {
+                    var data = dt.buttons.exportData();
+ 
+                    $.fn.dataTable.fileSave(
+                        new Blob( [ JSON.stringify( data ) ] ),
+                        'Export.json'
+                    );
+                }
+            }
         ]
     } );
 </script>
